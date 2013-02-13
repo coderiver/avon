@@ -1,1 +1,148 @@
 @import "base";
+.slider {
+    position: relative;
+    margin-top: -32px;
+    height: 595px;
+}
+.slide {
+    height: 595px;
+    width: 100%;
+    overflow: hidden;
+}
+.slide-1 {
+    background: url(../img/slide1.png) 74% 100% no-repeat;
+}
+.slide__text {
+    float: left;
+    padding-top: 105px;
+    width: 280px;
+    p {
+        margin-bottom: 17px;
+    }
+}
+.slide__title {
+    margin-bottom: 11px;
+    color: #34272f;
+    @include mb;
+    font-size: 36px;
+}
+.slide__info {
+    float: right;
+    padding: 40px 20px 0 0;
+    .next-training  {
+        padding-left: 125px;
+    }
+    .coach-scroll {
+        margin: 58px 0 0 142px;
+    }
+}
+.slide__big-title {
+    margin-bottom: 33px;
+    padding-left: 41px;
+    h2 {
+        position: relative;
+        margin-bottom: 17px;
+        color: #ae0776;
+        font-size: 43px;
+        line-height: 1;
+        font-weight: normal;
+        &:before {
+            content: "“";
+            position: absolute;
+            left: -41px;
+            top: -11px;
+            font-size: 63px;
+            color: #d380b8;
+        }
+    }
+    span {
+        display: block;
+    }
+
+    b {
+        @include mb;
+        text-transform: uppercase;
+        font-size: 48px;
+    }
+    .coach {
+        @include mi;
+        color: #6b6468;
+        font-size: 16px;
+        strong {
+            display: block;
+            color: #34272f;
+            font-size: 19px;
+            @include mb;
+        }
+    }
+}
+
+.slide-2 {
+    
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    text-align: center;
+    button {
+        position: relative;
+        display: inline-block;
+        margin-right: 35px;
+        width: 100px;
+        height: 67px;
+        line-height: 84px;
+        background: none;
+        text-align: center;
+    }
+    span {
+        color: #b5007d;
+        @include mb;
+        font-size: 18px;
+        opacity: 0.7;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    i {
+        position: absolute;
+        left: 50%;
+        top: 10px;
+        margin-left: -11px; 
+    } 
+    .activeSlide {
+        border: 2px solid #c754a1;
+        @include border-radius(7px);
+        @include background-image(linear-gradient(rgba(253,253,253,.9), rgba(224,212,218,.9)));
+        &:before { 
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%; 
+            margin-left: -9px; 
+            @include sized-sprite($icons,arr2);
+        }
+        span {
+            opacity: 1; 
+            color: #b5007d;
+        }
+    }
+    .nav-0 { 
+        i {
+            @include sized-sprite($icons,man);
+        }
+    }
+    .nav-1 {
+        i {
+            @include sized-sprite($icons,case);
+        }
+    }
+    .nav-2 {
+        i {
+            @include sized-sprite($icons,star);
+        }
+    }
+} 

@@ -1,6 +1,36 @@
 @import "compass/css3";
 @import "lib/animations";
 @import "lib/keyframes";
+@font-face {
+  font-family: 'Conv_MyriadPro-Regular';
+  src: url('../fonts/MyriadPro-Regular.eot');
+  src: local('☺'), url('../fonts/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadPro-Regular.ttf') format('truetype'), url('../fonts/MyriadPro-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Conv_MyriadPro-It';
+  src: url('../fonts/MyriadPro-It.eot');
+  src: local('☺'), url('../fonts/MyriadPro-It.woff') format('woff'), url('../fonts/MyriadPro-It.ttf') format('truetype'), url('../fonts/MyriadPro-It.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Conv_MyriadPro-Bold';
+  src: url('../fonts/MyriadPro-Bold.eot');
+  src: local('☺'), url('../fonts/MyriadPro-Bold.woff') format('woff'), url('../fonts/MyriadPro-Bold.ttf') format('truetype'), url('../fonts/MyriadPro-Bold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Conv_MyriadPro-BoldIt';
+  src: url('../fonts/MyriadPro-BoldIt.eot');
+  src: local('☺'), url('../fonts/MyriadPro-BoldIt.woff') format('woff'), url('../fonts/MyriadPro-BoldIt.ttf') format('truetype'), url('../fonts/MyriadPro-BoldIt.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 // gradients for ie
 $experimental-support-for-svg: true;
@@ -135,17 +165,33 @@ $break-large: 1180px;
 
 // sized sprites
 @mixin image-size($path){
-  width: image-width($path);
-  height: image-height($path);
+    width: image-width($path);
+    height: image-height($path);
 }
 @mixin sized-sprite($map, $sprite){
-  background: sprite($map, $sprite) no-repeat;
-  @include image-size(sprite-file($map, $sprite));
+    background: sprite($map, $sprite) no-repeat;
+    @include image-size(sprite-file($map, $sprite));
 }
 
 // fonts
-@mixin mp {
+@mixin mr {
     font-weight: normal;
     font-style: normal;
-    font-family: 'Myriad Pro', Arial, sans-serif;
+    font-family: 'Conv_MyriadPro-Regular', Arial, sans-serif;
 }
+@mixin mi {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Conv_MyriadPro-It', Arial, sans-serif;
+}
+@mixin mb {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif;
+}
+@mixin mbi {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Conv_MyriadPro-BoldIt', Arial, sans-serif;
+}
+

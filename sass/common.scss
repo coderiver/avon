@@ -48,7 +48,7 @@ table {
 body{
     min-width: 1000px;
     color: #483b50;
-    @include mp;
+    @include mr;
     font-size: 15px;
     line-height: 1.3;
     background: url(../img/body-bg.png) 50% 0 repeat;
@@ -185,7 +185,7 @@ a{
         padding: 0 13px 0 19px;
         background: none;
         color: #b6047f;
-        @include mp;
+        @include mr;
         &:before,
         &:after {
             content: "";
@@ -212,6 +212,34 @@ a{
         }
     }
 }
+.enter__user {
+    float: right;
+    padding-top: 11px;
+    color: #a19ea2;
+    font-size: 12px;
+    text-align: left;
+    span { 
+        display: block;
+        margin-bottom: 7px;
+        font-size: 13px;
+        color: #625667;
+        i {
+            display: inline-block;
+            margin-right: 9px;
+            @include sized-sprite($icons,user);
+        }
+    }
+    strong {
+        font-size: 15px;
+        @include mb;
+    }
+    .enter__id {
+        padding-left: 23px;
+        color: #a19ea2;
+    }
+}
+
+
 /* -------------------------------------- //END Header ------------------------------------------ */
  
 /* ------------------------------------- Independent blocks -------------------------------------- */
@@ -220,9 +248,10 @@ a{
     padding: 0 16px;
     height: 36px;
     line-height: 36px;
-    @include mp;
+    @include mr;
     color: #fff;
     font-size: 16px;
+    text-decoration: none;
     text-shadow: 0 1px 0 rgba(138,75,128, .22);
     @include border-radius(7px);
     @include box-shadow(inset 0 -2px 3px rgba(255,255,255, .6), inset 0 -4px 7px rgba(102,13,67, .3)); 
@@ -267,6 +296,88 @@ a{
         }
     }
 }
+
+.next-training {
+    font-size: 16px;
+    li {
+        margin-bottom: 8px;
+        color: #625667;
+        &:before {
+            content: "→";
+            margin-right: 8px;
+            color: #a70670;
+            font: bold 12px 'Calibri', Arial, sans-serif;
+        }
+    }
+    strong {
+        @include mb;
+    }
+}
+.next-training__title {
+    margin-bottom: 14px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.coach-scroll {
+    position: relative;
+    padding: 0 15px 0 25px;
+    width: 185px;
+    div {
+        @include mi;
+        font-size: 12px;
+        height: 44px;
+    }
+    a {
+        @include mb;
+        color: #34272f;
+        font-size: 14px;
+        text-decoration: none;
+        &:hover {
+            color: #bc1688;
+        }
+    }
+    img {
+        float: left;
+        margin-right: 15px;
+    }
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -22px;
+        height: 40px;
+        width: 15px;
+        line-height: 40px;
+        background: none;
+        i {
+            display: inline-block;
+        }
+    }
+    .prev {
+        left: 0;
+        &:hover {
+            i {
+                @include sized-sprite($icons, prev-h);
+            }
+        }
+        i {
+            @include sized-sprite($icons, prev);
+        }  
+    }
+    .next {
+        &:hover {
+            i {
+               @include sized-sprite($icons, next-h); 
+            }
+        }
+        i {
+            @include sized-sprite($icons, next);
+        }
+    }
+}
+
+
 
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
