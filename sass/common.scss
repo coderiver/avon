@@ -21,7 +21,7 @@ img,fieldset {border:none;}
 input[type="submit"], button {cursor:pointer;}
 input[type='submit']::-moz-focus-inner{padding:0;border:0}
 textarea {overflow: auto;}
-input {
+input, button {
     margin: 0;
     padding: 0;
     border: 0;
@@ -47,10 +47,11 @@ table {
 /* ----------------------------------------- Main styles --------------------------------------- */
 body{
     min-width: 1000px;
-    color: #474747;
-    @include pts_r;
+    color: #483b50;
+    @include mp;
     font-size: 15px;
-    line-height: 1.4;
+    line-height: 1.3;
+    background: url(../img/body-bg.png) 50% 0 repeat;
 }
 a{
     color:#00919e;
@@ -59,15 +60,18 @@ a{
     }
 }
 .l-layout {
-    margin: 0 auto -1px;
+    margin: 0 auto -120px;
     position: relative;
     min-height: 100%;
     height: auto !important;
     height: 100%;
 }
+.index {
+    width: 976px;
+}
 .push {
     clear: both;
-    height: 1px;
+    height: 120px;
 }
 .wrapper {
     overflow: hidden;
@@ -78,10 +82,198 @@ a{
 /* ------------------------------------ //END Main styles --------------------------------------- */
  
 /* ----------------------------------------- Header --------------------------------------------- */
-/* -------------------------------------- //END Header ------------------------------------------ */
+.header {
+    padding-top: 18px;
+    @extend %clr;
+}
 
+.logo {
+    float: left;
+    margin-right: 53px;
+    a {
+        display: block;
+        width: 297px;
+        height: 90px;
+        background: url(../img/logo.png) 0 0 no-repeat;
+    }
+}
+
+.nav {
+    float: left;
+    padding: 2px;
+    height: 38px;
+    @include background-image(linear-gradient(#ca56a4, #932966));
+    @include box-shadow(0 2px 2px rgba(78,7,50,.15)); 
+    @include border-radius(7px);
+    ul {
+        overflow: hidden;
+    }
+    li {
+        float: left;
+        &:first-child {
+            a {
+                @include border-radius(5px 0 0 5px);  
+                &:before {
+                    display: none;
+                }
+            }
+        }
+        &:last-child {
+            a {
+                @include border-radius(0 5px 5px 0);  
+            }
+        }
+    }
+    a {
+        position: relative;
+        display: block;
+        padding: 0 25px 0 15px;
+        height: 38px;
+        line-height: 38px;
+        color: #34272f;
+        font-size: 14px;
+        text-decoration: none;
+        @include background-image(linear-gradient(#fefdfd, #e2dbdf));
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 38px;
+            width: 1px;
+            @include background-image(linear-gradient(#f4f2f2, #cfc9cd));
+        }
+        &:hover {
+            color: #bc1688;
+            @include box-shadow(inset 0 3px 3px rgba(102,13,67,.66)); 
+            @include background-image(linear-gradient(#fefdfd, #e5ccdd));
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .active {
+        height: 40px;
+        color: #fff;
+        text-shadow: 0 1px 0 rgba(138,75,128, .22);
+        @include box-shadow(inset 0 -3px 4px rgba(255,255,255, .2)); 
+        @include background-image(linear-gradient(#ca56a4, #932966));
+        &:hover {
+            color: #fff;
+            text-shadow: 0 1px 0 rgba(138,75,128, .22);
+            @include box-shadow(inset 0 -3px 4px rgba(255,255,255, .2)); 
+            @include background-image(linear-gradient(#ca56a4, #932966));  
+        }
+    }
+}
+
+.enter {
+    float: right;
+    width: 230px;
+    .btn {
+        padding: 0 23px;
+        height: 43px;
+        line-height: 43px;
+        font-size: 14px;
+    }   
+}
+.enter__city {
+    text-align: right;
+    padding: 4px 60px 0 0;
+    button {
+        position: relative;
+        padding: 0 13px 0 19px;
+        background: none;
+        color: #b6047f;
+        @include mp;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+        }
+        &:before {
+            left: 0;
+            top: 2px;
+            @include sized-sprite($icons, pin);
+        }
+        &:after {
+            right: 0;
+            top: 8px;
+            @include sized-sprite($icons,arr1);
+        }
+    }
+    .drop-down {
+        right: -47px;
+        top: 26px;
+        &:before {
+            left: auto;
+            right: 41px;
+            margin: 0;
+        }
+    }
+}
+/* -------------------------------------- //END Header ------------------------------------------ */
+ 
 /* ------------------------------------- Independent blocks -------------------------------------- */
+.btn {
+    display: inline-block;
+    padding: 0 16px;
+    height: 36px;
+    line-height: 36px;
+    @include mp;
+    color: #fff;
+    font-size: 16px;
+    text-shadow: 0 1px 0 rgba(138,75,128, .22);
+    @include border-radius(7px);
+    @include box-shadow(inset 0 -2px 3px rgba(255,255,255, .6), inset 0 -4px 7px rgba(102,13,67, .3)); 
+    @include background-image(linear-gradient(#c966a9, #9c0567));
+    &:hover {
+        @include box-shadow(inset 0 2px 3px rgba(102,13,67, .75), 
+                            inset 0 -2px 3px rgba(255,255,255, .6),
+                            inset 0 -4px 7px rgba(102,13,67, .3));
+        @include background-image(linear-gradient(#d485bb, #9c0567));
+    }
+}
+
+.drop-down {
+    display: none;
+    position: absolute; 
+    padding: 2px;
+    z-index: 1000;  
+    color: #787275;
+    text-align: left;
+    @include border-radius(7px);
+    @include box-shadow(0 3px 9px rgba(71,58,80, .4));
+    @include background-image(linear-gradient(#ca56a4, #932966));
+    &:before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        margin-left: -9px;
+        @include sized-sprite($icons,arr-drop);
+    }
+    ul {
+        padding: 15px 25px 8px 18px;
+        background: #fff;
+        @include border-radius(5px);
+        overflow: hidden;
+        border-bottom: 1px solid #d4a9c1;
+    }
+    li {
+        margin-bottom: 11px;
+        &:hover {
+            color: #362c3c;
+        }
+    }
+}
+
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 /* ----------------------------------------- Footer ---------------------------------------------- */
+.footer {
+    position: relative;
+    height: 120px;
+    background: rgba(218,176,198, .51);
+}
 /* -------------------------------------- //END Footer ------------------------------------------- */
