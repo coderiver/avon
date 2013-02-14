@@ -310,6 +310,7 @@ a{
     li {
         margin-bottom: 11px;
         font-size: 15px;
+        cursor: pointer;
         &:hover {
             color: #362c3c;
         }
@@ -519,6 +520,119 @@ a{
 .soc__odn {@include sized-sprite($icons, odn);}
 .soc__vk {@include sized-sprite($icons, vk);}
 .soc__fb {@include sized-sprite($icons, fb);}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    background: rgba(255,255,255,.96);
+}
+.popup {
+    position: absolute;
+    z-index: 3000;
+    left: 50%;
+    color: #483b50;
+    p {
+        font-size: 16px;
+    }
+}
+.popup_choose-city {
+    padding: 10px;
+    width: 350px;
+    margin-left: -175px;
+    top: 100px;
+    .select {
+        margin: 24px auto 26px;
+    }
+    .popup__info {
+        color: #a29ba5;
+        font-size: 14px;
+    }
+    .popup__title {
+        margin-top: 19px;
+    }
+}
+.popup__title {
+    display: block;
+    font-size: 24px;
+    @include mb;
+    text-align: center; 
+    margin-bottom: 24px;
+}
+.close { 
+    display: block;
+    background: none;
+    color: #483b50;
+    font-size: 18px;
+    width: 85px;
+    margin: 0 auto;
+    @include mr;
+    i {
+        display: inline-block;
+        margin-right: 7px;
+        @include sized-sprite($icons, close);
+    }
+}
+
+// form's elements
+.select { 
+    position: relative;
+    padding: 2px;
+    width: 200px;
+    @include border-radius(10px);
+    @include background-image(linear-gradient(#ca57a5, #932965));
+    button {
+        display: block; 
+        position: relative;
+        z-index: 1001;
+        height: 31px;
+        line-height: 31px;
+        width: 100%;
+        @include mr;
+        @include border-radius(7px);
+        text-align: left;
+        @include background-image(linear-gradient(#fcfdfc, #d9cfd6));
+        span {
+            padding-left: 18px;
+            font-size: 14px;
+            color: #34272f;
+        }
+        i {
+            position: absolute;
+            right: -2px;
+            top: -2px; 
+            @include sized-sprite($icons, select);
+        }
+    }
+    .drop-down {
+        top: 33px;
+        left: -2px; 
+        width: 100%;
+        padding-top: 0;
+        line-height: 1;
+        &:before {
+            display: none;
+        }
+    }
+    .active {
+        @include border-radius(7px 7px 0 0);
+        i { 
+            @include sized-sprite($icons, select-act);
+        }
+    }
+}
+.select_active {
+    @include border-radius(10px 10px 0 0);
+    .drop-down {
+        @include border-radius(0 0 10px 10px);
+        ul {
+            @include border-radius(0 0 8px 8px);
+        }
+    }
+}
 
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 

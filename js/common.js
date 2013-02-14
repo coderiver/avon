@@ -11,6 +11,13 @@ $(document).ready(function() {
         }
     });
 
+// ---------------- Chose Other city -------------------------- //
+    $(".drop-down li").click(function(){
+        var val = $(this).text();
+        $(this).parent().parent().prev().text(val);
+    });
+
+
 // ----------------  init cycle plugin -------------------------- //
     $(".coach-scroll .scroll").cycle({ 
         fx:      'scrollHorz',
@@ -41,4 +48,25 @@ $(document).ready(function() {
             return '<button></button>'; // whatever markup you want
         }
     });
+
+// ---------------- close choose city popup -------------------------- //
+$(".popup_choose-city .close").click(function(){
+    $(this).parent().fadeOut();
+    $(".overlay").fadeOut();
+});
+
+// ---------------- Choose city  drop-list-------------------------- //
+    $(".select button").click(function(){
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+            $(this).parent().removeClass("select_active");
+            $(this).children(".drop-down").fadeOut();
+        }
+        else {
+            $(this).addClass("active");
+            $(this).parent().addClass("select_active");
+            $(this).children(".drop-down").fadeIn();
+        }
+    });   
+
 });
