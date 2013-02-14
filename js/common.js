@@ -31,4 +31,14 @@ $(document).ready(function() {
     $(".nav-0 span").text("Тренера");
     $(".nav-1 span").text("Тренинги");
     $(".nav-2 span").text("Галерея");
+
+    $(".img-scroll .scroll").cycle({ 
+        timeout:  0,
+        speed: 1000,
+        timeout:  2000,
+        pager:  '.img-scroll__nav',
+        pagerAnchorBuilder: function(index, el) {
+            return '<button></button>'; // whatever markup you want
+        }
+    });
 });

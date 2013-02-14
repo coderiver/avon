@@ -10,14 +10,14 @@
     overflow: hidden;
 }
 .slide-1 {
-    background: url(../img/slide1.png) 74% 100% no-repeat;
+    background: url(../img/slide1.png) 40px 100% no-repeat;
 }
 .slide__text {
     float: left;
-    padding-top: 105px;
+    padding-top: 108px;
     width: 280px;
     p {
-        margin-bottom: 17px;
+        margin-bottom: 13px;
     }
 }
 .slide__title {
@@ -28,16 +28,16 @@
 }
 .slide__info {
     float: right;
-    padding: 40px 20px 0 0;
+    padding: 50px 8px 0 0;
     .next-training  {
         padding-left: 125px;
     }
     .coach-scroll {
-        margin: 58px 0 0 142px;
+        margin: 66px 0 0 142px;
     }
 }
 .slide__big-title {
-    margin-bottom: 33px;
+    margin-bottom: 36px;
     padding-left: 41px;
     h2 {
         position: relative;
@@ -57,6 +57,7 @@
     }
     span {
         display: block;
+        margin-bottom: -3px;
     }
 
     b {
@@ -65,6 +66,7 @@
         font-size: 48px;
     }
     .coach {
+        padding-left: 5px;
         @include mi;
         color: #6b6468;
         font-size: 16px;
@@ -78,31 +80,62 @@
 }
 
 .slide-2 {
-    
+    background: url(../img/slide2.png) -48px 100% no-repeat;
+    .training-date {
+        margin: 0 0 48px 125px;
+        padding-bottom: 4px;
+    }
+    .btn-gray {
+        margin: 19px 0 0 15px;
+    }
 }
-
+.slide-3 {
+    padding-top: 19px;
+    .slide__info {
+        padding-top: 74px;
+    }
+    .gallery-link {
+        margin-bottom: 35px;
+    }
+    .slide__info-title {
+        margin-bottom: 24px;
+        color: #483b50;
+        font-size: 18px;
+        @include mb;
+    }
+    .slide__text {
+        padding-top: 57px;
+    }
+}
 .slider-nav {
     position: absolute;
-    bottom: 0;
+    bottom: 39px;
     left: 0;
     z-index: 1000;
+    padding-left: 18px;
     width: 100%;
     text-align: center;
     button {
         position: relative;
         display: inline-block;
         margin-right: 35px;
-        width: 100px;
-        height: 67px;
-        line-height: 84px;
+        width: 104px;
+        height: 78px;
+        line-height: 110px;
         background: none;
         text-align: center;
+        @include border-radius(10px);
+        &:hover {
+            span, i {
+                opacity: 1;
+            }
+        }
     }
     span {
         color: #b5007d;
         @include mb;
         font-size: 18px;
-        opacity: 0.7;
+        opacity: .6;
         &:hover {
             opacity: 1;
         }
@@ -110,24 +143,22 @@
     i {
         position: absolute;
         left: 50%;
-        top: 10px;
+        top: 21px;
         margin-left: -11px; 
+        opacity: 0.6;
+        &:hover {
+            opacity: 1;
+        }
     } 
     .activeSlide {
-        border: 2px solid #c754a1;
-        @include border-radius(7px);
-        @include background-image(linear-gradient(rgba(253,253,253,.9), rgba(224,212,218,.9)));
-        &:before { 
-            content: "";
-            position: absolute;
-            top: -10px;
-            left: 50%; 
-            margin-left: -9px; 
-            @include sized-sprite($icons,arr2);
-        }
+        @include box-shadow(0 5px 3px -3px rgba(0,0,0,.2));
+        @include sized-sprite($icons, slide-nav);
         span {
-            opacity: 1; 
             color: #b5007d;
+            opacity: 1;
+        }
+        i {
+            opacity: 1;
         }
     }
     .nav-0 { 
@@ -146,3 +177,40 @@
         }
     }
 } 
+
+.img-scroll {
+    float: left;
+    width: 450px;
+}
+.img-scroll__title {
+    margin-bottom: 10px;
+    font-size: 22px;
+    @include mb;
+    color: #34272f;
+    text-align: center;
+}
+.img-scroll__wrap {
+    position: relative;
+    img {
+        @include border-radius(5px);
+        @include box-shadow(0 3px 7px rgba(0,0,0, .3));
+    }
+}
+.img-scroll__nav {
+    position: absolute;
+    top: 20px;
+    left: 18px;
+    z-index: 1000;
+    button {
+        display: inline-block;
+        margin-right: 4px;
+        width: 8px;
+        height: 8px;
+        background: #b8b3b1;
+        @include border-radius(1px);
+    }
+    .activeSlide {
+        background: #f9f8f9;
+        @include box-shadow(0 0 0 1px #f9f8f9);
+    }
+}

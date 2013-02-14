@@ -89,7 +89,7 @@ a{
 
 .logo {
     float: left;
-    margin-right: 53px;
+    margin: 5px 61px 0 0;
     a {
         display: block;
         width: 297px;
@@ -104,7 +104,7 @@ a{
     height: 38px;
     @include background-image(linear-gradient(#ca56a4, #932966));
     @include box-shadow(0 2px 2px rgba(78,7,50,.15)); 
-    @include border-radius(7px);
+    @include border-radius(10px);
     ul {
         overflow: hidden;
     }
@@ -112,7 +112,7 @@ a{
         float: left;
         &:first-child {
             a {
-                @include border-radius(5px 0 0 5px);  
+                @include border-radius(8px 0 0 8px);  
                 &:before {
                     display: none;
                 }
@@ -120,14 +120,14 @@ a{
         }
         &:last-child {
             a {
-                @include border-radius(0 5px 5px 0);  
+                @include border-radius(0 8px 8px 0);  
             }
         }
     }
     a {
         position: relative;
         display: block;
-        padding: 0 25px 0 15px;
+        padding: 0 22px 0 15px;
         height: 38px;
         line-height: 38px;
         color: #34272f;
@@ -179,7 +179,7 @@ a{
 }
 .enter__city {
     text-align: right;
-    padding: 4px 60px 0 0;
+    padding: 6px 60px 0 0;
     button {
         position: relative;
         padding: 0 13px 0 19px;
@@ -253,14 +253,32 @@ a{
     font-size: 16px;
     text-decoration: none;
     text-shadow: 0 1px 0 rgba(138,75,128, .22);
-    @include border-radius(7px);
-    @include box-shadow(inset 0 -2px 3px rgba(255,255,255, .6), inset 0 -4px 7px rgba(102,13,67, .3)); 
+    @include border-radius(10px);
+    @include box-shadow(inset 0 -2px 3px rgba(255,255,255, .5), inset 0 -4px 7px rgba(102,13,67, .3)); 
     @include background-image(linear-gradient(#c966a9, #9c0567));
     &:hover {
         @include box-shadow(inset 0 2px 3px rgba(102,13,67, .75), 
-                            inset 0 -2px 3px rgba(255,255,255, .6),
+                            inset 0 -2px 3px rgba(255,255,255, .5),
                             inset 0 -4px 7px rgba(102,13,67, .3));
         @include background-image(linear-gradient(#d485bb, #9c0567));
+    }
+}
+
+.btn-gray {
+    display: inline-block;
+    padding: 0 16px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 16px;
+    color: #be1f8c;
+    text-decoration: none;
+    border: 2px solid #ac4187;
+    @include border-radius(10px);
+    @include background-image(linear-gradient(#fcfcfd, #dfd7dc));
+    @include box-shadow(0 1px 3px rgba(0,0,0, .2));
+    &:hover {
+        @include background-image(linear-gradient(#fff, #d5adc8));
+        @include box-shadow(0 1px 3px rgba(0,0,0, .2), inset 0 1px 3px rgba(102,13,67,.66));
     }
 }
 
@@ -271,7 +289,7 @@ a{
     z-index: 1000;  
     color: #787275;
     text-align: left;
-    @include border-radius(7px);
+    @include border-radius(10px);
     @include box-shadow(0 3px 9px rgba(71,58,80, .4));
     @include background-image(linear-gradient(#ca56a4, #932966));
     &:before {
@@ -285,12 +303,13 @@ a{
     ul {
         padding: 15px 25px 8px 18px;
         background: #fff;
-        @include border-radius(5px);
+        @include border-radius(7px);
         overflow: hidden;
         border-bottom: 1px solid #d4a9c1;
     }
     li {
         margin-bottom: 11px;
+        font-size: 15px;
         &:hover {
             color: #362c3c;
         }
@@ -321,7 +340,7 @@ a{
 
 .coach-scroll {
     position: relative;
-    padding: 0 15px 0 25px;
+    padding: 0 15px 0 32px;
     width: 185px;
     div {
         @include mi;
@@ -345,11 +364,12 @@ a{
         position: absolute;
         top: 50%;
         right: 0;
-        margin-top: -22px;
+        margin-top: -25px;
         height: 40px;
         width: 15px;
         line-height: 40px;
         background: none;
+        text-align: right;
         i {
             display: inline-block;
         }
@@ -377,7 +397,128 @@ a{
     }
 }
 
+.training-date {
+    overflow: hidden;
+    .title {
+        margin-bottom: 17px;
+        font-size: 18px;
+        font-weight: normal;
+    }
+}
+.calendar {
+    float: left;
+    margin-right: 14px;
+    text-align: center;
+    @include sized-sprite($icons, calendar);
+    span {
+        display: block;
+        margin-bottom: 2px;
+        color: #fff;
+        font-size: 12px;
+    }
+    strong {
+        color: #b6047f;
+        font-size: 30px;
+        @include mb;
+    }
+}
+.training-date__descr {
+    overflow: hidden;
+    ul {
+        color: #625667;
+        font-size: 15px;
+    }
+    span {
+        color: #a19ea2;
+    }
+}
+.training-date__title {
+    margin-bottom: 17px;
+    font-size: 18px;
+    @include mb;
+    color: #34272f;
+}
 
+.gallery-link {
+    text-align: center;
+    a {
+        font-size: 14px;
+        color: #483b50;
+        text-decoration: none;
+        &:hover {
+            color: #b5007d;
+        }
+    }
+}
+.gallery-link__wrap {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 5px;
+    height: 100px;
+    width: 100px;
+    a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        padding: 2px;
+        width: 96px;
+        height: 96px;
+        overflow: hidden;
+        @include border-radius(4px);
+        @include background-image(linear-gradient(#ca57a5, #932965));
+        span {
+            position: relative;
+            display: block;
+            padding: 8px;
+            width: 80px;
+            height: 80px;
+            background: #dcd4d8;
+            @include border-radius(3px);
+        }
+    }
+    img {
+        display: block;
+        @include border-radius(3px);
+    }
+    .first {
+        top: -1px;
+        z-index: 1;
+        @include rotate(10);
+    }
+    .second {
+        top: -1px;
+        z-index: 2;
+        @include rotate(5);
+    }
+    span {
+        position: absolute; 
+        top: 0;
+        left: 0;
+        z-index: 4;
+        font-size: 11px;
+        line-height: 30px;
+        color: #fff;
+        text-align: left;
+        @include sized-sprite($icons, img-corner);
+        strong {
+            display: inline-block;
+            width: 22px;
+            text-align: center;
+        }
+    }
+}
+
+.soc {
+    overflow: hidden;
+    a {
+        float: left;
+        margin-right: 12px;
+    } 
+}
+.soc__odn {@include sized-sprite($icons, odn);}
+.soc__vk {@include sized-sprite($icons, vk);}
+.soc__fb {@include sized-sprite($icons, fb);}
 
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
@@ -386,5 +527,34 @@ a{
     position: relative;
     height: 120px;
     background: rgba(218,176,198, .51);
+}
+.footer__wrap {
+    margin: 0 auto;
+    padding-top: 33px;
+    width: 976px;
+    overflow: hidden;
+}
+.footer__nav {
+    float: left;
+    padding-top: 6px;
+    overflow: hidden;
+    li {
+        float: left;
+        margin-right: 34px;
+    }
+    a {
+        font-size: 14px;
+        color: #483b50;
+    }
+}
+.footer__info  {
+    float: right;
+    .soc {
+        margin-right: 14px;
+    }
+    .soc, .copy {
+        display: inline-block;
+        vertical-align: middle;
+    }
 }
 /* -------------------------------------- //END Footer ------------------------------------------- */
