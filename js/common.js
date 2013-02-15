@@ -1,5 +1,9 @@
 $(document).ready(function() {
-// ---------------- Chose city  drop-list-------------------------- //
+// ---------------- Datapicker -------------------------- //
+    $(function() {
+        $( ".js-date" ).datepicker();
+    });
+    // ---------------- Chose city  drop-list-------------------------- //
     $(".enter__city button").click(function(){
         if ($(this).hasClass("js-act")) {
             $(this).removeClass("js-act");
@@ -63,7 +67,7 @@ $(".js-add-comment").click(function(){
 
 // ---------------- More -------------------------- //
     $(".js-more").hide();
-    $(".more div").click(function(){
+    $(".more span").click(function(){
         $(this).hide();
         $(this).parent().prev().slideDown();
     });

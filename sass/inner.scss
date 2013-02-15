@@ -265,18 +265,24 @@
     font-size: 24px;
     @include mb;
     color: #a39da7;
-    div {
-        cursor: pointer;
-    }
     i {
-        display: inline-block;
-        margin-right: 10px;
+        position: absolute;
+        left: -30px;
+        top: 6px;
         @include sized-sprite($icons, more);
-        vertical-align: middle;
     }
     span {
+        position: relative;
         border-bottom: 1px dotted;
-        vertical-align: middle;
+        vertical-align: middle; 
+        cursor: pointer;
+        &:hover {
+            color: #6d6273;
+            border-bottom: 0;
+            i {
+                @include sized-sprite($icons, more-h);
+            }
+        }
     }
 }
 
@@ -307,11 +313,15 @@
         @include sized-sprite($icons, glass-h);
     }
 }
-.download_shed {
+.download-shed {
     float: right;
     position: relative;
     font-size: 16px;
     color: #be1f8c;
+    &:hover {
+        text-decoration: none;
+        color: #cb4ca3;
+    }
     i {
         position: absolute;
         left: -37px;
@@ -347,6 +357,9 @@
     font-size: 16px;
     @include user-select(none);
     cursor: pointer;
+    &:hover {
+        color: #be1f8c;
+    }
     span {
         border-bottom: 1px dotted;
     }
