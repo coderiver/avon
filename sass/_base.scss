@@ -119,20 +119,23 @@ $break-large: 1180px;
     display: block;
     height: 0;
     clear: both;
-    visibility: hidden;
+    visibility: hidden; 
     }
 }
 
 // placeholder color
-@mixin placeholder-color($color) {
+@mixin placeholder($color, $font-family) {
   &.placeholder {
     color: $color;
+    font-family: $font-family;
   }
   &:-moz-placeholder {
     color: $color;
+    font-family: $font-family;
   }
   &::-webkit-input-placeholder {
     color: $color;
+    font-family: $font-family;
   }
 }
 

@@ -34,7 +34,7 @@ ul,ol {
     list-style-type: none;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header,
+article, aside, details, figcaption, figure, footer, header, 
 hgroup, menu, nav, section { 
     display: block;
 }
@@ -46,12 +46,18 @@ table {
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
 body{
-    min-width: 1000px;
+    min-width: 1045px;
     color: #483b50;
     @include mr;
     font-size: 15px;
     line-height: 1.3;
     background: url(../img/body-bg.png) 50% 0 repeat;
+}
+.index {
+    .l-layout,
+    .footer__wrap {
+        width: 976px; 
+    }
 }
 a{
     color:#00919e;
@@ -60,15 +66,14 @@ a{
     }
 }
 .l-layout {
+    width: 90%;
     margin: 0 auto -120px;
     position: relative;
     min-height: 100%;
     height: auto !important;
     height: 100%;
 }
-.index {
-    width: 976px;
-}
+
 .push {
     clear: both;
     height: 120px;
@@ -79,6 +84,8 @@ a{
 .wrap {
     @extend %clr;
 }
+
+
 /* ------------------------------------ //END Main styles --------------------------------------- */
  
 /* ----------------------------------------- Header --------------------------------------------- */
@@ -281,7 +288,9 @@ a{
         @include box-shadow(0 1px 3px rgba(0,0,0, .2), inset 0 1px 3px rgba(102,13,67,.66));
     }
 }
-
+button.btn-gray {
+    line-height: 31px;
+}
 .drop-down {
     display: none;
     position: absolute; 
@@ -406,6 +415,17 @@ a{
         font-weight: normal;
     }
 }
+
+.training-date_big {
+    .training-date__title {
+        margin-bottom: 6px;
+        font-size: 20px;
+    }
+    .badge {
+        margin-bottom: 10px;
+    }
+}
+
 .calendar {
     float: left;
     margin-right: 14px;
@@ -421,8 +441,25 @@ a{
         color: #b6047f;
         font-size: 30px;
         @include mb;
+    } 
+}
+
+.calendar_big {
+    @include sized-sprite($icons, calendar_big);
+    span {
+        margin-bottom: 6px;
     }
 }
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    color: #947a89;
+    font-size: 12px;
+    background: #e6e0e4;
+    @include border-radius(10px);
+}
+
 .training-date__descr {
     overflow: hidden;
     ul {
@@ -431,6 +468,13 @@ a{
     }
     span {
         color: #a19ea2;
+    }
+    a {
+        color: #625667;
+        text-decoration: none;
+        &:hover {
+            color: #b00777;
+        }
     }
 }
 .training-date__title {
@@ -521,7 +565,33 @@ a{
 .soc__vk {@include sized-sprite($icons, vk);}
 .soc__fb {@include sized-sprite($icons, fb);}
 
+.soc-big {
+    float: right;
+    width: 84px;
+    a, 
+    span {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+}
+.soc-big__vk {@include sized-sprite($icons, vk2);} 
+.soc-big__odn {@include sized-sprite($icons, odn2);}
+.soc-big__fb {
+    @include sized-sprite($icons, fb2);
+    &:hover {
+        .fb-counter {
+            display: block;
+            cursor: pointer;
+        }
+    }
+    .fb-counter {
+        display: none;
+    }
+}
+
 .overlay {
+    display: none;
     position: fixed;
     left: 0;
     top: 0;
@@ -531,6 +601,7 @@ a{
     background: rgba(255,255,255,.96);
 }
 .popup {
+    display: none;
     position: absolute;
     z-index: 3000;
     left: 50%;
@@ -539,24 +610,10 @@ a{
         font-size: 16px;
     }
 }
-.popup_choose-city {
-    padding: 10px;
-    width: 350px;
-    margin-left: -175px;
-    top: 100px;
-    .select {
-        margin: 24px auto 26px;
-    }
-    .popup__info {
-        color: #a29ba5;
-        font-size: 14px;
-    }
-    .popup__title {
-        margin-top: 19px;
-    }
-}
+
 .popup__title {
     display: block;
+    margin-top: 19px;
     font-size: 24px;
     @include mb;
     text-align: center; 
@@ -570,6 +627,12 @@ a{
     width: 85px;
     margin: 0 auto;
     @include mr;
+    &:hover { 
+        color: #918996;
+        i {
+            @include sized-sprite($icons, close-h);
+        }
+    }
     i {
         display: inline-block;
         margin-right: 7px;
@@ -634,6 +697,155 @@ a{
     }
 }
 
+.field {
+    margin-top: 36px;
+    label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 16px;
+    }
+}
+.field_submit {
+    text-align: center;
+}
+.input {
+    padding: 0 5px 0 13px;
+    width: 100%;
+    height: 28px;
+    color: #483b50;
+    @include mr;
+    font-size: 12px;
+    border: 1px solid #e0dbdf;
+    @include box-sizing(border-box);
+    @include border-radius(10px);
+    @include placeholder(#483b50, 'Conv_MyriadPro-It');
+    @include box-shadow(inset 0 0 2px rgba(0,0,0,.1), inset 1px 1px 3px rgba(0,0,0,.3));
+    @include background-image(linear-gradient(#f7f0f4, #f7f2f5));
+    &:focus {
+        border: 1px solid #fafc93;
+        border-bottom: 1px solid #feeb58;
+        @include box-shadow(inset 1px 1px 5px rgba(0,0,0,.4), 0 1px 0 #f1cad5);
+    }
+}
+.textarea {
+    padding: 10px 13px;
+    min-height: 133px;
+}
+.filter-wrapper {
+    float: left;
+    position: relative;
+    width: 429px;
+    .search {
+        position: absolute;
+        right: -43px;
+        top: 50%;
+        margin-top: -24px;
+    }
+}
+.filter {
+    padding: 2px;
+    @include border-radius(10px);
+    @include background-image(linear-gradient(#ca56a5, #932965));
+}
+.filter__wrap {
+    padding: 0 20px;
+    background: #fff;
+    height: 51px;
+    line-height: 51px;
+    @include border-radius(8px);
+}
+
+@include keyframes(anim-1) {
+    from {
+        left: 0;
+    }
+    
+    50% {
+        left: 50%;
+    }
+    
+    to {
+        right: 0;
+        left: auto;
+    }
+}
+
+@include keyframes(anim-2) {
+    from {
+        right: 0;
+        left: auto;
+    }
+    
+    50% {
+        left: 50%;
+    }
+    
+    to {
+        left: 0;
+    }
+}
+.switch {
+   color: #483b50;
+   font-size: 16px;
+   @include mb;
+   @include transition(all, 1s,ease-in-out);
+   label {
+       cursor: pointer;
+       vertical-align: middle;
+   }
+   .key {
+       color: #b6b1b9;
+       cursor: pointer;
+       border-bottom: 1px dotted;
+       @include user-select(none);
+       vertical-align: top;
+   }
+   .active {
+       color: #483b50;
+       border: 0;
+   }
+}
+.switch__name {
+    display: inline-block;
+    margin-right: 5px;
+}
+.switch__wrap {
+    position: relative;
+    display: inline-block;
+    margin: -5px 12px 0;
+    width: 35px;
+    height: 15px;
+    border: 1px solid #bdaab6;
+    vertical-align: middle;
+    @include border-radius(10px);
+    @include background-image(linear-gradient(#d9ccd6, #dcd0d9));
+    @include box-shadow(inset 0 0 5px rgba(0,0,0,.2));
+    i {
+        position: absolute;
+        left: 0;
+        top: -1px;
+        width: 15px;
+        height: 15px;
+        @include border-radius(50%);
+        border: 1px solid #90175b;
+        @include background-image(linear-gradient(#ca4a9c, #93145b));
+        @include box-shadow(0 2px 4px rgba(0,0,0,.4), inset 0 0 1px rgba(255,255,255,.1));
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        z-index: 2;
+    }
+    input + i {
+        //@include animation(anim-1 1s linear 1);
+    }
+    input:checked + i {
+        right: 0;
+        left: auto;
+        //@include animation(anim-2 1s linear 1);
+    }
+}
+
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 /* ----------------------------------------- Footer ---------------------------------------------- */
@@ -643,9 +855,9 @@ a{
     background: rgba(218,176,198, .51);
 }
 .footer__wrap {
+    width: 90%;
     margin: 0 auto;
     padding-top: 33px;
-    width: 976px;
     overflow: hidden;
 }
 .footer__nav {

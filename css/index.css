@@ -46,12 +46,12 @@
 .slider-nav span:hover { opacity: 1; }
 .slider-nav i { position: absolute; left: 50%; top: 21px; margin-left: -11px; opacity: 0.6; }
 .slider-nav i:hover { opacity: 1; }
-.slider-nav .activeSlide { -webkit-box-shadow: 0 5px 3px -3px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 5px 3px -3px rgba(0, 0, 0, 0.2); box-shadow: 0 5px 3px -3px rgba(0, 0, 0, 0.2); background: url('../img/icons-s64e55a6674.png') 0 0 no-repeat; width: 104px; height: 78px; }
+.slider-nav .activeSlide { -webkit-box-shadow: 0 5px 3px -3px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 5px 3px -3px rgba(0, 0, 0, 0.2); box-shadow: 0 5px 3px -3px rgba(0, 0, 0, 0.2); background: url('../img/icons-sedafb16436.png') 0 0 no-repeat; width: 104px; height: 78px; }
 .slider-nav .activeSlide span { color: #b5007d; opacity: 1; }
 .slider-nav .activeSlide i { opacity: 1; }
-.slider-nav .nav-0 i { background: url('../img/icons-s64e55a6674.png') 0 -248px no-repeat; width: 20px; height: 23px; }
-.slider-nav .nav-1 i { background: url('../img/icons-s64e55a6674.png') 0 -380px no-repeat; width: 23px; height: 23px; }
-.slider-nav .nav-2 i { background: url('../img/icons-s64e55a6674.png') 0 -347px no-repeat; width: 23px; height: 23px; }
+.slider-nav .nav-0 i { background: url('../img/icons-sedafb16436.png') 0 -420px no-repeat; width: 20px; height: 23px; }
+.slider-nav .nav-1 i { background: url('../img/icons-sedafb16436.png') 0 -618px no-repeat; width: 23px; height: 23px; }
+.slider-nav .nav-2 i { background: url('../img/icons-sedafb16436.png') 0 -585px no-repeat; width: 23px; height: 23px; }
 
 .img-scroll { float: left; width: 450px; }
 
@@ -63,3 +63,9 @@
 .img-scroll__nav { position: absolute; top: 20px; left: 18px; z-index: 1000; }
 .img-scroll__nav button { display: inline-block; margin-right: 4px; width: 8px; height: 8px; background: #b8b3b1; -webkit-border-radius: 1px; -moz-border-radius: 1px; -ms-border-radius: 1px; -o-border-radius: 1px; border-radius: 1px; }
 .img-scroll__nav .activeSlide { background: #f9f8f9; -webkit-box-shadow: 0 0 0 1px #f9f8f9; -moz-box-shadow: 0 0 0 1px #f9f8f9; box-shadow: 0 0 0 1px #f9f8f9; }
+
+.overlay_choose-city { display: block; }
+
+.popup_choose-city { display: block; padding: 10px; width: 350px; margin-left: -175px; top: 100px; }
+.popup_choose-city .select { margin: 24px auto 26px; }
+.popup_choose-city .popup__info { color: #a29ba5; font-size: 14px; }

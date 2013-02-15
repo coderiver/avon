@@ -1,1 +1,362 @@
 @import "base";
+.l-cols {
+    padding: 21px 0 25px;
+    overflow: hidden;
+}
+.sidebar {
+    float: left;
+    width: 215px;
+    img {
+        @include border-radius(10px);
+    }
+}
+.main {
+    overflow: hidden;
+}
+
+.title-l-1 {
+    @include mb; 
+    font-size: 30px;
+    color: #34272f;
+}
+
+.title-l-2 {
+    font-size: 22px;
+    color: #483b50;
+    @include mb;
+    span {
+        color: #b5007d;
+    }
+}
+
+.title-l-3 {
+    font-size: 18px;
+    color: #625667;
+    @include mb;
+}
+
+.content {
+    font-size: 14px;
+    color: #6b6468;
+    h1 {
+        @include mb; 
+        font-size: 30px;
+        color: #34272f;
+    }
+    h2 {
+        margin: 12px 0;
+        font-size: 22px;
+        color: #483b50;
+        @include mb;
+    }
+    h3 {
+        margin: 10px 0 6px;
+        font-size: 18px;
+        color: #625667;
+        @include mb;
+    }
+    p {
+        margin-bottom: 7px;
+    }
+}
+
+.breadcrumbs {
+    margin-bottom: 2px;
+    a, span {
+        position: relative;
+        display: inline-block;
+        color: #adaaac;
+        font-size: 14px;
+        margin: 0 5px;
+        &:before {
+            content: "/";
+            position: absolute;
+            left: -8px;
+            top: 0;
+        }
+    }
+    a {
+        color: #8e8892;
+    }
+    .home {
+        margin-left: 0;
+        @include sized-sprite($icons, home);
+        &:before {
+            display: none;
+        }
+    }
+} 
+.page-head {
+    margin-bottom: 17px;
+    .title-l-1 {
+        display: inline-block;
+    }
+    strong {
+        display: block;
+        color: #947a89;
+        font-size: 16px;
+        @include mi;
+    }
+}
+
+.tab {
+    margin-top: 36px;
+    li {
+        padding: 2px;
+        width: 158px;
+        font-size: 18px;
+        margin-bottom: 3px;
+    }
+    a {
+        display: block;
+        padding-left: 19px;
+        width: 139px;
+        height: 40px;
+        line-height: 40px;
+        text-decoration: none;
+        color: #918996;
+        &:hover {
+            color: #b5007d;
+        }
+    }
+    span {
+        border-bottom: 1px dotted;
+    }
+    .active {
+        position: relative;
+        @include border-radius(10px);
+        @include background-image(linear-gradient(#ca56a4, #932966));
+        &:after {
+            content: "";
+            position: absolute;
+            right: -6px;
+            top: 15px;
+            @include sized-sprite($icons, arr3);
+        }
+        a { 
+            @include border-radius(8px);
+            @include background-image(linear-gradient(#fdfdfd, #ded5db)); 
+        }
+        span {
+            border-bottom: 0;
+            color: #483b50;
+        }
+    }
+}
+
+// Coach page
+
+.about-coach {
+    float: left;
+    position: relative;
+    margin: 5px 0 42px 48px;
+    padding-left: 40px;
+    width: 70%;
+    font-size: 18px;
+    &:before {
+        content: "“";
+        position: absolute;
+        left: 0;
+        top: -12px;
+        color: #d683ba;
+        font-size: 63px;
+    }
+}
+.ask-coach {
+    margin-bottom: 70px;
+    padding-left: 70px;
+    clear: both;
+    .btn {
+        margin-right: 27px;
+    }
+}
+.to-cite-link {
+    color: #be1f8c;
+    font-size: 16px;
+    text-decoration: none;
+    i {
+        display: inline-block;
+        margin-right: 9px;
+        @include sized-sprite($icons, link);
+    }
+    span {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.comments-wrap {
+    padding-bottom: 4px;
+    .btn-gray {
+        display: inline-block;
+    }
+}
+
+.comments-head {
+    margin-bottom: 30px;
+    .title-l-2 {
+        display: inline-block;
+        margin-right: 24px;
+    }
+}
+.comment {
+    margin-bottom: 35px;
+    color: #6b6468;
+    font-size: 14px;
+}
+.comment__img {
+    float: left;
+    margin-right: 19px;
+}
+.comment__wrap {
+    overflow: hidden;
+    i {
+        display: block;
+        margin: 2px 0 5px;
+        color: #6b6468;
+        @include mi;
+        font-size: 13px;
+    }
+    p {
+        
+    }
+}
+.comment__author {
+    font-size: 16px;
+    @include mb; 
+    color: #34272f;
+    text-decoration: none;
+}
+.comment__date {
+    color: #a19ca4;
+    font-size: 12px;
+    i {
+        display: inline-block;  
+        margin-right: 5px;
+        vertical-align: middle;
+        @include sized-sprite($icons, clock);
+    }
+}
+
+.popup_add-comment {
+    margin-left: -203px;
+    top: 100px;
+    width: 406px;
+    div {
+        text-align: center;
+    }
+    .title-l-1,
+    img  {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    img {
+        margin-right: 16px;
+    }
+    .btn {
+        margin: 22px auto 0;
+    }
+} 
+
+.more {
+    text-align: center;
+    font-size: 24px;
+    @include mb;
+    color: #a39da7;
+    div {
+        cursor: pointer;
+    }
+    i {
+        display: inline-block;
+        margin-right: 10px;
+        @include sized-sprite($icons, more);
+        vertical-align: middle;
+    }
+    span {
+        border-bottom: 1px dotted;
+        vertical-align: middle;
+    }
+}
+
+.filter_sort {
+    position: relative;
+    z-index: 2;
+    width: 425px;
+}
+.search {
+    display: inline-block;
+    padding: 10px 17px 9px 28px;
+    @include border-radius(10px);
+    @include box-shadow(inset 0 -2px 3px rgba(255,255,255, .5), inset 0 -4px 7px rgba(102,13,67, .3)); 
+    @include background-image(linear-gradient(#cb5ba9, #7c0e47));
+    .input {
+        display: inline-block;
+        width: 270px;
+        margin-right: 7px;
+        vertical-align: middle;
+    }
+}
+.search__submit {
+    display: inline-block;
+    @extend %hide-text;
+    vertical-align: middle;
+    @include sized-sprite($icons, glass);
+    &:hover {
+        @include sized-sprite($icons, glass-h);
+    }
+}
+.download_shed {
+    float: right;
+    position: relative;
+    font-size: 16px;
+    color: #be1f8c;
+    i {
+        position: absolute;
+        left: -37px;
+        top: 0;
+        @include sized-sprite($icons, download);
+    }
+}
+.training-list {
+    clear: both;
+    padding-top: 45px;
+    .training-date_big {
+        float: left;
+    }
+    .date-more-wrap {
+        float: right;
+    }
+}
+.training {
+    margin-bottom: 46px;
+}
+.training__descr {
+    clear: both;
+    padding: 22px 0 0 70px;
+    .btn-gray {
+        margin-top: 15px;
+    }
+}
+
+.date-more {
+    position: relative;
+    margin-bottom: 9px;
+    color: #6b6468;
+    font-size: 16px;
+    @include user-select(none);
+    cursor: pointer;
+    span {
+        border-bottom: 1px dotted;
+    }
+    strong {
+        @include mb;
+    }
+    i {
+        position: absolute;
+        left: -26px;
+        top: 4px;
+        @include sized-sprite($icons, wtf);
+    }
+}
