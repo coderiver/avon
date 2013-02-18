@@ -284,6 +284,7 @@
     font-size: 24px;
     @include mb;
     color: #a39da7;
+    text-transform: uppercase;
     i {
         position: absolute;
         left: -30px;
@@ -568,5 +569,23 @@
     }
     .training-date__title {
         margin-bottom: 8px;
+    }
+}
+
+.gallery {
+    margin-right: -25px;
+    padding-top: 26px;
+    a {
+        display: inline-block;
+        margin: 0 18px 18px 0;
+        @include border-radius(3px);
+        overflow: hidden;
+        img {
+            display: block;
+            @include border-radius(3px); 
+        }
+    } 
+    .more {
+        margin-top: 20px;
     }
 }

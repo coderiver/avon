@@ -186,8 +186,14 @@
     margin-bottom: 10px;
     font-size: 22px;
     @include mb;
-    color: #34272f;
     text-align: center;
+    a {
+        color: #34272f;
+        text-decoration: none;
+        &:hover {
+            color: #b5007d;
+        }
+    }
 }
 .img-scroll__wrap {
     position: relative;

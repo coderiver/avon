@@ -4,13 +4,13 @@ $(document).ready(function() {
         $( ".js-date" ).datepicker();
     });
     // ---------------- Chose city  drop-list-------------------------- //
-    $(".enter__city button").click(function(){
-        if ($(this).hasClass("js-act")) {
-            $(this).removeClass("js-act");
+    $(".choose button").click(function(){
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
             $(this).children(".drop-down").fadeOut();
         }
         else {
-            $(this).addClass("js-act");
+            $(this).addClass("active");
             $(this).children(".drop-down").fadeIn();
         }
     });
@@ -71,6 +71,10 @@ $(".js-add-comment").click(function(){
         $(this).hide();
         $(this).parent().prev().slideDown();
     });
+    $(".gallery .more span").click(function(){
+        $(this).hide();
+        $(this).parent().parent().children(".js-more").slideDown();
+    });
 
 // ---------------- Choose city  drop-list-------------------------- //
     $(".select button").click(function(){
@@ -100,5 +104,12 @@ $(".switch label").click(function(){
         $(this).children().next().next().addClass("active");
     }
 });
+
+// ---------------- fancybox  -------------------------- //
+    $(".gallery a").fancybox({
+        // insert parameters here
+    });
+
+
 
 });

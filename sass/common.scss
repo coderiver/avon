@@ -46,7 +46,7 @@ table {
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
 body{
-    min-width: 1045px;
+    min-width: 1258px;
     color: #483b50;
     @include mr;
     font-size: 15px;
@@ -66,7 +66,7 @@ a{
     }
 }
 .l-layout {
-    width: 90%;
+    width: 78%;
     margin: 0 auto -120px;
     position: relative;
     min-height: 100%;
@@ -94,6 +94,15 @@ a{
 .header {
     padding-top: 18px;
     @extend %clr;
+    .drop-down {
+        right: -47px;
+        top: 26px;
+        &:before {
+            left: auto;
+            right: 41px;
+            margin: 0;
+        }
+    }
 }
 
 .logo {
@@ -192,41 +201,7 @@ a{
         font-size: 14px;
     }   
 }
-.enter__city {
-    text-align: right;
-    padding: 6px 60px 0 0;
-    button {
-        position: relative;
-        padding: 0 13px 0 19px;
-        background: none;
-        color: #b6047f;
-        @include mr;
-        &:before,
-        &:after {
-            content: "";
-            position: absolute;
-        }
-        &:before {
-            left: 0;
-            top: 2px;
-            @include sized-sprite($icons, pin);
-        }
-        &:after {
-            right: 0;
-            top: 8px;
-            @include sized-sprite($icons,arr1);
-        }
-    }
-    .drop-down {
-        right: -47px;
-        top: 26px;
-        &:before {
-            left: auto;
-            right: 41px;
-            margin: 0;
-        }
-    }
-}
+
 .enter__user {
     float: right;
     padding-top: 11px;
@@ -591,7 +566,7 @@ button.btn-gray {
 
 .soc-big {
     float: right;
-    width: 84px;
+    width: 29px;
     a, 
     span {
         display: block;
@@ -604,9 +579,11 @@ button.btn-gray {
 .soc-big__fb {
     @include sized-sprite($icons, fb2);
     &:hover {
+        background: none;
         .fb-counter {
             display: block;
             cursor: pointer;
+            margin-left: -48px; 
         }
     }
     .fb-counter {
@@ -781,6 +758,13 @@ button.btn-gray {
     height: 51px;
     line-height: 51px;
     @include border-radius(8px);
+    .choose {
+        display: inline-block;
+        padding: 0;
+        span {
+            font-size: 16px;
+        }
+    }
 }
 
 @include keyframes(anim-1) {
@@ -849,6 +833,7 @@ button.btn-gray {
     background: #d9ccd6;
     @include background-image(linear-gradient(#d9ccd6, #dcd0d9));
     @include box-shadow(inset 0 0 5px rgba(0,0,0,.2));
+
     i {
         position: absolute;
         left: 0;
@@ -886,6 +871,83 @@ button.btn-gray {
     }
 }
 
+.filter-tab {
+    overflow: hidden;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    li {
+        float: left;
+        margin-right: 30px;
+        color: #bbb6be;
+        font-size: 16px;
+        border-bottom: 1px dotted;
+        cursor: pointer;
+        @include mb;
+        @include user-select(none);
+        &:hover {
+            color: #6d6273;
+        }
+    }
+    .active {
+        border: 0;
+        color: #483b50;
+    }
+}
+
+.choose {
+    text-align: right;
+    padding: 6px 60px 0 0;
+    button {
+        position: relative;
+        padding: 0 13px 3px 19px;
+        background: none;
+        color: #b6047f;
+        @include mr;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+        }
+        &:before {
+            left: 0;
+            top: 2px;
+            @include sized-sprite($icons, pin);
+        }
+        &:after {
+            right: 0;
+            top: 8px;
+            @include sized-sprite($icons,arr1);
+        }
+    }
+    .active {
+        span {
+            border-bottom: 0;
+        }
+    }
+    span {
+        border-bottom: 1px dotted;
+    }
+    .drop-down {
+        left: 0;
+        top: 28px;
+        &:before {
+            left: 50%;
+            margin-left: -8px;
+        }
+    }
+}
+.choose_coach {
+    margin: 0 54px 0 33px;
+    button {
+        &:before {
+            left: 0;
+            top: 2px;
+            @include sized-sprite($icons, man_s);
+        }
+    }
+    
+}
 
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
