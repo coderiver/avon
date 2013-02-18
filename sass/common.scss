@@ -91,7 +91,7 @@ a{
 /* ----------------------------------------- Header --------------------------------------------- */
 .header {
     padding-top: 18px;
-    @extend %clr;
+    overflow: hidden;
 }
 
 .logo {
@@ -109,6 +109,7 @@ a{
     float: left;
     padding: 2px;
     height: 38px;
+    background: #ca56a4;
     @include background-image(linear-gradient(#ca56a4, #932966));
     @include box-shadow(0 2px 2px rgba(78,7,50,.15)); 
     @include border-radius(10px);
@@ -140,6 +141,7 @@ a{
         color: #34272f;
         font-size: 14px;
         text-decoration: none;
+        background: #fefdfd;
         @include background-image(linear-gradient(#fefdfd, #e2dbdf));
         &:before {
             content: "";
@@ -148,11 +150,13 @@ a{
             top: 0;
             height: 38px;
             width: 1px;
+            background: #f4f2f2;
             @include background-image(linear-gradient(#f4f2f2, #cfc9cd));
         }
         &:hover {
             color: #bc1688;
             @include box-shadow(inset 0 3px 3px rgba(102,13,67,.66)); 
+            background: #fefdfd;
             @include background-image(linear-gradient(#fefdfd, #e5ccdd));
             &:before {
                 display: none;
@@ -163,12 +167,14 @@ a{
         height: 40px;
         color: #fff;
         text-shadow: 0 1px 0 rgba(138,75,128, .22);
+        background: #ca56a4;
         @include box-shadow(inset 0 -3px 4px rgba(255,255,255, .2)); 
         @include background-image(linear-gradient(#ca56a4, #932966));
         &:hover {
             color: #fff;
             text-shadow: 0 1px 0 rgba(138,75,128, .22);
             @include box-shadow(inset 0 -3px 4px rgba(255,255,255, .2)); 
+            background: #ca56a4;
             @include background-image(linear-gradient(#ca56a4, #932966));  
         }
     }
@@ -261,12 +267,14 @@ a{
     text-decoration: none;
     text-shadow: 0 1px 0 rgba(138,75,128, .22);
     @include border-radius(10px);
-    @include box-shadow(inset 0 -2px 3px rgba(255,255,255, .5), inset 0 -4px 7px rgba(102,13,67, .3)); 
+    @include box-shadow(inset 0 -2px 3px rgba(255,255,255, .5), inset 0 -4px 7px rgba(102,13,67, .3));
+    background: #c966a9;
     @include background-image(linear-gradient(#c966a9, #9c0567));
     &:hover {
         @include box-shadow(inset 0 2px 3px rgba(102,13,67, .75), 
                             inset 0 -2px 3px rgba(255,255,255, .5),
                             inset 0 -4px 7px rgba(102,13,67, .3));
+        background: #d485bb; 
         @include background-image(linear-gradient(#d485bb, #9c0567));
     }
 }
@@ -281,9 +289,11 @@ a{
     text-decoration: none;
     border: 2px solid #ac4187;
     @include border-radius(10px);
+    background: #fcfcfd;
     @include background-image(linear-gradient(#fcfcfd, #dfd7dc));
     @include box-shadow(0 1px 3px rgba(0,0,0, .2));
     &:hover {
+        background: #d5adc8;
         @include background-image(linear-gradient(#fff, #d5adc8));
         @include box-shadow(0 1px 3px rgba(0,0,0, .2), inset 0 1px 3px rgba(102,13,67,.66));
     }
@@ -300,6 +310,7 @@ button.btn-gray {
     text-align: left;
     @include border-radius(10px);
     @include box-shadow(0 3px 9px rgba(71,58,80, .4));
+    background: #ca56a4;
     @include background-image(linear-gradient(#ca56a4, #932966));
     &:before {
         content: "";
@@ -352,24 +363,6 @@ button.btn-gray {
     position: relative;
     padding: 0 15px 0 32px;
     width: 185px;
-    div {
-        @include mi;
-        font-size: 12px;
-        height: 44px;
-    }
-    a {
-        @include mb;
-        color: #34272f;
-        font-size: 14px;
-        text-decoration: none;
-        &:hover {
-            color: #bc1688;
-        }
-    }
-    img {
-        float: left;
-        margin-right: 15px;
-    }
     .prev, .next {
         position: absolute;
         top: 50%;
@@ -404,6 +397,27 @@ button.btn-gray {
         i {
             @include sized-sprite($icons, next);
         }
+    }
+}
+.coach-item {
+    @include mi;
+    font-size: 12px;
+    height: 44px;
+    a {
+        @include mb;
+        color: #34272f;
+        font-size: 14px;
+        text-decoration: none;
+        &:hover {
+            color: #bc1688;
+        }
+    }
+    span {
+        display: block;
+    }
+    img {
+        float: left;
+        margin-right: 15px;
     }
 }
 
@@ -457,7 +471,12 @@ button.btn-gray {
     color: #947a89;
     font-size: 12px;
     background: #e6e0e4;
+    text-decoration: none;
     @include border-radius(10px);
+    &:hover {
+        color: #876e7c;
+        background: #f2eff1;
+    }
 }
 
 .training-date__descr {
@@ -511,6 +530,7 @@ button.btn-gray {
         height: 96px;
         overflow: hidden;
         @include border-radius(4px);
+        background: #ca57a5;
         @include background-image(linear-gradient(#ca57a5, #932965));
         span {
             position: relative;
@@ -646,6 +666,7 @@ button.btn-gray {
     padding: 2px;
     width: 200px;
     @include border-radius(10px);
+    background: #ca57a5;
     @include background-image(linear-gradient(#ca57a5, #932965));
     button {
         display: block; 
@@ -657,6 +678,7 @@ button.btn-gray {
         @include mr;
         @include border-radius(7px);
         text-align: left;
+        background: #fcfdfc;
         @include background-image(linear-gradient(#fcfdfc, #d9cfd6));
         span {
             padding-left: 18px;
@@ -720,6 +742,7 @@ button.btn-gray {
     @include border-radius(10px);
     @include placeholder(#483b50, 'Conv_MyriadPro-It');
     @include box-shadow(inset 0 0 2px rgba(0,0,0,.1), inset 1px 1px 3px rgba(0,0,0,.3));
+    background: #f7f0f4;
     @include background-image(linear-gradient(#f7f0f4, #f7f2f5));
     &:focus {
         border: 1px solid #fafc93;
@@ -745,6 +768,7 @@ button.btn-gray {
 .filter {
     padding: 2px;
     @include border-radius(10px);
+    background: #ca56a5;
     @include background-image(linear-gradient(#ca56a5, #932965));
 }
 .filter__wrap {
@@ -818,6 +842,7 @@ button.btn-gray {
     border: 1px solid #bdaab6;
     vertical-align: middle;
     @include border-radius(10px);
+    background: #d9ccd6;
     @include background-image(linear-gradient(#d9ccd6, #dcd0d9));
     @include box-shadow(inset 0 0 5px rgba(0,0,0,.2));
     i {
@@ -828,6 +853,7 @@ button.btn-gray {
         height: 15px;
         @include border-radius(50%);
         border: 1px solid #90175b;
+        background: #ca4a9c;
         @include background-image(linear-gradient(#ca4a9c, #93145b));
         @include box-shadow(0 2px 4px rgba(0,0,0,.4), inset 0 0 1px rgba(255,255,255,.1));
     }

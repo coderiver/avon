@@ -5,6 +5,7 @@
 
 /* Layout helpers
 ----------------------------------*/
+
 .ui-helper-hidden {
     display: none;
 }
@@ -825,14 +826,16 @@ body .ui-tooltip {
     font-size: 1em;
 }
 .ui-widget-content {
-     @include background-image(linear-gradient(#cb5ba9, #7c0e47));
+    background: #cb5ba9;
+    @include background-image(linear-gradient(#cb5ba9, #7c0e47));
     color: #222222;
 }
 .ui-widget-content a {
     color: #222222;
 }
 .ui-widget-header {
-    @include background-image(linear-gradient(#cb5ba9, #7c0e47));
+    background: #bf3f9b;
+    @include background-image(linear-gradient(#bf3f9b, #7c0e47));
     color: #fff;
     @include mb;
     font-size: 18px;
@@ -863,6 +866,7 @@ body .ui-tooltip {
     border-bottom: 0;
     border-left: 0;
     @include box-shadow(inset -1px 0 0 #fff);
+    background: #f0f0f0;
     @include background-image(linear-gradient(#fff, #f0f0f0));
     font-weight: normal;
     color: #333;
@@ -880,6 +884,7 @@ body .ui-tooltip {
 .ui-state-focus,
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
+    background: #c33299;
     @include background-image(linear-gradient(#c33299, #a71475));
     @include box-shadow(inset 0 0 10px rgba(0,0,0,.4));
     border-bottom: 0;
@@ -913,6 +918,7 @@ body .ui-tooltip {
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
+    background: #c33299;
     @include background-image(linear-gradient(#c33299, #a71475));
     color: #fff;
     @include box-shadow(inset 0 0 10px rgba(0,0,0,.4));

@@ -1,0 +1,39 @@
+@import "base";
+// ie6-8
+.lteie8 {
+
+}
+
+// ie7
+*+ html {
+    
+}
+
+// ie6
+* html {
+
+}
+
+// ie6-7
+*+ html, * html {
+    .enter__user i,
+    .btn,
+    .btn-gray,
+    .prev i, .next i,
+    .badge,
+    .gallery-link__wrap,
+    .gallery-link__wrap strong,
+    .close i,
+    .switch__name,
+    .soc, .copy,
+    .slider-nav button,
+    .img-scroll__nav button,
+    .breadcrumbs a,
+    .breadcrumbs span,
+    .page-head .title-l-1,
+    .comments-wrap .btn-gray,
+    .training__head .coach-item,
+    {
+        display: inline;
+    }
+}

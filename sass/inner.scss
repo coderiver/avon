@@ -21,6 +21,7 @@
 }
 
 .title-l-2 {
+    margin: 12px 0;
     font-size: 22px;
     color: #483b50;
     @include mb;
@@ -30,6 +31,7 @@
 }
 
 .title-l-3 {
+    margin: 10px 0 6px;
     font-size: 18px;
     color: #625667;
     @include mb;
@@ -77,6 +79,9 @@
     }
     a {
         color: #8e8892;
+        &:hover {
+            color: #b5007d;
+        }
     }
     .home {
         margin-left: 0;
@@ -90,12 +95,17 @@
     margin-bottom: 17px;
     .title-l-1 {
         display: inline-block;
+        margin-right: 20px;
     }
     strong {
         display: block;
         color: #947a89;
         font-size: 16px;
         @include mi;
+    }
+    .badge {
+        position: relative;
+        top: -6px;
     }
 }
 
@@ -117,6 +127,9 @@
         color: #918996;
         &:hover {
             color: #b5007d;
+            span {
+                border-bottom: 0;
+            }
         }
     }
     span {
@@ -125,6 +138,7 @@
     .active {
         position: relative;
         @include border-radius(10px);
+        background: #ca56a4;
         @include background-image(linear-gradient(#ca56a4, #932966));
         &:after {
             content: "";
@@ -135,6 +149,7 @@
         }
         a { 
             @include border-radius(8px);
+            background: #fdfdfd;
             @include background-image(linear-gradient(#fdfdfd, #ded5db)); 
         }
         span {
@@ -170,20 +185,10 @@
         margin-right: 27px;
     }
 }
-.to-cite-link {
-    color: #be1f8c;
-    font-size: 16px;
-    text-decoration: none;
+.to-cite{
     i {
-        display: inline-block;
         margin-right: 9px;
         @include sized-sprite($icons, link);
-    }
-    span {
-        text-decoration: underline;
-        &:hover {
-            text-decoration: none;
-        }
     }
 }
 
@@ -296,6 +301,7 @@
     padding: 10px 17px 9px 28px;
     @include border-radius(10px);
     @include box-shadow(inset 0 -2px 3px rgba(255,255,255, .5), inset 0 -4px 7px rgba(102,13,67, .3)); 
+    background: #cb5ba9;
     @include background-image(linear-gradient(#cb5ba9, #7c0e47));
     .input {
         display: inline-block;
@@ -313,15 +319,30 @@
         @include sized-sprite($icons, glass-h);
     }
 }
-.download-shed {
-    float: right;
+
+.btn-action {
     position: relative;
-    font-size: 16px;
     color: #be1f8c;
+    font-size: 16px;
+    text-decoration: none;
     &:hover {
         text-decoration: none;
         color: #cb4ca3;
     }
+    i {
+        display: inline-block;
+    }
+    span {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+} 
+
+.downl {
+    float: right;
+    position: relative;
     i {
         position: absolute;
         left: -37px;
@@ -337,6 +358,7 @@
     }
     .date-more-wrap {
         float: right;
+        padding-right: 35px;
     }
 }
 .training {
@@ -371,5 +393,155 @@
         left: -26px;
         top: 4px;
         @include sized-sprite($icons, wtf);
+    }
+    .ui-datepicker-inline  {
+        position: absolute;
+        z-index: 3000;
+        left: -94px;
+        top: 31px;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -9px;
+            margin-left: -10px;
+            @include sized-sprite($icons, arr4);
+        }
+    }
+}
+
+.training__head {
+    color: #a19ea2;
+    .coach-item {
+        display: inline-block;
+        margin: 0 0 10px 14px;
+        vertical-align: top;
+        font-size: 13px;
+        a {
+            font-size: 16px;
+        }
+    }
+    .take-part {
+        clear: both;
+    }
+    .date-list {
+        float: left;
+    }
+    
+}
+.training__info-col {
+    float: left;
+    width: 400px;
+    margin-right: 20px;
+}
+.training__name {
+    margin-bottom: 10px;
+    font-size: 24px;
+    @include mb;
+    color: #483b50;
+    span {
+        color: #b6047f;
+        font-size: 30px;
+    }
+}
+.training__price {
+    span {
+        color: #b6047f;
+        font-size: 22px;
+        @include mb;
+    }
+}
+.training__term {
+    span {
+        color: #625667;
+        font-size: 15px;
+    }
+}
+.add-to-cal {
+    margin-left: 33px;
+    i {
+        position: relative;
+        margin-right: 2px;
+        vertical-align: middle;
+        @include sized-sprite($icons, cal);
+    }
+}
+.date-list {
+    padding: 2px;
+    @include border-radius(10px);
+    background: #ca56a5;
+    @include background-image(linear-gradient(#ca56a5, #932965));
+    ul {
+        padding: 13px 23px 18px 46px;
+        color: #483b50;
+        background: #fff;
+        @include border-radius(8px);
+        overflow: hidden;
+    }
+    li {
+        position: relative;
+        margin-bottom: 4px;
+    }
+    strong {
+        @include mb;
+    }
+    i {
+        display: none;
+        position: absolute;
+        left: -30px;
+        @include sized-sprite($icons, cal); 
+    }
+    .active {
+        i {
+            display: inline-block;
+        }
+    }
+}
+
+.download {
+    margin-bottom: 23px;
+    padding-left: 37px;
+    span {
+        font-size: 14px;
+        color: #888;
+    }
+    .btn-action {
+        margin-right: 30px;
+        text-decoration: underline;
+        line-height: 1.8;
+        &:hover {
+            text-decoration: none;
+        }
+        i {
+            position: absolute;
+            left: -37px;
+            top: -6px;
+            color: #fff;
+            font-style: normal;
+            font-size: 8px;
+            line-height: 23px;
+            text-transform: uppercase;
+            @include sized-sprite($icons, downl);
+        }
+        b {
+            display: block;
+            width: 21px;
+            height: 30px;
+            text-align: center;
+            font-weight: normal;
+        }
+    }
+    p {
+        margin: 4px 0;
+        color: #6b6468;
+        font-size: 12px;
+    }
+}
+.downl-wrap {
+    .title-l-2 {
+        margin-bottom: 30px;
+    }
+    .title-l-3 {
+        margin-bottom: 17px;
     }
 }
