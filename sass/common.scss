@@ -84,14 +84,16 @@ a{
 .wrap {
     @extend %clr;
 }
-
+.i-hate-ie7 {
+    clear: both;
+}
 
 /* ------------------------------------ //END Main styles --------------------------------------- */
  
 /* ----------------------------------------- Header --------------------------------------------- */
 .header {
     padding-top: 18px;
-    overflow: hidden;
+    @extend %clr;
 }
 
 .logo {
@@ -500,7 +502,9 @@ button.btn-gray {
     margin-bottom: 17px;
     font-size: 18px;
     @include mb;
-    color: #34272f;
+    a {
+        color: #34272f;
+    }
 }
 
 .gallery-link {
@@ -811,18 +815,18 @@ button.btn-gray {
 .switch {
    color: #483b50;
    font-size: 16px;
+   line-height: 1;
+   display: inline-block;
    @include mb;
    @include transition(all, 1s,ease-in-out);
    label {
        cursor: pointer;
-       vertical-align: middle;
    }
    .key {
        color: #b6b1b9;
        cursor: pointer;
        border-bottom: 1px dotted;
        @include user-select(none);
-       vertical-align: top;
    }
    .active {
        color: #483b50;
@@ -855,7 +859,7 @@ button.btn-gray {
         border: 1px solid #90175b;
         background: #ca4a9c;
         @include background-image(linear-gradient(#ca4a9c, #93145b));
-        @include box-shadow(0 2px 4px rgba(0,0,0,.4), inset 0 0 1px rgba(255,255,255,.1));
+        @include box-shadow(0 1px 4px rgba(0,0,0,.4), inset 0 0 1px rgba(255,255,255,.1));
     }
     input {
         position: absolute;
@@ -871,6 +875,17 @@ button.btn-gray {
         //@include animation(anim-2 1s linear 1);
     }
 }
+.switch_big {
+    padding-top: 135px;
+    font-size: 18px;
+    @include mr;
+    .switch__name {
+        font-size: 24px;
+        @include mb;
+        margin-right: 31px;
+    }
+}
+
 
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
@@ -878,7 +893,7 @@ button.btn-gray {
 .footer {
     position: relative;
     height: 120px;
-    background: rgba(218,176,198, .51);
+    background: rgba(237,201,218, .7);
 }
 .footer__wrap {
     width: 90%;
@@ -897,6 +912,10 @@ button.btn-gray {
     a {
         font-size: 14px;
         color: #483b50;
+    } 
+    .active {
+        color: #b5007d;
+        text-decoration: none;
     }
 }
 .footer__info  {

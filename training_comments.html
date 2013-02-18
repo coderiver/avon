@@ -3,10 +3,12 @@
 <!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Coach Comments</title>
-	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<title>Trening Comments</title>
+    <link rel="stylesheet" media="screen" href="css/screen.css" >
+	<!-- <link rel="stylesheet" media="screen" href="css/jquery-ui.css" > -->
     <script src="js/jquery.tools.min.js"></script>
     <script src="js/jquery.cycle.all.js"></script>
+    <script src="js/jquery-ui.js"></script>  
     <script src="js/common.js"></script>  
     <!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
@@ -20,8 +22,8 @@
         </h1>
         <nav class="nav">
             <ul>
-                <li><a href="#" class="active">Наши тренеры</a></li>
-                <li><a href="#">Наши тренинги</a></li>
+                <li><a href="#">Наши тренеры</a></li>
+                <li><a href="#" class="active">Наши тренинги</a></li>
                 <li><a href="#">Галерея</a></li>
             </ul>
         </nav>
@@ -31,7 +33,7 @@
                 <span class="enter__id">Ваш персональный номер  - R12380</span>
             </div>
         </div>
-        <div class="i-hate-ie"></div>
+        <div class="i-hate-ie7"></div>
     </header>
     <section class="l-cols">
         <div class="breadcrumbs">
@@ -40,33 +42,59 @@
             <span>Анастасия Солнцева</span>
         </div>
         <div class="page-head">
-            <h1 class="title-l-1">Анастасия Вениаминовна Солнцева </h1>
-            <strong>Тренер по обучению</strong>
+            <h1 class="title-l-1">Тренинг "Вечная Молодость"</h1>
+            <a class="badge" href="#">Представителям</a>
+            <a class="badge" href="#">Работа с Клиентами</a>
         </div>
         <aside class="sidebar">
-            <img src="http://placehold.it/212x218" alt="">
+            <img src="http://placehold.it/194x218" alt="">
             <nav class="tab">
                 <ul>
-                    <li><a href="#"><span>История успеха</span></a></li>
+                    <li><a href="#"><span>Описание</span></a></li>
                     <li class="active"><a href="#"><span>Отзывы</span></a></li>
+                    <li><a href="#"><span>Фото</span></a></li>
+                    <li><a href="#"><span>Материалы</span></a></li>
                     <li><a href="#"><span>Расписание</span></a></li>
                 </ul>
             </nav>
         </aside>
         <div class="main">
-            <div class="about-coach">
-                <p>Сотрудничество с Avon — это прекрасное решение для молодых мам, которые хотят оставаться активными во время декрета! Avon предлагает идеальный сервис для того чтобы начать свой бизнес даже в период отпуска по уходу за маленьким ребенком!</p>
-            </div>
-            <div class="soc-big">
-                <a href="#" class="soc-big__vk"></a>
-                <a href="#" class="soc-big__odn"></a>
-                <span href="#" class="soc-big__fb">
-                    <img class="fb-counter" src="img/fb-counter.png" alt="">
-                </span>
-            </div>
-            <div class="ask-coach">
-                <a href="#" class="btn">Задать вопрос</a>
-                <a href="#" class="btn-action to-cite"><i></i><span>Перейти на сайт</span></a>
+            <div class="training">
+                <div class="training__head">
+                    <h2 class="training__name">Ближайший тренинг: <span>12 мая</span>, Киев</h2>
+                    <div class="training__info-col">
+                        <span>Проводит: </span>
+                        <div class="coach-item">
+                            <a href="#"><img src="http://placehold.it/40x40" alt=""></a>
+                            <a href="#">Иванова Катерина</a>
+                            <span>тренер по обучению</span>
+                        </div>
+                        <div class="training__price">
+                            Стоимость участия: <span>11900 грн.</span>
+                        </div>
+                        <div class="training__term">
+                            Продолжительность: <span>40 ч. (6 дн.)</span>
+                        </div>
+                    </div>
+                    <div class="date-list">
+                        <ul>
+                            <li class="active"><i></i><strong>24 мая</strong> - Киев</li>
+                            <li><i></i><strong>26 мая</strong> - Львов</li>
+                            <li><i></i><strong>1 августа</strong> - Одесса</li>
+                        </ul>
+                    </div>
+                    <div class="soc-big">
+                        <a href="#" class="soc-big__vk"></a>
+                        <a href="#" class="soc-big__odn"></a>
+                        <span href="#" class="soc-big__fb">
+                            <img class="fb-counter" src="img/fb-counter.png" alt="">
+                        </span>
+                    </div>
+                    <div class="take-part">
+                        <a href="#" class="btn">Участвовать</a>
+                        <a href="#" class="btn-action add-to-cal"><i></i><span>Добавить в календарь</span></a>
+                    </div>
+                </div>
             </div>
             <div class="comments-wrap">
                 <div class="comments-head">
@@ -129,7 +157,7 @@
                         <span class="comment__date"><i></i>12 Ноября 2012</span>
                     </div>
                 </div>
-                <div class="js-more">
+                <div class="js-more" style="display: none;">
                     <div class="comment">
                         <a href="#" class="comment__img">
                             <img src="http://placehold.it/50x50" alt="">
@@ -190,6 +218,58 @@
                 <div class="more"><span><i></i>Еще 4 Отзыва</span></div>
             </div>
         </div>
+        <div class="switch switch_big">
+            <span class="switch__name">Другие тренинги </span> 
+            <label for="switch1">
+                <span class="key active">На ту же дату</span>
+                    <span class="switch__wrap">
+                        <input type="checkbox" id="switch1">
+                        <i></i>
+                    </span>
+                <span class="key">В том же городе</span>
+            </label>
+        </div>
+        <div class="training-date-wrap">
+            <div class="training-date">
+                <div class="calendar">
+                    <span>май</span>
+                    <strong>12</strong>
+                </div>
+                <div class="training-date__descr">
+                    <h3 class="training-date__title"><a href="#">Тренинг "Тайны ароматов"</a></h3>
+                    <ul>
+                        <li><span>Тренер:</span> <a href="#">Надежда Ванеева</a></li>
+                        <li><span>Город:</span> Киев</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="training-date">
+                <div class="calendar">
+                    <span>май</span>
+                    <strong>12</strong>
+                </div>
+                <div class="training-date__descr">
+                    <h3 class="training-date__title"><a href="#">Тренинг "Тайны ароматов"</a></h3>
+                    <ul>
+                        <li><span>Тренер:</span> <a href="#">Надежда Ванеева</a></li>
+                        <li><span>Город:</span> Киев</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="training-date">
+                <div class="calendar">
+                    <span>май</span>
+                    <strong>12</strong>
+                </div>
+                <div class="training-date__descr">
+                    <h3 class="training-date__title"><a href="#">Тренинг "Тайны ароматов"</a></h3>
+                    <ul>
+                        <li><span>Тренер:</span> <a href="#">Надежда Ванеева</a></li>
+                        <li><span>Город:</span> Киев</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section> 
     <div class="push"></div>
 </section>
@@ -197,8 +277,8 @@
     <div class="footer__wrap">
         <nav class="footer__nav">
             <ul>
-                <li><a href="#" class="active">Наши тренера</a></li>
-                <li><a href="#">Наши тренинги</a></li>
+                <li><a href="#">Наши тренера</a></li>
+                <li><a href="#" class="active">Наши тренинги</a></li>
                 <li><a href="#">Обратна связь</a></li>
                 <li><a href="#">AVON.ru</a></li>
             </ul>

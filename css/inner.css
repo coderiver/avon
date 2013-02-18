@@ -27,6 +27,8 @@
 .content h2 { margin: 12px 0; font-size: 22px; color: #483b50; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; }
 .content h3 { margin: 10px 0 6px; font-size: 18px; color: #625667; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; }
 .content p { margin-bottom: 7px; }
+.content ul { margin-bottom: 20px; color: #6b6468; font-size: 14px; }
+.content li:before { content: "—"; margin-right: 5px; }
 
 .breadcrumbs { margin-bottom: 2px; }
 .breadcrumbs a, .breadcrumbs span { position: relative; display: inline-block; color: #adaaac; font-size: 14px; margin: 0 5px; }
@@ -74,6 +76,7 @@
 .comment__wrap i { display: block; margin: 2px 0 5px; color: #6b6468; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-It', Arial, sans-serif; font-size: 13px; }
 
 .comment__author { font-size: 16px; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; color: #34272f; text-decoration: none; }
+.comment__author:hover { color: #b5007d; }
 
 .comment__date { color: #a19ca4; font-size: 12px; }
 .comment__date i { display: inline-block; margin-right: 5px; vertical-align: middle; background: url('../img/icons-s107292b8fa.png') 0 -1149px no-repeat; width: 11px; height: 11px; }
@@ -159,3 +162,7 @@
 
 .downl-wrap .title-l-2 { margin-bottom: 30px; }
 .downl-wrap .title-l-3 { margin-bottom: 17px; }
+
+.training-date-wrap { padding: 27px 0 150px; overflow: hidden; }
+.training-date-wrap .training-date { float: left; width: 33%; }
+.training-date-wrap .training-date__title { margin-bottom: 8px; }
