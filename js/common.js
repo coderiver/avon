@@ -110,6 +110,15 @@ $(".switch label").click(function(){
         // insert parameters here
     });
 
-
+// ---------------- Tab -------------------------- //
+    $(".tab-cont").hide();
+    $(".tab-1").show();
+    $(".tab li").click(function(){
+        $(".tab li").removeClass("active");
+        $(this).addClass("active");
+        var act = $(this).attr("data-tab");
+        $(".tab-cont").hide();
+        $(act).fadeIn();
+    });
 
 });

@@ -3,12 +3,13 @@
 <!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Trening Comments</title>
+	<title>Trening description</title>
     <link rel="stylesheet" media="screen" href="css/screen.css" >
-	<!-- <link rel="stylesheet" media="screen" href="css/jquery-ui.css" > -->
+    <link rel="stylesheet" media="screen" href="css/jquery.fancybox.css" >
     <script src="js/jquery.tools.min.js"></script>
     <script src="js/jquery.cycle.all.js"></script>
     <script src="js/jquery-ui.js"></script>  
+    <script src="js/jquery.fancybox.js"></script>  
     <script src="js/common.js"></script>  
     <!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
@@ -50,11 +51,11 @@
             <img src="http://placehold.it/194x218" alt="">
             <nav class="tab">
                 <ul>
-                    <li><a href="#"><span>Описание</span></a></li>
-                    <li class="active"><a href="#"><span>Отзывы</span></a></li>
-                    <li><a href="#"><span>Фото</span></a></li>
-                    <li><a href="#"><span>Материалы</span></a></li>
-                    <li><a href="#"><span>Расписание</span></a></li>
+                    <li class="active" data-tab=".tab-1"><a href="#"><span>Описание</span></a></li>
+                    <li data-tab=".tab-2"><a href="#"><span>Отзывы</span></a></li>
+                    <li data-tab=".tab-3"><a href="#"><span>Фото</span></a></li>
+                    <li data-tab=".tab-4"><a href="#"><span>Материалы</span></a></li>
+                    <li data-tab=".tab-5"><a href="#"><span>Расписание</span></a></li>
                 </ul>
             </nav>
         </aside>
@@ -96,7 +97,38 @@
                     </div>
                 </div>
             </div>
-            <div class="comments-wrap">
+            <div class="content tab-cont tab-1">
+                <h2>Программа тренинга </h2>
+                <h3>Стратегии и техники управления групповыми процессами 1–2 день</h3>
+                <h3>Процесс организации тренинга и роль тренера</h3>
+                <ul>
+                    <li>для чего вначале участникам рассказывать о себе (познакомится или дать отдохнуть тренеру?)</li>
+                    <li>для чего снимать ожидания участников перед тренингом или демонстрация силы и могущества тренера-мага</li>
+                    <li>процесс организации тренинга</li>
+                    <li>ситуативный стиль при ведении тренингового действия</li>
+                    <li>тип личности тренера или… ищем свои лучшие стороны при ведении тренинга</li>
+                </ul>
+                <h3>Особенности работы малой группы</h3>
+                <ul>
+                    <li>процесс и результат- ориентированные цели обучения</li>
+                    <li>единственная цель бизнес-обучения</li>
+                    <li>нормы и правила поведения группы и тренера. Что важнее?</li>
+                    <li>особенности проведения тренинга в малой (4 чел.) и большой группе (от 20 чел.)</li>
+                    <li>в чем разница между «методами» и «техниками» в тренинге?</li>
+                </ul>
+                <h3>Управление групповой динамикой</h3>
+                <ul>
+                    <li>тренерский фокус или стадии развития группы: от сопротивления до конструктивной работы</li>
+                    <li>задачи по управлению группой в бизнес-обучении</li>
+                    <li>особенности развития группы в бизнес-тренинге и психологической группе</li>
+                    <li>сплоченность группы и эффективность тренинга: норм-статус участников. Что делать тренеру?</li>
+                    <li>роли участников тренинга — как показатель эффективности бизнес-обучения</li>
+                    <li>техники воздействия на групповые процессы или эмоциональное регулирование обучения</li>
+                    <li>что чувствует группа или тренер как «барометр»?</li>
+                    <li>вечерний анализ тренерских техник</li>
+                </ul>
+            </div>
+            <div class="comments-wrap tab-cont tab-2">
                 <div class="comments-head">
                     <h2 class="title-l-2">Всего в тренера <span>123</span> хороших отзыва!</h2>
                     <button class="btn-gray js-add-comment">Оставить отзыв</button>
@@ -216,6 +248,133 @@
                     </div>
                 </div>
                 <div class="more"><span><i></i>Еще 4 Отзыва</span></div>
+            </div>
+            <div class="gallery-wrap tab-cont tab-3">
+                <h2 class="title-l-2">В галерее тренинга <span>123</span> фото и <span>3</span> видео!</h2>
+                <div class="filter">
+                    <div class="filter__wrap">
+                        <ul class="filter-tab">
+                            <li class="active">Все</li>
+                            <li>Фото</li>
+                            <li>Видео</li>
+                        </ul>
+                        <div class="choose choose_coach">
+                            <button>
+                                <span>Выбрать тренера</span>
+                                <div class="drop-down">
+                                    <ul>
+                                        <li>Тренер</li>
+                                        <li>Тренер2</li>
+                                        <li>Тренер3</li>
+                                        <li>Тренер4</li>
+                                    </ul>
+                                </div>
+                            </button>  
+                        </div>
+                        <div class="choose">
+                            <button>
+                                <span>Выбрать город</span>
+                                <div class="drop-down">
+                                    <ul>
+                                        <li>Киев</li>
+                                        <li>Днепропетровск</li>
+                                        <li>Одесса</li>
+                                        <li>Львов</li>
+                                        <li>Мариуполь</li>
+                                    </ul>
+                                </div>
+                            </button>  
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="gallery">
+                        <a href="img/img_b.jpg" data-fancybox-group="gallery">
+                            <img src="img/img_s.jpg" alt="">
+                        </a>
+                        <a href="img/img_b.jpg" data-fancybox-group="gallery">
+                            <img src="img/img_s.jpg" alt="">
+                        </a>
+                        <a href="img/img_b.jpg" data-fancybox-group="gallery">
+                            <img src="img/img_s.jpg" alt="">
+                        </a>
+                        <a href="img/img_b.jpg" data-fancybox-group="gallery">
+                            <img src="img/img_s.jpg" alt="">
+                        </a>
+                        <a href="img/img_b.jpg" data-fancybox-group="gallery">
+                            <img src="img/img_s.jpg" alt="">
+                        </a>
+                        <a href="img/img_b.jpg" data-fancybox-group="gallery">
+                            <img src="img/img_s.jpg" alt="">
+                        </a>
+                        <a href="img/img_b.jpg" data-fancybox-group="gallery">
+                            <img src="img/img_s.jpg" alt="">
+                        </a>
+                        <a href="img/img_b.jpg" data-fancybox-group="gallery">
+                            <img src="img/img_s.jpg" alt="">
+                        </a>
+                        <a class="js-more" href="img/img_b.jpg" data-fancybox-group="gallery">
+                        <img src="img/img_s.jpg" alt="">
+                        </a>
+                        <a class="js-more" href="img/img_b.jpg" data-fancybox-group="gallery">
+                            <img src="img/img_s.jpg" alt="">
+                        </a>
+                        <a class="js-more" href="img/img_b.jpg" data-fancybox-group="gallery">
+                            <img src="img/img_s.jpg" alt="">
+                        </a>
+                        <a class="js-more" href="img/img_b.jpg" data-fancybox-group="gallery">
+                            <img src="img/img_s.jpg" alt="">
+                        </a>
+                        <a class="js-more" href="img/img_b.jpg" data-fancybox-group="gallery">
+                            <img src="img/img_s.jpg" alt="">
+                        </a>
+                        <a class="js-more" href="img/img_b.jpg" data-fancybox-group="gallery">
+                            <img src="img/img_s.jpg" alt="">
+                        </a>
+                        <a class="js-more" href="img/img_b.jpg" data-fancybox-group="gallery">
+                            <img src="img/img_s.jpg" alt="">
+                        </a>
+                        <a class="js-more" href="img/img_b.jpg" data-fancybox-group="gallery">
+                            <img src="img/img_s.jpg" alt="">
+                        </a>
+                        <div class="more"><span><i></i>Загрузить еще</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="downl-wrap tab-cont tab-4">
+                <h2 class="title-l-2">Полное расписание и доступные материалы для скачивания.</h2>
+                <div class="download">
+                    <a href="#" class="btn-action"><i><b>xls</b></i>Скачать расписание</a>
+                    <span>*.xls , 67 Мб, загружено 12.10.2012 </span>
+                </div>
+                <h3 class="title-l-3">Дополнительные материалы</h3>
+                <div class="download">
+                    <a href="#" class="btn-action"><i><b>pptx</b></i>Теоретическое пособие к тренингу.</a>
+                    <span>.pptx , 117 Мб, загружено 12.12.2012 </span>
+                    <p>Программа тренинга в текстовом виде, поможет Вам  лучше подготовиться к тренингу,  выделить наиболее интересные места, подготовить вопросы.</p>
+                </div>
+                <div class="download">
+                    <a href="#" class="btn-action"><i><b>pptx</b></i>Теоретическое пособие к тренингу.</a>
+                    <span>.pptx , 117 Мб, загружено 12.12.2012 </span>
+                    <p>Программа тренинга в текстовом виде, поможет Вам  лучше подготовиться к тренингу,  выделить наиболее интересные места, подготовить вопросы.</p>
+                </div>
+                <div class="download">
+                    <a href="#" class="btn-action"><i><b>pdf</b></i>Теоретическое пособие к тренингу.</a>
+                    <span>.pdf , 117 Мб, загружено 12.12.2012 </span>
+                    <p>Программа тренинга в текстовом виде, поможет Вам  лучше подготовиться к тренингу,  выделить наиболее интересные места, подготовить вопросы.</p>
+                </div>
+                <div class="download">
+                    <a href="#" class="btn-action"><i><b>pptx</b></i>Теоретическое пособие к тренингу.</a>
+                    <span>.pptx , 117 Мб, загружено 12.12.2012 </span>
+                    <p>Программа тренинга в текстовом виде, поможет Вам  лучше подготовиться к тренингу,  выделить наиболее интересные места, подготовить вопросы.</p>
+                </div>
+                <div class="download">
+                    <a href="#" class="btn-action"><i><b>doc</b></i>Теоретическое пособие к тренингу.</a>
+                    <span>.doc , 117 Мб, загружено 12.12.2012 </span>
+                    <p>Программа тренинга в текстовом виде, поможет Вам  лучше подготовиться к тренингу,  выделить наиболее интересные места, подготовить вопросы.</p>
+                </div>
+            </div>
+            <div class="tab-cont tab-5">
             </div>
         </div>
         <div class="switch switch_big">
