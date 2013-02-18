@@ -1,7 +1,13 @@
 @import "base";
 // ie6-8
 .lteie8 {
-
+    .checkbox i,
+    .switch__wrap i {
+        display: none;
+    }
+    .switch__wrap {
+        background: none;
+    }
 }
 
 // ie7

@@ -15,6 +15,10 @@
 
 .main { overflow: hidden; }
 
+.col { width: 45%; float: left; }
+
+.col_right { float: right; }
+
 .title-l-1 { font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; font-size: 30px; color: #34272f; }
 
 .title-l-2 { margin: 12px 0; font-size: 22px; color: #483b50; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; }

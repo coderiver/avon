@@ -90,6 +90,16 @@ $(".js-add-comment").click(function(){
         }
     });   
 
+// ---------------- Checkbox -------------------------- //
+    $(".checkbox").click(function(){
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+        }
+        else {
+            $(this).addClass("active");
+        }
+    });  
+
 // ---------------- Choose city  drop-list-------------------------- //
 $(".switch label").children("span:first").addClass("active");
 $(".switch label").click(function(){

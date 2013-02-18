@@ -13,7 +13,13 @@
 .main {
     overflow: hidden;
 }
-
+.col {
+    width: 45%;
+    float: left;
+}
+.col_right {
+    float: right;
+}
 .title-l-1 {
     @include mb; 
     font-size: 30px;

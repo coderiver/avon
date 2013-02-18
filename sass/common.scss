@@ -870,7 +870,9 @@ button.btn-gray {
         margin-right: 31px;
     }
 }
-
+.switch_mod {
+    font-size: 18px;
+}
 .filter-tab {
     overflow: hidden;
     line-height: 1;
@@ -947,6 +949,55 @@ button.btn-gray {
         }
     }
     
+}
+
+.checkbox {
+    position: relative;
+    cursor: pointer;
+    margin-left: 46px;
+    @include user-select(none);
+    input, i {
+        position: absolute;
+        left: -25px;
+        top: 0;
+        width: 19px;
+        height: 19px;
+        @include border-radius(3px);
+    }
+    input {
+        z-index: 2;
+        opacity: 0;
+        cursor: pointer;
+        &:checked + i {
+            @include box-shadow(inset 1px 1px 5px rgba(0,0,0,.4));
+            &:before {
+                opacity: .6;
+            }
+        }
+        &:checked + i + span {
+            color: #483b50;
+            border-bottom: 0;
+        }
+    }
+    i {
+        background: #c73998;
+        border: 1px solid #820449;
+        @include background-image(linear-gradient(#c73998, #921157));
+        @include box-shadow(0 1px 4px rgba(0,0,0,.4), inset 1px 1px 0 rgba(255,255,255,.2));
+        &:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -6px;
+            margin-top: -6px;
+            @include sized-sprite($icons, check);
+        }
+    }
+    span {
+        color: #a39da7;
+        border-bottom: 1px dotted;
+    }
 }
 
 /* ---------------------------------- //END Independent blocks ----------------------------------- */

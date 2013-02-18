@@ -6,4 +6,7 @@
 
 @font-face { font-family: 'Conv_MyriadPro-BoldIt'; src: url("../fonts/MyriadPro-BoldIt.eot"); src: local("☺"), url("../fonts/MyriadPro-BoldIt.woff") format("woff"), url("../fonts/MyriadPro-BoldIt.ttf") format("truetype"), url("../fonts/MyriadPro-BoldIt.svg") format("svg"); font-weight: normal; font-style: normal; }
 
+.lteie8 .checkbox i, .lteie8 .switch__wrap i { display: none; }
+.lteie8 .switch__wrap { background: none; }
+
 * + html .enter__user i, * + html .btn, * + html .btn-gray, * + html .prev i, * + html .next i, * + html .badge, * + html .gallery-link__wrap, * + html .gallery-link__wrap strong, * + html .close i, * + html .switch__name, * + html .soc, * + html .copy, * + html .slider-nav button, * + html .img-scroll__nav button, * + html .breadcrumbs a, * + html .breadcrumbs span, * + html .page-head .title-l-1, * + html .comments-wrap .btn-gray, * + html .training__head .coach-item, * + html .choose, * + html .filter-tab, * html .enter__user i, * html .btn, * html .btn-gray, * html .prev i, * html .next i, * html .badge, * html .gallery-link__wrap, * html .gallery-link__wrap strong, * html .close i, * html .switch__name, * html .soc, * html .copy, * html .slider-nav button, * html .img-scroll__nav button, * html .breadcrumbs a, * html .breadcrumbs span, * html .page-head .title-l-1, * html .comments-wrap .btn-gray, * html .training__head .coach-item, * html .choose, * html .filter-tab { display: inline; }
