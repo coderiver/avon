@@ -75,7 +75,10 @@ $(".js-add-comment").click(function(){
         $(this).hide();
         $(this).parent().parent().children(".js-more").slideDown();
     });
-
+    $(".training-item-wrap .more span").click(function(){
+        $(this).hide();
+        $(this).parent().parent().parent().children(".js-more").slideDown();
+    });
 // ---------------- Choose city  drop-list-------------------------- //
     $(".select button").click(function(){
         if ($(this).hasClass("active")) {

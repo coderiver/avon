@@ -595,3 +595,56 @@
         margin-top: 20px;
     }
 }
+
+.training-item-wrap {
+    padding-top: 34px;
+    margin-right: -5%;
+}
+.training-item {
+    display: inline-block;
+    margin: 0 5% 57px 0;
+    width: 43%;
+    vertical-align: top;
+}
+.training-item__img {
+    float: left;
+    margin: 0 20px 14px 0;
+    width: 142px;
+    overflow: hidden;
+    @include border-radius(3px); 
+    img {
+        display: block;
+        @include border-radius(3px);
+    }
+}
+.training-date {
+    i {
+        display: inline-block;
+        margin-right: 13px;
+        @include sized-sprite($icons, cal2); 
+    }
+    span {
+        @include mb;
+    }
+}
+.training-item__head {
+    position: relative;
+    top: -3px;
+    overflow: hidden;
+    .title-l-2 {
+        margin: 0 0 3px;
+        a {
+            color: #34272f;
+            text-decoration: none;
+            &:hover {
+                color: #b5007d;
+            }
+        }
+    }
+    .training-date {
+        margin: 14px 0;
+    }
+}
+.training-item__desr {
+    clear: both;
+}
