@@ -1,5 +1,6 @@
 @import "base";
 .l-cols {
+    position: relative;
     padding: 21px 0 25px;
     overflow: hidden;
 }
@@ -599,6 +600,9 @@
 .training-item-wrap {
     padding-top: 34px;
     margin-right: -5%;
+    .more {
+        margin-bottom: 57px;
+    }
 }
 .training-item {
     display: inline-block;
@@ -647,4 +651,127 @@
 }
 .training-item__desr {
     clear: both;
+}
+
+.map {
+    position: relative;
+    margin-top: -10px;
+}
+.coach-list-wrap {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    .title-l-1 {
+        margin-bottom: 19px;
+    }
+    .title-l-1,
+    .breadcrumbs,
+    .tab-btn {
+        padding-left: 17px;
+    }
+    .filter-wrapper {
+        position: absolute;
+        z-index: 1;
+        left: -163px;
+        top: 112px;
+        .input {
+            width: 238px;
+        }
+    }
+}
+.coach-list-main {
+    position: relative;
+    z-index: 2;
+    padding-top: 7px;
+    width: 266px;
+    background: #fff;
+    @include border-radius(10px);
+    z-index: 1000;
+}
+.coach-list {
+    margin-top: 3px;
+    padding-right: 17px;
+    li {
+        position: relative;
+        padding: 15px 0 22px 17px;
+        &:hover { 
+            background: #fde9f1;
+            @include border-radius(0 10px 10px 0);
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -13px;
+                @include sized-sprite($icons, coach-list);
+            }
+        }
+    }
+    .coach-item {
+        display: block;
+        font-size: 16px;
+        @include mb;
+        color: #34272f;
+        text-decoration: none;
+        &:hover {
+            color: #b5007d;
+            span {
+                color: #6b6468;
+            }
+        }
+        span {
+            color: #6b6468; 
+            font-size: 13px;
+            @include mi;
+        }
+    }
+}
+.coach-nav {
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    background: #fafafa;
+    text-align: center;
+    i {
+        display: inline-block;
+    }
+}
+.coach-nav_prev {
+    margin: 9px 0 -3px;
+    &:hover {
+        i {
+            @include sized-sprite($icons, top-h);
+        }
+    }
+    i {
+        @include sized-sprite($icons, top);
+    }
+}
+.coach-nav_next {
+    &:hover {
+        i {
+            @include sized-sprite($icons, bot-h);
+        }
+    }
+    @include border-radius(0 0 10px 10px);
+    i {
+        @include sized-sprite($icons, bot);
+    }
+}
+.experts {
+    margin: 44px 0 22px;
+    overflow: hidden;
+    .title-l-2 {
+        font-size: 24px;
+    }
+    .coach-item {
+        float: left;
+        margin-bottom: 19px;
+        width: 33%;
+        a {
+            font-size: 16px;
+        }
+        span {
+            font-size: 13px;
+        }
+    }
 }
