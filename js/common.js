@@ -1,10 +1,44 @@
 $(document).ready(function() {
 // ---------------- Datapicker -------------------------- //
     $(function() {
-        $( ".js-date" ).datepicker();
+        $( ".js-date" ).datepicker({
+            showOn: '.btn',
+            monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+            'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+            monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
+            'Июл','Авг','Сен','Окт','Ноя','Дек'],
+            dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+            dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+            dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+            weekHeader: 'Не',
+            dateFormat: 'dd.mm.yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            //minDate: 0
+            showOtherMonths: true,
+            selectOtherMonths: true
+        })
+    //     .hide()
+    //     .click(function() {
+    //       $(this).hide();
+    //     });
+    //     $(".btn").click(function() {
+    //    $(".js-dater").show(); 
+    // });
     });
+    
+    // $(".js-date").hover(
+    //   function () {
+    //     $(this).children(".ui-datepicker-inline").fadeIn();
+    //   }, 
+    //   function () {
+    //     $(this).children(".ui-datepicker-inline").fadeOut();
+    //     $(this).children(".ui-datepicker-inline").fadeOut();
+    //   }
+    // );
     // ---------------- Chose city  drop-list-------------------------- //
-    $(".choose button").click(function(){
+    $(".choose__wrap").click(function(){
         if ($(this).hasClass("active")) {
             $(this).removeClass("active");
             $(this).children(".drop-down").fadeOut();
@@ -53,6 +87,13 @@ $(document).ready(function() {
         }
     });
 
+    $(".coach-list-scroll").cycle({ 
+        fx:     'scrollVert', 
+        next:    ".coach-nav_next", 
+        prev:    ".coach-nav_prev", 
+        timeout:  0,
+        speed: 2000
+    });
 // ---------------- close popup -------------------------- //
 $(".close").click(function(){
     $(this).parent().fadeOut();
@@ -80,7 +121,7 @@ $(".js-add-comment").click(function(){
         $(this).parent().parent().parent().children(".js-more").slideDown();
     });
 // ---------------- Choose city  drop-list-------------------------- //
-    $(".select button").click(function(){
+    $(".select__wrap").click(function(){
         if ($(this).hasClass("active")) {
             $(this).removeClass("active");
             $(this).parent().removeClass("select_active");
@@ -104,24 +145,38 @@ $(".js-add-comment").click(function(){
     });  
 
 // ---------------- Choose city  drop-list-------------------------- //
-$(".switch label").children("span:first").addClass("active");
-$(".switch label").click(function(){
-    if ($(this).children().children("input:checked").length > 0) {
-        $(this).children().children("input").removeAttr("checked");
+$(".switch div").children("span:first").addClass("active");
+$(".switch div").click(function(){
+    if ($(this).hasClass("switch-active")) {
+        $(this).removeClass("switch-active");
         $(this).children("span:first").addClass("active");
         $(this).children().next().next().removeClass("active");
     }
     else {
-        $(this).children().children("input").attr("checked", "checked");
+        $(this).addClass("switch-active");
         $(this).children().removeClass("active");
         $(this).children().next().next().addClass("active");
     }
 });
 
-// ---------------- fancybox  -------------------------- //
-    $(".gallery a").fancybox({
-        // insert parameters here
+// ---------------- Input drop-list -------------------------- //
+    // show/hide
+    $(".input_drop-down").focusin(function(){
+        $(this).next().fadeIn("fast");
     });
+    $(".input_drop-down").focusout(function(){
+        $(this).next().fadeOut("fast");
+    });
+    // get text
+    $(".input-drop-down li").click(function(){
+        var text = $(this).text();
+        $(this).parent().prev().val(text);
+    });
+
+// ---------------- fancybox  -------------------------- //
+    // $(".gallery a").fancybox({
+    //     // insert parameters here
+    // });
 
 // ---------------- Tab -------------------------- //
     $(".tab-cont").hide();
@@ -132,6 +187,39 @@ $(".switch label").click(function(){
         var act = $(this).attr("data-tab");
         $(".tab-cont").hide();
         $(act).fadeIn();
+    });
+// ---------------- Sort -------------------------- //
+    $(".filter-tab li:first").addClass("active");
+    $(".filter-tab li").click(function(){
+        $(".filter-tab li").removeClass("active");
+        $(this).addClass("active");
+    });
+
+// ---------------- Sort media -------------------------- //
+    $(".tab-btn li:first").addClass("active");
+    $(".tab-btn li").click(function(){
+        $(".tab-btn li").removeClass("active");
+        $(this).addClass("active");
+    });
+
+// ---------------- Gallery -------------------------- //
+    $(".gallery-link").click(function(){
+        $(".popup_album").fadeIn();
+        $(".overlay-album").fadeIn();
+    });
+    $(".gallery img").click(function(){
+        var img = $(this).parent().attr("data-img");
+        $(".popup_photo img").attr("src", img);
+        $(".popup_photo").fadeIn();
+        $(".overlay_photo").fadeIn();
+    });
+    $(".popup_album .close").click(function(){
+        $(".popup_album").fadeOut();
+        $(".overlay-album").fadeOut();
+    });
+    $(".popup_photo .close").click(function(){
+        $(".popup_photo").fadeOut();
+        $(".overlay_photo").fadeOut();
     });
 
 });

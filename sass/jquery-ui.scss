@@ -249,9 +249,10 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-datepicker .ui-datepicker-prev {
     left: 16px;
-    @include sized-sprite($icons, prev-month);
+    @include sized-sprite($icons, prev-month); 
      &:hover {
         @include sized-sprite($icons, prev-month);
+        @include box-shadow(none);
     }
 }
 .ui-datepicker .ui-datepicker-next {
@@ -259,6 +260,7 @@ button.ui-button::-moz-focus-inner {
     @include sized-sprite($icons, next-month);
     &:hover {
         @include sized-sprite($icons, next-month);
+        @include box-shadow(none);
     }
 }
 
@@ -272,7 +274,7 @@ button.ui-button::-moz-focus-inner {
     margin-top: -8px;
     border: 0;
     &:hover {
-        
+        @include box-shadow(none);
     }
 }
 .ui-datepicker .ui-datepicker-title {
@@ -952,19 +954,28 @@ body .ui-tooltip {
 .ui-priority-secondary,
 .ui-widget-content .ui-priority-secondary,
 .ui-widget-header .ui-priority-secondary {
-    opacity: .7;
-    filter:Alpha(Opacity=70);
+    color: #979797;
     font-weight: normal;
+    &:hover {
+        @include background-image(linear-gradient(#fff, #f0f0f0));
+        @include box-shadow(none);
+        cursor: default;
+    }
 }
 .ui-state-disabled,
 .ui-widget-content .ui-state-disabled,
 .ui-widget-header .ui-state-disabled {
-    opacity: .35;
-    filter:Alpha(Opacity=35);
+    color: #979797;
     background-image: none;
+    &:hover {
+        @include background-image(linear-gradient(#fff, #f0f0f0));
+        @include box-shadow(none);
+        cursor: default;
+    }
+
 }
 .ui-state-disabled .ui-icon {
-    filter:Alpha(Opacity=35);
+    
 }
 
 /* Icons

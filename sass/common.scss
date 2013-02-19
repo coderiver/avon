@@ -73,7 +73,11 @@ a{
     height: auto !important;
     height: 100%;
 }
-
+.l-container {
+    position: relative;
+    width: 78%;
+    margin: 0 auto;
+}
 .push {
     clear: both;
     height: 120px;
@@ -84,7 +88,7 @@ a{
 .wrap {
     @extend %clr;
 }
-.i-hate-ie7 {
+.i-hate-ie {
     clear: both;
 }
 
@@ -94,15 +98,20 @@ a{
 .header {
     padding-top: 18px;
     @extend %clr;
-    .drop-down {
-        right: -47px;
-        top: 26px;
-        &:before {
+    .choose {
+        .drop-down {
+            right: -47px;
+            top: 26px;
             left: auto;
-            right: 41px;
-            margin: 0;
+            width: 150px;
+            &:before {
+                left: auto;
+                right: 41px;
+                margin: 0;
+            }
         }
     }
+    
 }
 
 .logo {
@@ -170,7 +179,7 @@ a{
             background: #fefdfd;
             @include background-image(linear-gradient(#fefdfd, #e5ccdd));
             &:before {
-                display: none;
+                //display: none;
             }
         }
     }
@@ -178,15 +187,15 @@ a{
         height: 40px;
         color: #fff;
         text-shadow: 0 1px 0 rgba(138,75,128, .22);
-        background: #ca56a4;
         @include box-shadow(inset 0 -3px 4px rgba(255,255,255, .2)); 
+        background: #ca56a4;
         @include background-image(linear-gradient(#ca56a4, #932966));
         &:hover {
             color: #fff;
             text-shadow: 0 1px 0 rgba(138,75,128, .22);
             @include box-shadow(inset 0 -3px 4px rgba(255,255,255, .2)); 
             background: #ca56a4;
-            @include background-image(linear-gradient(#ca56a4, #932966));  
+            @include background-image(linear-gradient(#ca56a4, #932966)); 
         }
     }
 }
@@ -483,11 +492,12 @@ button.btn-gray {
 }
 
 .gallery-link {
-    text-align: center;
-    a {
-        font-size: 14px;
-        color: #483b50;
-        text-decoration: none;
+    text-align: center; 
+    display: inline-block;
+    font-size: 14px;
+    color: #483b50;
+    text-decoration: none;
+    strong {
         &:hover {
             color: #b5007d;
         }
@@ -499,7 +509,7 @@ button.btn-gray {
     margin-bottom: 5px;
     height: 100px;
     width: 100px;
-    a {
+    strong {
         position: absolute;
         top: 0;
         left: 0;
@@ -545,7 +555,7 @@ button.btn-gray {
         color: #fff;
         text-align: left;
         @include sized-sprite($icons, img-corner);
-        strong {
+        b {
             display: inline-block;
             width: 22px;
             text-align: center;
@@ -560,9 +570,24 @@ button.btn-gray {
         margin-right: 12px;
     } 
 }
-.soc__odn {@include sized-sprite($icons, odn);}
-.soc__vk {@include sized-sprite($icons, vk);}
-.soc__fb {@include sized-sprite($icons, fb);}
+.soc__odn {
+    @include sized-sprite($icons, odn);
+    &:hover {
+        @include sized-sprite($icons, odn-h);
+    }
+}
+.soc__vk {
+    @include sized-sprite($icons, vk);
+    &:hover {
+        @include sized-sprite($icons, vk-h);
+    }
+}
+.soc__fb {
+    @include sized-sprite($icons, fb);
+    &:hover {
+        @include sized-sprite($icons, fb-h);
+    }
+}
 
 .soc-big {
     float: right;
@@ -574,16 +599,27 @@ button.btn-gray {
     }
     
 }
-.soc-big__vk {@include sized-sprite($icons, vk2);} 
-.soc-big__odn {@include sized-sprite($icons, odn2);}
+.soc-big__vk {
+    @include sized-sprite($icons, vk2);
+    &:hover {
+        @include sized-sprite($icons, vk2-h);
+    }
+} 
+.soc-big__odn {
+    @include sized-sprite($icons, odn2);
+    &:hover { 
+        @include sized-sprite($icons, odn2-h);
+    }
+}
 .soc-big__fb {
     @include sized-sprite($icons, fb2);
     &:hover {
         background: none;
+        @include sized-sprite($icons, fb2-h);
         .fb-counter {
             display: block;
             cursor: pointer;
-            margin-left: -48px; 
+            margin-left: -51px; 
         }
     }
     .fb-counter {
@@ -591,13 +627,13 @@ button.btn-gray {
     }
 }
 
-.overlay {
+.overlay { 
     display: none;
     position: fixed;
-    left: 0;
+    left: 0; 
     top: 0;
     right: 0;
-    bottom: 0;
+    bottom: 0; 
     z-index: 2000;
     background: rgba(255,255,255,.96);
 }
@@ -637,6 +673,7 @@ button.btn-gray {
     i {
         display: inline-block;
         margin-right: 7px;
+        vertical-align: middle;
         @include sized-sprite($icons, close);
     }
 }
@@ -649,30 +686,6 @@ button.btn-gray {
     @include border-radius(10px);
     background: #ca57a5;
     @include background-image(linear-gradient(#ca57a5, #932965));
-    button {
-        display: block; 
-        position: relative;
-        z-index: 1001;
-        height: 31px;
-        line-height: 31px;
-        width: 100%;
-        @include mr;
-        @include border-radius(7px);
-        text-align: left;
-        background: #fcfdfc;
-        @include background-image(linear-gradient(#fcfdfc, #d9cfd6));
-        span {
-            padding-left: 18px;
-            font-size: 14px;
-            color: #34272f;
-        }
-        i {
-            position: absolute;
-            right: -2px;
-            top: -2px; 
-            @include sized-sprite($icons, select);
-        }
-    }
     .drop-down {
         top: 33px;
         left: -2px; 
@@ -690,6 +703,31 @@ button.btn-gray {
         }
     }
 }
+.select__wrap {
+    display: block; 
+    position: relative;
+    z-index: 1001;
+    height: 31px;
+    line-height: 31px;
+    width: 100%;
+    cursor: pointer;
+    @include mr;
+    @include border-radius(7px);
+    text-align: left;
+    background: #fcfdfc;
+    @include background-image(linear-gradient(#fcfdfc, #d9cfd6));
+    span {
+        padding-left: 18px;
+        font-size: 14px;
+        color: #34272f;
+    }
+    i {
+        position: absolute;
+        right: -2px;
+        top: -2px; 
+        @include sized-sprite($icons, select);
+    }
+}
 .select_active {
     @include border-radius(10px 10px 0 0);
     .drop-down {
@@ -701,6 +739,7 @@ button.btn-gray {
 }
 
 .field {
+    position: relative;
     margin-top: 36px;
     label {
         display: block;
@@ -731,10 +770,46 @@ button.btn-gray {
         @include box-shadow(inset 1px 1px 5px rgba(0,0,0,.4), 0 1px 0 #f1cad5);
     }
 }
+.input_drop-down {
+    position: relative;
+    z-index: 2;
+    &:focus {
+        @include border-radius(10px 10px 0 0);
+        @include box-shadow(0 -3px 6px rgba(0,0,0,.2));
+    }
+}
 .textarea {
     padding: 10px 13px;
     min-height: 133px;
 }
+
+.input-drop-down {
+    display: none;
+    position: absolute;
+    top: 54px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0 17px;
+    color: #787275;
+    font-size: 12px;
+    background: #fff;
+    border: 1px solid #c4bec1;
+    border-top: none;
+    border-bottom: 1px solid #dcd8da;
+    @include box-sizing(border-box);
+    @include border-radius(0 0 10px 10px);
+    @include box-shadow(0 0 9px rgba(0,0,0,.3));
+    li {
+        margin-bottom: 6px;
+        padding: 0 5px 0 12px;
+        cursor: pointer;
+        &:hover {
+            color: #362c3c;
+        }
+    }
+}
+
 .filter-wrapper {
     float: left;
     position: relative;
@@ -767,35 +842,6 @@ button.btn-gray {
     }
 }
 
-@include keyframes(anim-1) {
-    from {
-        left: 0;
-    }
-    
-    50% {
-        left: 50%;
-    }
-    
-    to {
-        right: 0;
-        left: auto;
-    }
-}
-
-@include keyframes(anim-2) {
-    from {
-        right: 0;
-        left: auto;
-    }
-    
-    50% {
-        left: 50%;
-    }
-    
-    to {
-        left: 0;
-    }
-}
 .switch {
    color: #483b50;
    font-size: 16px;
@@ -803,8 +849,9 @@ button.btn-gray {
    display: inline-block;
    @include mb;
    @include transition(all, 1s,ease-in-out);
-   label {
+   div {
        cursor: pointer;
+       display: inline-block;
    }
    .key {
        color: #b6b1b9;
@@ -815,6 +862,12 @@ button.btn-gray {
    .active {
        color: #483b50;
        border: 0;
+   }
+   .switch-active {
+        i   {
+            right: 0;
+            left: auto;
+        }
    }
 }
 .switch__name {
@@ -830,10 +883,9 @@ button.btn-gray {
     border: 1px solid #bdaab6;
     vertical-align: middle;
     @include border-radius(10px);
-    background: #d9ccd6;
+    background: #dcd0d9;
     @include background-image(linear-gradient(#d9ccd6, #dcd0d9));
     @include box-shadow(inset 0 0 5px rgba(0,0,0,.2));
-
     i {
         position: absolute;
         left: 0;
@@ -845,19 +897,6 @@ button.btn-gray {
         background: #ca4a9c;
         @include background-image(linear-gradient(#ca4a9c, #93145b));
         @include box-shadow(0 1px 4px rgba(0,0,0,.4), inset 0 0 1px rgba(255,255,255,.1));
-    }
-    input {
-        position: absolute;
-        opacity: 0;
-        z-index: 2;
-    }
-    input + i {
-        //@include animation(anim-1 1s linear 1);
-    }
-    input:checked + i {
-        right: 0;
-        left: auto;
-        //@include animation(anim-2 1s linear 1);
     }
 }
 .switch_big {
@@ -900,28 +939,6 @@ button.btn-gray {
 .choose {
     text-align: right;
     padding: 6px 60px 0 0;
-    button {
-        position: relative;
-        padding: 0 13px 3px 19px;
-        background: none;
-        color: #b6047f;
-        @include mr;
-        &:before,
-        &:after {
-            content: "";
-            position: absolute;
-        }
-        &:before {
-            left: 0;
-            top: 2px;
-            @include sized-sprite($icons, pin);
-        }
-        &:after {
-            right: 0;
-            top: 8px;
-            @include sized-sprite($icons,arr1);
-        }
-    }
     .active {
         span {
             border-bottom: 0;
@@ -939,9 +956,34 @@ button.btn-gray {
         }
     }
 }
+.choose__wrap {
+    position: relative;
+    display: inline-block;
+    padding: 0 13px 3px 19px;
+    background: none;
+    color: #b6047f;
+    cursor: pointer;
+    line-height: 1;
+    @include mr;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+    }
+    &:before {
+        left: 0;
+        top: 2px;
+        @include sized-sprite($icons, pin);
+    }
+    &:after {
+        right: 0;
+        top: 8px;
+        @include sized-sprite($icons,arr1);
+    }
+}
 .choose_coach {
     margin: 0 54px 0 33px;
-    button {
+    .choose__wrap {
         &:before {
             left: 0;
             top: 2px;
@@ -954,11 +996,12 @@ button.btn-gray {
 .checkbox {
     position: relative;
     cursor: pointer;
-    margin-left: 46px;
+    padding-left: 26px;
+    margin-left: 20px;
     @include user-select(none);
     input, i {
         position: absolute;
-        left: -25px;
+        left: 0;
         top: 0;
         width: 19px;
         height: 19px;
@@ -1012,6 +1055,7 @@ button.btn-gray {
         font-size: 14px;
         cursor: pointer;
         color: #483b50;
+        border: 2px solid transparent;
         span {
             border-bottom: 1px dotted;
         }
@@ -1084,7 +1128,7 @@ button.btn-gray {
         }
     }
 }
- 
+
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 /* ----------------------------------------- Footer ---------------------------------------------- */

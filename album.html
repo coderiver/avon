@@ -1,0 +1,206 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Album</title>
+    <link rel="stylesheet" media="screen" href="css/screen.css" >
+    <link rel="stylesheet" media="screen" href="css/jquery.fancybox.css" >
+    <script src="js/jquery.tools.min.js"></script>
+    <script src="js/jquery.cycle.all.js"></script>
+    <script src="js/jquery-ui.js"></script>  
+    <script src="js/jquery.fancybox.js"></script>  
+    <script src="js/common.js"></script>  
+    <!--[if lt IE 9]> 
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+    <![endif]-->
+</head>
+<body>
+<section class="l-layout l-layout_map">
+    <div class="l-container">
+        <header class="header">
+            <h1 class="logo">
+                <a href="#"></a>
+            </h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Наши тренеры</a></li>
+                    <li><a href="#">Наши тренинги</a></li>
+                    <li><a href="#" class="active">Галерея</a></li>
+                </ul>
+            </nav>
+            <div class="enter">
+                <div class="enter__user">
+                    <span><i></i>Здравствуйте, <strong>Вера Попова!</strong></span>
+                    <span class="enter__id">Ваш персональный номер  - R12380</span>
+                </div>
+            </div>
+            <div class="i-hate-ie"></div>
+        </header>
+    </div>
+    <div class="map-wrap">
+        <div class="map">
+            <iframe width="100%" height="886" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ru/?ie=UTF8&amp;ll=50.236665,31.657104&amp;spn=3.039246,8.453979&amp;t=m&amp;z=8&amp;output=embed"></iframe>
+            <a class="gallery-link gallery-link_small" href="#" style="position:absolute;top:300px;
+            right:300px;">
+                <div class="gallery-link__wrap">
+                    <strong href="#" class="first"><span></span></strong>
+                    <strong href="#" class="second"><span></span></strong>
+                    <strong href="#">
+                        <span><img src="http://placehold.it/50x50" alt=""></span>
+                    </strong>
+                    <span><b>5</b></span>
+                </div>
+            </a>
+        </div>
+        <div class="map-block-wrap">
+            <div class="map-block">
+                <div class="breadcrumbs">
+                    <a href="#" class="home"></a>
+                    <span>Галерея</span>
+                </div>
+                <h1 class="title-l-1">Галерея</h1>
+                <h2 class="title-l-2">Расширенный поиск</h2>
+                <div class="extend-search">
+                    <form>
+                        <fieldset class="field">
+                            <label>Тренер:</label>
+                            <input class="input input_drop-down" placeholder="Начните вводить">
+                            <ul class="input-drop-down">
+                                <li>Киев</li>
+                                <li>Днепропетровск</li>
+                                <li>Одесса</li>
+                                <li>Львов</li>
+                                <li>Мариуполь</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="field">
+                            <label>Город:</label>
+                            <input class="input input_drop-down" placeholder="Начните вводить">
+                            <ul class="input-drop-down">
+                                <li>Иванова Катерина</li>
+                                <li>Анастасия Солнцева</li>
+                                <li>Виктория  Саенко</li>
+                                <li>Валерия Леонова</li>
+                                <li>Инна Крюкова</li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="field">
+                            <label class="checkbox" for="check5">
+                                <input type="checkbox" id="check5">
+                                <i></i>
+                                <span>Только не тренинги, которые я посетил</span>
+                            </label>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="push"></div>
+</section>
+<footer class="footer">
+    <div class="footer__wrap">
+        <nav class="footer__nav">
+            <ul>
+                <li><a href="#">Наши тренера</a></li>
+                <li><a href="#">Наши тренинги</a></li>
+                <li><a href="#">Обратна связь</a></li>
+                <li><a href="#">AVON.ru</a></li>
+            </ul>
+        </nav> 
+        <div class="footer__info">
+            <div class="soc">
+                <a href="#" class="soc__odn"></a>
+                <a href="#" class="soc__vk"></a>
+                <a href="#" class="soc__fb"></a>
+            </div>
+            <span class="copy">© 2012 Avon Products Inc.</span>
+        </div>                                      
+    </div>
+</footer>
+<div class="popup popup_album">
+    <button class="close"><i></i>закрыть</button>
+    <div class="gallery">
+        <span data-img="img/img_b.jpg">
+            <img src="img/img_s.jpg" alt="">
+            <div class="soc-big">
+                <a href="#" class="soc-big__vk"></a>
+                <a href="#" class="soc-big__odn"></a>
+                <a href="#" class="soc-big__fb">
+                </a>
+            </div>
+        </span>
+        <span data-img="img/img_b.jpg">
+            <img src="img/img_s.jpg" alt="">
+            <div class="soc-big">
+                <a href="#" class="soc-big__vk"></a>
+                <a href="#" class="soc-big__odn"></a>
+                <a href="#" class="soc-big__fb">
+                </a>
+            </div>
+        </span>
+        <span data-img="img/img_b.jpg">
+            <img src="img/img_s.jpg" alt="">
+            <div class="soc-big">
+                <a href="#" class="soc-big__vk"></a>
+                <a href="#" class="soc-big__odn"></a>
+                <a href="#" class="soc-big__fb">
+                </a>
+            </div>
+        </span>
+        <span data-img="img/img_b.jpg">
+            <img src="img/img_s.jpg" alt="">
+            <div class="soc-big">
+                <a href="#" class="soc-big__vk"></a>
+                <a href="#" class="soc-big__odn"></a>
+                <a href="#" class="soc-big__fb">
+                </a>
+            </div>
+        </span>
+        <span data-img="img/img_b.jpg">
+            <img src="img/img_s.jpg" alt="">
+            <div class="soc-big">
+                <a href="#" class="soc-big__vk"></a>
+                <a href="#" class="soc-big__odn"></a>
+                <a href="#" class="soc-big__fb">
+                </a>
+            </div>
+        </span>
+        <span data-img="img/img_b.jpg">
+            <img src="img/img_s.jpg" alt="">
+            <div class="soc-big">
+                <a href="#" class="soc-big__vk"></a>
+                <a href="#" class="soc-big__odn"></a>
+                <a href="#" class="soc-big__fb">
+                </a>
+            </div>
+        </span>
+        <span data-img="img/img_b.jpg">
+            <img src="img/img_s.jpg" alt="">
+            <div class="soc-big">
+                <a href="#" class="soc-big__vk"></a>
+                <a href="#" class="soc-big__odn"></a>
+                <a href="#" class="soc-big__fb">
+                </a>
+            </div>
+        </span>
+    </div>
+</div>
+<div class="popup popup_photo">
+    <button class="close"><i></i>закрыть</button>
+    <div class="l-container">
+        <h2 class="title-l-2">Вместе с Avon твой успех гарантирован!</h2>
+        <img src="" alt="">
+        <div class="soc-big">
+            <a href="#" class="soc-big__vk"></a>
+            <a href="#" class="soc-big__odn"></a>
+            <a href="#" class="soc-big__fb">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="overlay-album"></div>
+<div class="overlay overlay_photo"></div>
+</body>
+</html>

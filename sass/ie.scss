@@ -1,18 +1,67 @@
 @import "base";
 // ie6-8
 .lteie8 {
-    .checkbox i,
-    .switch__wrap i {
-        display: none;
+    .checkbox {
+        i {
+            display: none;
+        }
+        input {
+            position: static;
+        }
     }
-    .switch__wrap {
-        background: none;
+    .coach-list {
+        background: none !important;
+    }
+    .overlay,
+    .overlay-album {
+        background: #fff;
+    }
+    .header {
+        position: relative;
+        z-index: 1000;
+    }
+    .nav {
+        a  {
+             background: #e2dbdf;
+         }
+        .active {
+            background: #ca56a4;
+        } 
+    }
+    .footer {
+        background: #edc9da;
+    } 
+    .map-block-wrap {
+        .filter-wrapper {
+            .input {
+                width: 217px;
+            }
+        }
     }
 }
 
 // ie7
 *+ html {
+    .btn-gray {
+        line-height: 27px;
+    }
     
+    .js-date,
+    .filter {
+        position: relative;
+        z-index: 1000;
+    }
+    .filter__wrap {
+        .filter-tab, 
+        .choose {
+            vertical-align: middle;
+            line-height: 51px;
+        }
+    }
+    .switch {
+        vertical-align: middle;
+        line-height: 51px;
+    }
 }
 
 // ie6
@@ -40,7 +89,14 @@
     .comments-wrap .btn-gray,
     .training__head .coach-item,
     .choose, 
-    .filter-tab
+    .filter-tab,
+    .choose__wrap,
+    .comments-head .title-l-2, 
+    .filter__wrap .choose,
+    .training-item,
+    .switch,
+    .switch div,
+    .search
     {
         display: inline;
     }
