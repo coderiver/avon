@@ -235,4 +235,21 @@ $(".switch div").click(function(){
         $(".overlay_photo").fadeOut();
     });
 
+// ---------------- Scroll TOP -------------------------- //
+     $(window).scroll(function() {   
+        if (($('body').scrollTop() > 30)) {
+            $(".to-top").show();
+        }
+        else {
+            $(".to-top").hide();
+        }
+    });
+     $(".to-top").click(function(){
+        $('html, body').animate({
+         scrollTop: 0
+        }, 500);
+    });
+
+
+
 });

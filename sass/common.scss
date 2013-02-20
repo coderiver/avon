@@ -1187,6 +1187,35 @@ button.btn-gray {
     }
 }
 
+.to-top {
+    display: none;
+    position: fixed;
+    left: 45px;
+    top: 50%;
+    margin-top: -36px;
+    width: 86px;
+    height: 73px;
+    text-align: center;
+    cursor: pointer;
+    @include mb;
+    color: #fff;
+    font-size: 14px;
+    background: rgba(226,217,221, .5);
+    text-transform: uppercase;
+    @include border-radius(10px);
+    &:hover {
+        background: #e2d9dd;
+    }
+    i {
+        display: inline-block;
+        margin-top: 13px;
+        @include sized-sprite($icons, to-top);
+    }
+    span {
+        display: block;
+    }
+}
+
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 /* ----------------------------------------- Footer ---------------------------------------------- */
