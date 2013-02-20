@@ -642,6 +642,7 @@ button.btn-gray {
     position: absolute;
     z-index: 3000;
     left: 50%;
+    top: 75px;
     color: #483b50;
     p {
         font-size: 16px;
@@ -1040,6 +1041,63 @@ button.btn-gray {
     span {
         color: #a39da7;
         border-bottom: 1px dotted;
+    }
+}
+
+.radio {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    @include user-select(none);
+    cursor: pointer;
+    font-size: 16px;
+    i, input {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -9px;
+        width: 18px;
+        height: 18px;
+        @include box-sizing(border-box);
+    }
+    i {
+        background: #c73998;
+        border: 1px solid #820449;
+        @include border-radius(50%);
+        @include background-image(linear-gradient(#c73998, #921157));
+        @include box-shadow(0 1px 4px rgba(0,0,0,.4), inset 1px 1px 0 rgba(255,255,255,.2));
+        &:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -3px;
+            margin-top: -3px;
+            width: 6px;
+            height: 6px;
+            background: #fff;
+            @include border-radius(50%);
+            @include box-shadow(0 -1px 0 rgba(0,0,0,.4));
+        }
+    }
+    input {
+        opacity: 0;
+        &:checked + i {
+            border: 0;
+            @include background-image(linear-gradient(#92185c, #9e1965));
+            @include box-shadow(inset 1px 1px 5px rgba(0,0,0,.4));
+            &:before {
+                opacity: .6;
+            }
+        }
+    }
+    span, img {
+        display: inline-block;
+        vertical-align: middle;
+    } 
+    img {
+        margin-right: 5px;
     }
 }
 

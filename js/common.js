@@ -1,42 +1,36 @@
 $(document).ready(function() {
 // ---------------- Datapicker -------------------------- //
-    $(function() {
-        $( ".js-date" ).datepicker({
-            showOn: '.btn',
-            monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
-            'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-            monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
-            'Июл','Авг','Сен','Окт','Ноя','Дек'],
-            dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
-            dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
-            dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-            weekHeader: 'Не',
-            dateFormat: 'dd.mm.yy',
-            firstDay: 1,
-            isRTL: false,
-            showMonthAfterYear: false,
-            //minDate: 0
-            showOtherMonths: true,
-            selectOtherMonths: true
-        })
-    //     .hide()
-    //     .click(function() {
-    //       $(this).hide();
-    //     });
-    //     $(".btn").click(function() {
-    //    $(".js-dater").show(); 
-    // });
-    });
     
-    // $(".js-date").hover(
-    //   function () {
-    //     $(this).children(".ui-datepicker-inline").fadeIn();
-    //   }, 
-    //   function () {
-    //     $(this).children(".ui-datepicker-inline").fadeOut();
-    //     $(this).children(".ui-datepicker-inline").fadeOut();
-    //   }
-    // );
+    $(".js-date").click( function(){
+        if ($(this).hasClass("js-act")) {
+            $(this).removeClass("js-act");
+            $(this).children(".ui-datepicker-inline").fadeOut();
+        }
+        else {
+            $(this).addClass("js-act");
+            $(".ui-datepicker-inline").fadeOut();
+            $(this).children(".ui-datepicker-inline").fadeIn();
+            $(this).datepicker({
+                inline: true,
+                showOn: '.btn',
+                monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+                'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+                monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
+                'Июл','Авг','Сен','Окт','Ноя','Дек'],
+                dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+                dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+                dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+                weekHeader: 'Не',
+                dateFormat: 'dd.mm.yy',
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                //minDate: 0
+                showOtherMonths: true,
+                selectOtherMonths: true
+            });
+        }  
+    });
     // ---------------- Chose city  drop-list-------------------------- //
     $(".choose__wrap").click(function(){
         if ($(this).hasClass("active")) {
@@ -49,12 +43,25 @@ $(document).ready(function() {
         }
     });
 
-// ---------------- Chose Other city -------------------------- //
-    $(".drop-down li").click(function(){
+// ---------------- SHOW Other city -------------------------- //
+    $(".js-drop-down-list li").click(function(){
         var val = $(this).text();
         $(this).parent().parent().prev().text(val);
     });
 
+
+// ---------------- other city  drop-list -------------------------- //
+    $(".js-place").click(function(){
+        if ($(this).hasClass("js-active")) {
+            $(this).removeClass("js-active");
+            $(".js-show-other").fadeOut();
+        }
+        else {
+            $(this).addClass("js-active");
+            $(".js-show-other").fadeOut();
+            $(this).children(".js-show-other").fadeIn();
+        }
+    });
 
 // ----------------  init cycle plugin -------------------------- //
     $(".coach-scroll .scroll").cycle({ 
@@ -103,6 +110,12 @@ $(".close").click(function(){
 // ---------------- Add comment popup -------------------------- //
 $(".js-add-comment").click(function(){
     $(".popup_add-comment").fadeIn();
+    $(".overlay").fadeIn();
+});
+
+// ---------------- Request popup -------------------------- //
+$(".js-request").click(function(){
+    $(".popup_request").fadeIn();
     $(".overlay").fadeIn();
 });
 

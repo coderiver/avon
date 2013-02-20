@@ -5,7 +5,19 @@
 
 /* Layout helpers
 ----------------------------------*/
-
+.ui-datepicker-inline {
+    position: absolute;
+    z-index: 3000;
+    top: 31px;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: -9px;
+        margin-left: -10px;
+        @include sized-sprite($icons, arr4);
+    }
+}
 .ui-helper-hidden {
     display: none;
 }
