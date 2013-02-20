@@ -1,8 +1,9 @@
 @import "base";
 .slider {
     position: relative;
-    margin-top: -32px;
+    margin: 0 auto;
     height: 595px;
+    width: 976px;
 }
 .slide {
     height: 595px;
@@ -70,11 +71,17 @@
         @include mi;
         color: #6b6468;
         font-size: 16px;
-        strong {
-            display: block;
+        a {
             color: #34272f;
             font-size: 19px;
             @include mb;
+            text-decoration: none;
+            &:hover {
+                color: #b5007d;
+            }
+        }
+        span {
+            display: block;
         }
     }
 }
@@ -90,7 +97,6 @@
     }
 }
 .slide-3 {
-    padding-top: 19px;
     .slide__info {
         padding-top: 74px;
     }
@@ -214,6 +220,9 @@
         height: 8px;
         background: #b8b3b1;
         @include border-radius(1px);
+        &:hover {
+            background: #fff;
+        }
     }
     .activeSlide {
         background: #f9f8f9;

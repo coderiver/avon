@@ -27,7 +27,7 @@ input, button {
     border: 0;
 }
 input, textarea, select,
-h1,h2,h3,h4,h5,h6,a,span,a:focus {
+h1,h2,h3,h4,h5,h6,a,span,a:focus, button {
     outline: none;
 }
 ul,ol {
@@ -57,6 +57,12 @@ body{
     .l-layout,
     .footer__wrap {
         width: 976px; 
+    }
+    .l-layout {
+        margin-bottom: -716px;
+        .push {
+            height: 716px;
+        }
     }
 }
 a{
@@ -338,6 +344,13 @@ button.btn-gray {
     strong {
         @include mb;
     }
+    a {
+        color: #625667;
+        text-decoration: none;
+        &:hover {
+            color: #b5007d;
+        }
+    }
 }
 .next-training__title {
     margin-bottom: 14px;
@@ -384,11 +397,15 @@ button.btn-gray {
             @include sized-sprite($icons, next);
         }
     }
+    .scroll {
+        min-width: 185px;
+    }
 }
 .coach-item {
     @include mi;
     font-size: 12px;
     height: 44px;
+    min-width: 185px;
     a {
         @include mb;
         color: #34272f;
@@ -492,76 +509,48 @@ button.btn-gray {
 }
 
 .gallery-link {
+    position: relative;
     text-align: center; 
     display: inline-block;
     font-size: 14px;
     color: #483b50;
     text-decoration: none;
+    @include sized-sprite($icons, img-wrap);
+    div {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        margin: -40px 0 0 -40px;
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+    }
+    i {
+        position: absolute;
+        z-index: 2;
+        left: 7px;
+        top: 10px;
+        @include sized-sprite($icons, img-corner);
+    }
+    span {
+        position: absolute;
+        z-index: 3;
+        left: 9px;
+        top: 19px;
+        width: 20px;
+        text-align: center;
+        font-size: 11px;
+        color: #fff;
+    }
     strong {
+        font-weight: normal;
         &:hover {
             color: #b5007d;
         }
     }
 }
-.gallery-link__wrap {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 5px;
-    height: 100px;
-    width: 100px;
-    strong {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 3;
-        padding: 2px;
-        width: 96px;
-        height: 96px;
-        overflow: hidden;
-        @include border-radius(4px);
-        background: #ca57a5;
-        @include background-image(linear-gradient(#ca57a5, #932965));
-        span {
-            position: relative;
-            display: block;
-            padding: 8px;
-            width: 80px;
-            height: 80px;
-            background: #dcd4d8;
-            @include border-radius(3px);
-        }
-    }
-    img {
-        display: block;
-        @include border-radius(3px);
-    }
-    .first {
-        top: -1px;
-        z-index: 1;
-        @include rotate(10);
-    }
-    .second {
-        top: -1px;
-        z-index: 2;
-        @include rotate(5);
-    }
-    span {
-        position: absolute; 
-        top: 0;
-        left: 0;
-        z-index: 4;
-        font-size: 11px;
-        line-height: 30px;
-        color: #fff;
-        text-align: left;
-        @include sized-sprite($icons, img-corner);
-        b {
-            display: inline-block;
-            width: 22px;
-            text-align: center;
-        }
-    }
-}
+
 
 .soc {
     overflow: hidden;
@@ -713,7 +702,7 @@ button.btn-gray {
     width: 100%;
     cursor: pointer;
     @include mr;
-    @include border-radius(7px);
+    @include border-radius(8px);
     text-align: left;
     background: #fcfdfc;
     @include background-image(linear-gradient(#fcfdfc, #d9cfd6));

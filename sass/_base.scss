@@ -69,9 +69,6 @@ $break-large: 1180px;
   -webkit-transform: rotate($deg + deg);
       -ms-transform: rotate($deg + deg);
           transform: rotate($deg + deg);
-             filter: progid:DXImageTransform.Microsoft.Matrix(
-                     M11=$m11, M12=$m12,M21=$m21, M22=$m22, sizingMethod='auto expand');
-               zoom: 1;
 }
 
 // skew

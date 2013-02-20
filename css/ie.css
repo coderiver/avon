@@ -15,6 +15,7 @@
 .lteie8 .nav .active { background: #ca56a4; }
 .lteie8 .footer { background: #edc9da; }
 .lteie8 .map-block-wrap .filter-wrapper .input { width: 217px; }
+.lteie8 .to-top { background: #e2d9dd; }
 
 * + html .btn-gray { line-height: 27px; }
 * + html .js-date, * + html .filter { position: relative; z-index: 1000; }

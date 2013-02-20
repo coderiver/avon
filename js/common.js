@@ -200,7 +200,9 @@ $(".switch div").click(function(){
         var act = $(this).attr("data-tab");
         $(".tab-cont").hide();
         $(act).fadeIn();
+        return false;
     });
+
 // ---------------- Sort -------------------------- //
     $(".filter-tab li:first").addClass("active");
     $(".filter-tab li").click(function(){

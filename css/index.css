@@ -6,7 +6,7 @@
 
 @font-face { font-family: 'Conv_MyriadPro-BoldIt'; src: url("../fonts/MyriadPro-BoldIt.eot"); src: local("☺"), url("../fonts/MyriadPro-BoldIt.woff") format("woff"), url("../fonts/MyriadPro-BoldIt.ttf") format("truetype"), url("../fonts/MyriadPro-BoldIt.svg") format("svg"); font-weight: normal; font-style: normal; }
 
-.slider { position: relative; margin-top: -32px; height: 595px; }
+.slider { position: relative; margin: 0 auto; height: 595px; width: 976px; }
 
 .slide { height: 595px; width: 100%; overflow: hidden; }
 
@@ -27,13 +27,14 @@
 .slide__big-title span { display: block; margin-bottom: -3px; }
 .slide__big-title b { font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; text-transform: uppercase; font-size: 48px; }
 .slide__big-title .coach { padding-left: 5px; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-It', Arial, sans-serif; color: #6b6468; font-size: 16px; }
-.slide__big-title .coach strong { display: block; color: #34272f; font-size: 19px; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; }
+.slide__big-title .coach a { color: #34272f; font-size: 19px; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; text-decoration: none; }
+.slide__big-title .coach a:hover { color: #b5007d; }
+.slide__big-title .coach span { display: block; }
 
 .slide-2 { background: url(../img/slide2.png) -48px 100% no-repeat; }
 .slide-2 .training-date { margin: 0 0 48px 125px; padding-bottom: 4px; }
 .slide-2 .btn-gray { margin: 19px 0 0 15px; }
 
-.slide-3 { padding-top: 19px; }
 .slide-3 .slide__info { padding-top: 74px; }
 .slide-3 .gallery-link { margin-bottom: 35px; }
 .slide-3 .slide__info-title { margin-bottom: 24px; color: #483b50; font-size: 18px; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; }
@@ -46,12 +47,12 @@
 .slider-nav span:hover { opacity: 1; }
 .slider-nav i { position: absolute; left: 50%; top: 21px; margin-left: -11px; opacity: 0.6; }
 .slider-nav i:hover { opacity: 1; }
-.slider-nav .activeSlide { -webkit-box-shadow: 0 5px 3px -3px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 5px 3px -3px rgba(0, 0, 0, 0.2); box-shadow: 0 5px 3px -3px rgba(0, 0, 0, 0.2); background: url('../img/icons-s4d448e9e8c.png') 0 0 no-repeat; width: 104px; height: 78px; }
+.slider-nav .activeSlide { -webkit-box-shadow: 0 5px 3px -3px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 5px 3px -3px rgba(0, 0, 0, 0.2); box-shadow: 0 5px 3px -3px rgba(0, 0, 0, 0.2); background: url('../img/icons-s8f89219ce8.png') 0 0 no-repeat; width: 104px; height: 78px; }
 .slider-nav .activeSlide span { color: #b5007d; opacity: 1; }
 .slider-nav .activeSlide i { opacity: 1; }
-.slider-nav .nav-0 i { background: url('../img/icons-s4d448e9e8c.png') 0 -593px no-repeat; width: 20px; height: 23px; }
-.slider-nav .nav-1 i { background: url('../img/icons-s4d448e9e8c.png') 0 -878px no-repeat; width: 23px; height: 23px; }
-.slider-nav .nav-2 i { background: url('../img/icons-s4d448e9e8c.png') 0 -818px no-repeat; width: 23px; height: 23px; }
+.slider-nav .nav-0 i { background: url('../img/icons-s8f89219ce8.png') 0 -980px no-repeat; width: 20px; height: 23px; }
+.slider-nav .nav-1 i { background: url('../img/icons-s8f89219ce8.png') 0 -1441px no-repeat; width: 23px; height: 23px; }
+.slider-nav .nav-2 i { background: url('../img/icons-s8f89219ce8.png') 0 -1381px no-repeat; width: 23px; height: 23px; }
 
 .img-scroll { float: left; width: 450px; }
 
@@ -64,6 +65,7 @@
 
 .img-scroll__nav { position: absolute; top: 20px; left: 18px; z-index: 1000; }
 .img-scroll__nav button { display: inline-block; margin-right: 4px; width: 8px; height: 8px; background: #b8b3b1; -webkit-border-radius: 1px; -moz-border-radius: 1px; -ms-border-radius: 1px; -o-border-radius: 1px; border-radius: 1px; }
+.img-scroll__nav button:hover { background: #fff; }
 .img-scroll__nav .activeSlide { background: #f9f8f9; -webkit-box-shadow: 0 0 0 1px #f9f8f9; -moz-box-shadow: 0 0 0 1px #f9f8f9; box-shadow: 0 0 0 1px #f9f8f9; }
 
 .overlay_choose-city { display: block; }

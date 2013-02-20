@@ -811,21 +811,21 @@
 }
 
 .gallery-link_small {
-    .gallery-link__wrap {
-        height: 71px;
-        width: 71px; 
-        strong span {
-           width: 50px;
-           height: 50px; 
-           padding: 5px;
-           overflow: hidden;
-        }
-        strong,
-        .first,
-        .second {
-            width: 61px;
-            height: 61px;
-        }
+    @include sized-sprite($icons, img-wrap_small);
+    div {
+        margin: -24px 0 0 -26px;
+        width: 50px;
+        height: 50px;
+    }
+    i {
+        left: 4px;
+        top: 6px;
+        @include sized-sprite($icons, img-corner_small);
+    }
+    span {
+        left: 5px;
+        top: 10px;
+        width: 18px;
     }
 }
 .popup_album, {
