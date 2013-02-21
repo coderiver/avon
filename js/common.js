@@ -129,10 +129,19 @@ $(".js-request").click(function(){
 });
 
 // ---------------- popup height -------------------------- //
-    $(".popup").each(function(){
-        if ($(this).height() > $(window).height()) {
-            $(this).addClass("popup_height");
-        }
+    function popup () {
+        $(".popup").each(function(){
+            if ($(this).height() > $(window).height() - 100) {
+                $(this).addClass("popup_height");
+            }
+            else {
+                $(this).removeClass("popup_height");
+            }
+        });
+    }
+    popup ();    
+    $(window).resize(function(){
+        popup ();
     });
     
 // ---------------- More -------------------------- //
