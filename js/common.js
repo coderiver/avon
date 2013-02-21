@@ -2,34 +2,31 @@ $(document).ready(function() {
 // ---------------- Datapicker -------------------------- //
     
     $(".js-date").click( function(){
-        if ($(this).hasClass("js-act")) {
-            $(this).removeClass("js-act");
-            $(this).children(".ui-datepicker-inline").fadeOut();
-        }
-        else {
-            $(this).addClass("js-act");
-            $(".ui-datepicker-inline").fadeOut();
-            $(this).children(".ui-datepicker-inline").fadeIn();
-            $(this).datepicker({
-                inline: true,
-                showOn: '.btn',
-                monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
-                'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-                monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
-                'Июл','Авг','Сен','Окт','Ноя','Дек'],
-                dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
-                dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
-                dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-                weekHeader: 'Не',
-                dateFormat: 'dd.mm.yy',
-                firstDay: 1,
-                isRTL: false,
-                showMonthAfterYear: false,
-                //minDate: 0
-                showOtherMonths: true,
-                selectOtherMonths: true
-            });
-        }  
+        $(this).children(".ui-datepicker-inline").fadeIn();
+        $(".overlay-calendar").show();
+        $(this).datepicker({
+            inline: true,
+            showOn: '.btn',
+            monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+            'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+            monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
+            'Июл','Авг','Сен','Окт','Ноя','Дек'],
+            dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+            dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+            dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+            weekHeader: 'Не',
+            dateFormat: 'dd.mm.yy',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            //minDate: 0
+            showOtherMonths: true,
+            selectOtherMonths: true
+        });
+    });
+    $(".overlay-calendar").click( function(){
+        $(".ui-datepicker-inline").fadeOut();
+        $(this).hide();
     });
     // ---------------- Chose city  drop-list-------------------------- //
     $(".choose__wrap").click(function(){
@@ -94,19 +91,30 @@ $(document).ready(function() {
         }
     });
 
-    $(".coach-list-scroll").cycle({ 
-        fx:     'scrollVert', 
-        next:    ".coach-nav_next", 
-        prev:    ".coach-nav_prev", 
-        timeout:  0,
-        speed: 2000
-    });
+    // $(".coach-list-scroll .coach-list").cycle({ 
+    //     fx:     'scrollVert', 
+    //     next:    ".coach-nav_next", 
+    //     prev:    ".coach-nav_prev", 
+    //     timeout:  0,
+    //     speed: 2000
+    // });
 // ---------------- close popup -------------------------- //
 $(".close").click(function(){
     $(this).parent().fadeOut();
     $(".overlay").fadeOut();
 });
-
+$(".overlay").click(function(){
+    $(this).fadeOut();
+    $(".popup").fadeOut();
+});
+$(".overlay-album").click(function(){
+    $(".popup_album").fadeOut();
+    $(this).fadeOut();
+});
+$(".overlay-photo").click(function(){
+    $(".popup_photo").fadeOut();
+    $(this).fadeOut();
+});
 // ---------------- Add comment popup -------------------------- //
 $(".js-add-comment").click(function(){
     $(".popup_add-comment").fadeIn();
@@ -117,8 +125,16 @@ $(".js-add-comment").click(function(){
 $(".js-request").click(function(){
     $(".popup_request").fadeIn();
     $(".overlay").fadeIn();
+    return false;
 });
 
+// ---------------- popup height -------------------------- //
+    $(".popup").each(function(){
+        if ($(this).height() > $(window).height()) {
+            $(this).addClass("popup_height");
+        }
+    });
+    
 // ---------------- More -------------------------- //
     $(".js-more").hide();
     $(".more span").click(function(){
@@ -186,10 +202,13 @@ $(".switch div").click(function(){
         $(this).parent().prev().val(text);
     });
 
-// ---------------- fancybox  -------------------------- //
-    // $(".gallery a").fancybox({
-    //     // insert parameters here
-    // });
+// ---------------- search  -------------------------- //
+    $(".search__holder").click(function(){
+        $(this).hide();
+        $(this).parent().animate({
+            right: -300,
+        }, 500);
+});
 
 // ---------------- Tab -------------------------- //
     $(".tab-cont").hide();
@@ -226,7 +245,7 @@ $(".switch div").click(function(){
         var img = $(this).parent().attr("data-img");
         $(".popup_photo img").attr("src", img);
         $(".popup_photo").fadeIn();
-        $(".overlay_photo").fadeIn();
+        $(".overlay-photo").fadeIn();
     });
     $(".popup_album .close").click(function(){
         $(".popup_album").fadeOut();
@@ -234,7 +253,7 @@ $(".switch div").click(function(){
     });
     $(".popup_photo .close").click(function(){
         $(".popup_photo").fadeOut();
-        $(".overlay_photo").fadeOut();
+        $(".overlay-photo").fadeOut();
     });
 
 // ---------------- Scroll TOP -------------------------- //
@@ -252,6 +271,83 @@ $(".switch div").click(function(){
         }, 500);
     });
 
+// ---------------- Placeholder -------------------------- //
+    // add placeholder to all input
+    $(".input").each(function(){
+        var placeholder = $(this).attr("placeholder");
+        $(this).val(placeholder);
+    });
+    // remove placeholder from the current input
+    $(".input").focusin(function(){
+        if ($(this).hasClass("focus")) {}
+        else {
+            $(this).addClass("focus");
+            $(this).val("");
+        }
+    });
+    // remove placeholder from the current input
+    $(".input").focusout(function(){
+        var placeholder = $(this).attr("placeholder");
+        if ($(this).val() != "") {}
+        else {
+            $(this).val(placeholder);
+            $(this).removeClass("focus");
+        }
+    });
+
+// ---------------- Map resize -------------------------- //
+
+    function Coach_Resize () {
+        var map = $(window).height() - 113;
+        var list = map - 201 - 15;
+        var list_li = 81;
+        var counter = Math.ceil(list/list_li) - 1;
+        list = list_li * counter;
+        $(".map iframe").height(map);
+        $(".coach-list-wrap").height(list);
+    }
+    Coach_Resize ();
+    $(window).resize(function(){
+        Coach_Resize ();
+    });
+
+    var i = 0;
+    $(".coach-nav_prev").click(function(){
+        var i = 1;
+        var top = $(".coach-list").position().top + 81;
+        if ( (i == 1) && top <= 0) {
+            $(".coach-list").animate({
+                top: top,
+            }, 100);
+        }
+        else {}
+    });
+    $(".coach-nav_next").click(function(){
+        var i = 1;
+        var top = $(".coach-list").position().top - 81;
+        var list_height = $(".coach-list").height() - $(".coach-list-wrap").height() + 81;
+        if ((i == 1) && Math.abs(top) < list_height) {
+            $(".coach-list").animate({
+                top: top,
+            }, 100);
+        }
+        else {}
+    });
+    
+
+
+
+
+
 
 
 });
+
+// ---------------- Press ESC -------------------------- //
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+        $(".overlay, .overlay-calendar, .popup, .overlay-photo, .overlay-album").fadeOut();
+
+    }
+};

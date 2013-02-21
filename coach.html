@@ -229,8 +229,8 @@
                     <div class="training">
                         <div class="training-date training-date_big">
                             <div class="calendar calendar_big">
-                                <span>май</span>
-                                <strong>12</strong>
+                                <span class="calendar__month">май</span>
+                                <strong class="calendar__date">12</strong>
                             </div>
                             <div class="training-date__descr">
                                 <h3 class="training-date__title"><a href="#">Тренинг "Тайны ароматов"</a></h3>
@@ -262,14 +262,14 @@
                         </div>
                         <div class="training__descr">
                             <p>Координируя даже небольшую команду, вы сможете получать не только дополнительный доход от своих продаж, но и процент от продаж группы! </p>
-                            <a href="#" class="btn-gray">Участвовать</a>
+                            <button class="btn-gray js-request">Участвовать</button>
                         </div>
                     </div>
                     <div class="training">
                         <div class="training-date training-date_big">
                             <div class="calendar calendar_big">
-                                <span>май</span>
-                                <strong>12</strong>
+                                <span class="calendar__month">май</span>
+                                <strong class="calendar__date">12</strong>
                             </div>
                             <div class="training-date__descr">
                                 <h3 class="training-date__title"><a href="#">Тренинг "Тайны ароматов"</a></h3>
@@ -301,14 +301,14 @@
                         </div>
                         <div class="training__descr">
                             <p>Координируя даже небольшую команду, вы сможете получать не только дополнительный доход от своих продаж, но и процент от продаж группы! </p>
-                            <a href="#" class="btn-gray">Участвовать</a>
+                            <button class="btn-gray js-request">Участвовать</button>
                         </div>
                     </div>
                     <div class="training">
                         <div class="training-date training-date_big">
                             <div class="calendar calendar_big">
-                                <span>май</span>
-                                <strong>12</strong>
+                                <span class="calendar__month">май</span>
+                                <strong class="calendar__date">12</strong>
                             </div>
                             <div class="training-date__descr">
                                 <h3 class="training-date__title"><a href="#">Тренинг "Тайны ароматов"</a></h3>
@@ -340,7 +340,7 @@
                         </div>
                         <div class="training__descr">
                             <p>Координируя даже небольшую команду, вы сможете получать не только дополнительный доход от своих продаж, но и процент от продаж группы! </p>
-                            <a href="#" class="btn-gray">Участвовать</a>
+                            <button class="btn-gray js-request">Участвовать</button>
                         </div>
                     </div>
                     <div class="js-more">
@@ -380,7 +380,7 @@
                             </div>
                             <div class="training__descr">
                                 <p>Координируя даже небольшую команду, вы сможете получать не только дополнительный доход от своих продаж, но и процент от продаж группы! </p>
-                                <a href="#" class="btn-gray">Участвовать</a>
+                                <button class="btn-gray js-request">Участвовать</button>
                             </div>
                         </div>
                         <div class="training">
@@ -419,7 +419,7 @@
                             </div>
                             <div class="training__descr">
                                 <p>Координируя даже небольшую команду, вы сможете получать не только дополнительный доход от своих продаж, но и процент от продаж группы! </p>
-                                <a href="#" class="btn-gray">Участвовать</a>
+                                <button class="btn-gray js-request">Участвовать</button>
                             </div>
                         </div>
                         <div class="training">
@@ -458,7 +458,7 @@
                             </div>
                             <div class="training__descr">
                                 <p>Координируя даже небольшую команду, вы сможете получать не только дополнительный доход от своих продаж, но и процент от продаж группы! </p>
-                                <a href="#" class="btn-gray">Участвовать</a>
+                                <button class="btn-gray js-request">Участвовать</button>
                             </div>
                         </div>
                     </div>
@@ -494,6 +494,132 @@
     <span>НаверХ</span>
 </div>
 <div class="overlay"></div>
+<div class="overlay-calendar"></div>
+<div class="popup popup_request">
+    <button class="close"><i></i>закрыть</button>
+    <strong class="popup__title">Заявка на участие в тренинг</strong>
+    <h1 class="title-l-1">"Вечная Молодость"</h1>
+    <div class="popup__left-col">
+        <div class="meta">
+            <div class="item">
+                <b>Город:</b><strong>Киев</strong>
+                <span class="js-place meta__choose">
+                    другие города
+                    <div class="drop-down js-show-other">
+                        <ul>
+                            <li>Киев</li>
+                            <li>Днепропетровск</li>
+                            <li>Одесса</li>
+                            <li>Львов</li>
+                            <li>Мариуполь</li>
+                        </ul>
+                </div>
+                </span>
+                
+            </div>
+            <div class="item js-date"><b>Дата:</b><strong>12  мая  2012</strong><span class="meta__choose">другие даты</span></div>
+        </div>
+        <h2 class="title-l-2">Личная информация</h2>
+        <form>
+            <fieldset class="field">
+                <label for="input3">ФИО:</label>
+                <input class="input" placeholder="Введите ФИО" id="input3">
+            </fieldset>
+            <fieldset class="field">
+                <label for="input4">С-номер или R-номер:</label>
+                <input class="input" placeholder="Введите свой номер" id="input4">
+            </fieldset>
+            <fieldset class="field">
+                <label for="input5">Контактный телефон:</label>
+                <input class="input" placeholder="+38 (***) *** - ** - **" id="input5">
+            </fieldset>
+            <fieldset class="field">
+                <label for="input6">Ваш e-mail:</label>
+                <input class="input" placeholder="Ваша електронная почта" id="input6">
+            </fieldset>
+            <h2 class="title-l-2">Оплата</h2>
+            <div class="radio-wrapper">
+                <div>
+                    <label class="radio radio_qiwi" for="radio1">
+                        <input type="radio" id="radio1" name="radio">
+                        <i></i>
+                        <img src="img/qiwi.png" alt="">
+                        <span>Онлайн оплата через Qiwi</span>
+                    </label>
+                </div>
+                <div>
+                    <label class="radio radio_ym" for="radio2">
+                        <input type="radio" id="radio2" name="radio">
+                        <i></i>
+                        <img src="img/ym.png" alt="">
+                        <span>Онлайн оплата через Yandex деньги</span>
+                    </label>
+                </div>
+                <div>
+                    <label class="radio" for="radio3">
+                        <input type="radio" id="radio3" name="radio">
+                        <i></i>
+                        <span>Оплата через банк</span>
+                    </label> 
+                </div>
+                <div>
+                    <label class="radio" for="radio4">
+                        <input type="radio" id="radio4" name="radio">
+                        <i></i>
+                        <span>Оплачу позже</span>
+                    </label>
+                </div>
+                <input type="submit" class="btn">
+            </div>
+        </form>
+    </div>
+    <div class="popup__right-col">
+        <div class="training__info-col">
+            <span>Проводит: </span>
+            <div class="coach-item">
+                <a href="#"><img src="http://placehold.it/40x40" alt=""></a>
+                <a href="#">Иванова Катерина</a>
+                <span>тренер по обучению</span>
+            </div>
+            <div class="training__price">
+                Стоимость участия: <span>11900 грн.</span>
+            </div>
+            <div class="training__term">
+                Продолжительность: <span>40 ч. (6 дн.)</span>
+            </div>
+            <div class="info">
+                <div class="date-more-wrap">
+                    <div class="date-more js-date">
+                        <i></i><span>Когда еще будет в <strong>Киеве?</strong></span>
+                    </div>
+                    <div class="date-more js-place">
+                        <i></i><span>Где еще будет <strong>12 мая 2012?</strong></span>
+                        <div class="drop-down js-show-other">
+                            <ul>
+                                <li>Киев</li>
+                                <li>Днепропетровск</li>
+                                <li>Одесса</li>
+                                <li>Львов</li>
+                                <li>Мариуполь</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="next-training">
+                    <h3 class="next-training__title">Ближайшие тренинги:</h3>
+                    <ul>
+                        <li><strong>24 мая</strong>  /  Тренинг "Вечная молодость"</li>
+                        <li><strong>12 августа</strong>  /  Тренинг " Уроки  успеха"</li>
+                    </ul>
+                </div>
+                <a href="#" class="other-training-link"><i></i>Другие тренинги в <strong>Киеве</strong></a>
+                <div>
+                    <a href="#" class="other-training-link"><i></i>Другие тренинги <strong>12 мая 2012</strong></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="popup popup_add-comment">
     <button class="close"><i></i>закрыть</button>
     <strong class="popup__title">Оставить отзыв о тренере</strong>
@@ -503,8 +629,8 @@
     </div>
     <form>
         <fieldset class="field">
-            <label>Ваш отзыв:</label>
-            <textarea class="input textarea" placeholder="Ваш отзыв"></textarea>
+            <label for="textarea">Ваш отзыв:</label>
+            <textarea class="input textarea" placeholder="Ваш отзыв" id="textarea"></textarea>
         </fieldset>
         <fieldset class="field_submit">
             <input type="submit" class="btn" value="Отправить">

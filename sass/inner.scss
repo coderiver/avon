@@ -330,7 +330,7 @@
     @include background-image(linear-gradient(#cb5ba9, #7c0e47));
     .input {
         display: inline-block;
-        width: 270px;
+        width: 238px;
         margin-right: 7px;
         vertical-align: middle;
     }
@@ -344,7 +344,14 @@
         @include sized-sprite($icons, glass-h);
     }
 }
-
+.search__holder {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 43px;
+    height: 47px;
+    cursor: pointer;
+}
 .btn-action {
     position: relative;
     color: #be1f8c;
@@ -368,10 +375,11 @@
 .downl {
     float: right;
     position: relative;
+    text-decoration: underline;
     i {
         position: absolute;
-        left: -37px;
-        top: 0;
+        left: -36px;
+        top: -4px;
         @include sized-sprite($icons, download);
     }
 }
@@ -384,7 +392,13 @@
     .date-more-wrap {
         float: right;
         padding-right: 35px;
+        .drop-down {
+            top: 31px;
+        }
     }
+}
+.training-list_mod {
+    padding-bottom: 0;
 }
 .training {
     margin-bottom: 46px;
@@ -626,19 +640,23 @@
     }
 }
 .training-date {
+    position: relative;
     i {
         display: inline-block;
         margin-right: 13px;
+        cursor: pointer;
         @include sized-sprite($icons, cal2); 
     }
     span {
         @include mb;
     }
+    .ui-datepicker-inline {
+        left: 8px;
+    }
 }
 .training-item__head {
     position: relative;
     top: -3px;
-    overflow: hidden;
     .title-l-2 {
         margin: 0 0 3px;
         a {
@@ -667,11 +685,10 @@
     }
 }
 .map-block-wrap {
-    position: absolute;
+        position: absolute;
         top: 15px;
-        left: 50%;
-        margin-left: -39%;
-        width: 78%;
+        margin-left: 11%;
+        width: 266px;
     .title-l-1 {
         margin-bottom: 19px;
     }
@@ -686,9 +703,6 @@
         z-index: 1;
         left: -163px;
         top: 112px;
-        .input {
-            width: 238px;
-        }
     }
 }
 .map-block {
@@ -700,16 +714,22 @@
     @include border-radius(10px);
     z-index: 1000;
 }
-.coach-list-scroll {
+.coach-list-wrap {
+    position: relative;
     margin-left: -17px;
+    overflow: hidden;
 }
 .coach-list {
+    position: absolute;
     margin-top: 3px;
     padding: 0 17px;
     width: 248px;
+    top: 0;
+    left: 0;
     li {
         position: relative;
-        padding: 15px 0 22px 17px;
+        padding: 15px 0 3px 17px;
+        height: 63px;
         &:hover { 
             background: #fde9f1;
             @include border-radius(0 10px 10px 0);
@@ -847,7 +867,8 @@
         display: inline-block;
     }
 }
-.overlay-album {
+.overlay-album,
+.overlay-photo { 
     display: none;
     position: fixed;
     left: 0; 
@@ -857,7 +878,7 @@
     z-index: 2000;
     background: rgba(255,255,255,.96);
 }
-.overlay_photo {
+.overlay-photo {
     z-index: 3000;
 }
 .gallery {

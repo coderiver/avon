@@ -16,11 +16,12 @@
 .lteie8 .footer { background: #edc9da; }
 .lteie8 .map-block-wrap .filter-wrapper .input { width: 217px; }
 .lteie8 .to-top { background: #e2d9dd; }
+.lteie8 .input { line-height: 28px; font-style: italic; }
+.lteie8 .focus { font-style: normal; }
 
 * + html .btn-gray { line-height: 27px; }
 * + html .js-date, * + html .filter { position: relative; z-index: 1000; }
 * + html .filter__wrap .filter-tab, * + html .filter__wrap .choose { vertical-align: middle; line-height: 51px; }
 * + html .switch { vertical-align: middle; line-height: 51px; }
-* + html .input { line-height: 28px; }
 
 * + html .enter__user i, * + html .btn, * + html .btn-gray, * + html .prev i, * + html .next i, * + html .badge, * + html .gallery-link__wrap, * + html .gallery-link__wrap strong, * + html .close i, * + html .switch__name, * + html .soc, * + html .copy, * + html .slider-nav button, * + html .img-scroll__nav button, * + html .breadcrumbs a, * + html .breadcrumbs span, * + html .page-head .title-l-1, * + html .comments-wrap .btn-gray, * + html .training__head .coach-item, * + html .choose, * + html .filter-tab, * + html .choose__wrap, * + html .comments-head .title-l-2, * + html .filter__wrap .choose, * + html .training-item, * + html .switch, * + html .switch div, * + html .search, * html .enter__user i, * html .btn, * html .btn-gray, * html .prev i, * html .next i, * html .badge, * html .gallery-link__wrap, * html .gallery-link__wrap strong, * html .close i, * html .switch__name, * html .soc, * html .copy, * html .slider-nav button, * html .img-scroll__nav button, * html .breadcrumbs a, * html .breadcrumbs span, * html .page-head .title-l-1, * html .comments-wrap .btn-gray, * html .training__head .coach-item, * html .choose, * html .filter-tab, * html .choose__wrap, * html .comments-head .title-l-2, * html .filter__wrap .choose, * html .training-item, * html .switch, * html .switch div, * html .search { display: inline; }

@@ -43,6 +43,13 @@
     .to-top {
         background: #e2d9dd;
     }
+    .input {
+        line-height: 28px;
+        font-style: italic;
+    }
+    .focus {
+        font-style: normal;
+    }
 }
 
 // ie7
@@ -67,9 +74,7 @@
         vertical-align: middle;
         line-height: 51px;
     }
-    .input {
-        line-height: 28px;
-    }
+    
 }
 
 // ie6

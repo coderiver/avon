@@ -64,6 +64,14 @@ body{
             height: 716px;
         }
     }
+    .logo {
+        margin: 5px 61px 0 0;
+        a {
+            width: 297px;
+            height: 90px;
+            background: url(../img/logo.png) 0 0 no-repeat;
+        }
+    }
 }
 a{
     color:#00919e;
@@ -122,12 +130,12 @@ a{
 
 .logo {
     float: left;
-    margin: 5px 61px 0 0;
+    margin: 5px 100px 0 0;
     a {
         display: block;
-        width: 297px;
-        height: 90px;
-        background: url(../img/logo.png) 0 0 no-repeat;
+        width: 248px;
+        height: 75px;
+        background: url(../img/logo-small.png) 0 0 no-repeat;
     }
 }
 
@@ -314,9 +322,10 @@ button.btn-gray {
     }
     ul {
         padding: 15px 25px 8px 18px;
+        max-height: 300px;
+        overflow-y: auto;
         background: #fff;
         @include border-radius(7px);
-        overflow: hidden;
         border-bottom: 1px solid #d4a9c1;
     }
     li {
@@ -425,7 +434,7 @@ button.btn-gray {
 }
 
 .training-date {
-    overflow: hidden;
+    //overflow: hidden;
     .title {
         margin-bottom: 17px;
         font-size: 18px;
@@ -448,22 +457,21 @@ button.btn-gray {
     margin-right: 14px;
     text-align: center;
     @include sized-sprite($icons, calendar);
-    span {
-        display: block;
-        margin-bottom: 2px;
-        color: #fff;
-        font-size: 12px;
-    }
-    strong {
-        color: #b6047f;
-        font-size: 30px;
-        @include mb;
-    } 
 }
-
+.calendar__month {
+    display: block;
+    margin-bottom: 2px;
+    color: #fff;
+    font-size: 12px;
+}
+.calendar__date {
+    color: #b6047f;
+    font-size: 30px;
+    @include mb;
+} 
 .calendar_big {
     @include sized-sprite($icons, calendar_big);
-    span {
+    .calendar__month {
         margin-bottom: 6px;
     }
 }
@@ -626,10 +634,19 @@ button.btn-gray {
     z-index: 2000;
     background: rgba(255,255,255,.96);
 }
+.overlay-calendar {
+    display: none;
+    position: fixed;
+    left: 0; 
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    z-index: 2500;
+}
 .popup {
     display: none;
-    position: absolute;
-    z-index: 3000;
+    position: fixed;
+    z-index: 3000; 
     left: 50%;
     top: 75px;
     color: #483b50;
@@ -637,7 +654,9 @@ button.btn-gray {
         font-size: 16px;
     }
 }
-
+.popup_height {
+    position: absolute; 
+}
 .popup__title {
     display: block;
     margin-top: 19px;
@@ -745,7 +764,8 @@ button.btn-gray {
     width: 100%;
     height: 28px;
     color: #483b50;
-    @include mr;
+    @include mi;
+    color: #483b50;
     font-size: 12px;
     border: 1px solid #e0dbdf;
     @include box-sizing(border-box);
@@ -772,7 +792,10 @@ button.btn-gray {
     padding: 10px 13px;
     min-height: 133px;
 }
-
+.focus {
+    color: #483b50;
+    @include mr;
+}
 .input-drop-down {
     display: none;
     position: absolute;
