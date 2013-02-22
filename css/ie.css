@@ -18,6 +18,7 @@
 .lteie8 .to-top { background: #e2d9dd; }
 .lteie8 .input { line-height: 28px; font-style: italic; }
 .lteie8 .focus { font-style: normal; }
+.lteie8 .coach-item { background: none !important; }
 
 * + html .btn-gray { line-height: 27px; }
 * + html .js-date, * + html .filter { position: relative; z-index: 1000; }

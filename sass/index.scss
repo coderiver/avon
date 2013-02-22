@@ -2,16 +2,25 @@
 .slider {
     position: relative;
     margin: 0 auto;
-    height: 595px;
+    //height: 595px;
     width: 976px;
 }
 .slide {
-    height: 595px;
+    position: relative;
+    //height: 595px;
     width: 100%;
-    overflow: hidden;
+    height: 100% !important;
+    //overflow: hidden;
+}
+.slide__img {
+    position: absolute;
+    bottom: 0;
 }
 .slide-1 {
-    background: url(../img/slide1.png) 40px 100% no-repeat;
+    //background: url(../img/slide1.png) 40px 100% no-repeat;
+    .slide__img {
+        left: 40px;
+    }
 }
 .slide__text {
     float: left;
@@ -87,13 +96,16 @@
 }
 
 .slide-2 {
-    background: url(../img/slide2.png) -48px 100% no-repeat;
+    position: relative;
     .training-date {
         margin: 0 0 48px 125px;
         padding-bottom: 4px;
     }
     .btn-gray {
         margin: 19px 0 0 15px;
+    }
+    .slide__img {
+        left: -48px;
     }
 }
 .slide-3 {

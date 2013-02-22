@@ -1,7 +1,28 @@
 $(document).ready(function() {
 // ---------------- Datapicker -------------------------- //
-    
+    function tooltip() {
+        // get dates and write to tooltip
+        $(".ui-state-default").each(function(){
+            //$(".tooltip").remove();
+            var date = $(this).text();
+            var month = $(".ui-datepicker-month").text();
+            var city = "Киев";
+            $(this).append('<div class="tooltip">'+date+' ' + month + ' ' + 'в г. '+ city +'</div>');
+        });
+
+        // show tooltip
+        $(".ui-state-default").hover(
+            function () {
+                $(this).children(".tooltip").show();
+            }, 
+            function () {
+                $(this).children(".tooltip").hide();
+            }
+        );
+    };
     $(".js-date").click( function(){
+         $(".tooltip").remove();
+        // init datepicker
         $(this).children(".ui-datepicker-inline").fadeIn();
         $(".overlay-calendar").show();
         $(this).datepicker({
@@ -21,14 +42,24 @@ $(document).ready(function() {
             showMonthAfterYear: false,
             //minDate: 0
             showOtherMonths: true,
-            selectOtherMonths: true
+            selectOtherMonths: true,
+            onSelect: function(selectedDate) {
+                // custom callback logic here
+                //alert(selectedDate);
+              }
         });
+
+        tooltip();
     });
+    
+        
+// ---------------- Show pverlay for calendar ------------------------- //
     $(".overlay-calendar").click( function(){
         $(".ui-datepicker-inline").fadeOut();
         $(this).hide();
     });
-    // ---------------- Chose city  drop-list-------------------------- //
+
+// ---------------- Chose city  drop-list-------------------------- //
     $(".choose__wrap").click(function(){
         if ($(this).hasClass("active")) {
             $(this).removeClass("active");
@@ -91,42 +122,36 @@ $(document).ready(function() {
         }
     });
 
-    // $(".coach-list-scroll .coach-list").cycle({ 
-    //     fx:     'scrollVert', 
-    //     next:    ".coach-nav_next", 
-    //     prev:    ".coach-nav_prev", 
-    //     timeout:  0,
-    //     speed: 2000
-    // });
 // ---------------- close popup -------------------------- //
-$(".close").click(function(){
-    $(this).parent().fadeOut();
-    $(".overlay").fadeOut();
-});
-$(".overlay").click(function(){
-    $(this).fadeOut();
-    $(".popup").fadeOut();
-});
-$(".overlay-album").click(function(){
-    $(".popup_album").fadeOut();
-    $(this).fadeOut();
-});
-$(".overlay-photo").click(function(){
-    $(".popup_photo").fadeOut();
-    $(this).fadeOut();
-});
+    $(".close").click(function(){
+        $(this).parent().fadeOut();
+        $(".overlay").fadeOut();
+    });
+    $(".overlay").click(function(){
+        $(this).fadeOut();
+        $(".popup").fadeOut();
+    });
+    $(".overlay-album").click(function(){
+        $(".popup_album").fadeOut();
+        $(this).fadeOut();
+    });
+    $(".overlay-photo").click(function(){
+        $(".popup_photo").fadeOut();
+        $(this).fadeOut();
+    });
+
 // ---------------- Add comment popup -------------------------- //
-$(".js-add-comment").click(function(){
-    $(".popup_add-comment").fadeIn();
-    $(".overlay").fadeIn();
-});
+    $(".js-add-comment").click(function(){
+        $(".popup_add-comment").fadeIn();
+        $(".overlay").fadeIn();
+    });
 
 // ---------------- Request popup -------------------------- //
-$(".js-request").click(function(){
-    $(".popup_request").fadeIn();
-    $(".overlay").fadeIn();
-    return false;
-});
+    $(".js-request").click(function(){
+        $(".popup_request").fadeIn();
+        $(".overlay").fadeIn();
+        return false;
+    });
 
 // ---------------- popup height -------------------------- //
     function popup () {
@@ -183,19 +208,19 @@ $(".js-request").click(function(){
     });  
 
 // ---------------- Choose city  drop-list-------------------------- //
-$(".switch div").children("span:first").addClass("active");
-$(".switch div").click(function(){
-    if ($(this).hasClass("switch-active")) {
-        $(this).removeClass("switch-active");
-        $(this).children("span:first").addClass("active");
-        $(this).children().next().next().removeClass("active");
-    }
-    else {
-        $(this).addClass("switch-active");
-        $(this).children().removeClass("active");
-        $(this).children().next().next().addClass("active");
-    }
-});
+    $(".switch div").children("span:first").addClass("active");
+    $(".switch div").click(function(){
+        if ($(this).hasClass("switch-active")) {
+            $(this).removeClass("switch-active");
+            $(this).children("span:first").addClass("active");
+            $(this).children().next().next().removeClass("active");
+        }
+        else {
+            $(this).addClass("switch-active");
+            $(this).children().removeClass("active");
+            $(this).children().next().next().addClass("active");
+        }
+    });
 
 // ---------------- Input drop-list -------------------------- //
     // show/hide
@@ -215,7 +240,7 @@ $(".switch div").click(function(){
     $(".search__holder").click(function(){
         $(this).hide();
         $(this).parent().animate({
-            right: -300,
+            right: -300
         }, 500);
 });
 
@@ -326,7 +351,7 @@ $(".switch div").click(function(){
         var top = $(".coach-list").position().top + 81;
         if ( (i == 1) && top <= 0) {
             $(".coach-list").animate({
-                top: top,
+                top: top
             }, 100);
         }
         else {}
@@ -337,19 +362,26 @@ $(".switch div").click(function(){
         var list_height = $(".coach-list").height() - $(".coach-list-wrap").height() + 81;
         if ((i == 1) && Math.abs(top) < list_height) {
             $(".coach-list").animate({
-                top: top,
+                top: top
             }, 100);
         }
         else {}
     });
     
+// ---------------- Main scoll resize -------------------------- //
 
-
-
-
-
-
-
+    function Scroll_Resize () {
+        var scroll = $(window).height() - 233;
+        $(".slider, .scroll-main, .slide").height(scroll);
+        if (scroll <= 550) {
+            $(".slider, .scroll-main, .slide").height(550);
+        }
+    }
+    Scroll_Resize ();
+    $(window).resize(function(){
+        Scroll_Resize ();
+    });
+    
 });
 
 // ---------------- Press ESC -------------------------- //

@@ -500,6 +500,7 @@
     }
 }
 .date-list {
+    position: relative;
     padding: 2px;
     @include border-radius(10px);
     background: #ca56a5;
@@ -528,6 +529,9 @@
         i {
             display: inline-block;
         }
+    }
+    .ui-datepicker-inline {
+        
     }
 }
 
