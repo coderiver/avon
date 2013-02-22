@@ -239,11 +239,19 @@ $(document).ready(function() {
     });
 
 // ---------------- search  -------------------------- //
-    $(".search__holder").click(function(){
-        $(this).hide();
-        $(this).parent().animate({
-            right: -300
-        }, 500);
+    $(".search__submit").click(function(){
+        if ($(this).hasClass("js-act")) {
+            $(this).removeClass("js-act");
+            $(this).parent().animate({
+                right: -43
+            }, 500);
+        }
+        else {
+            $(this).addClass("js-act");
+            $(this).parent().animate({
+                right: -300
+            }, 500);
+        }
 });
 
 // ---------------- Tab -------------------------- //
