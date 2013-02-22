@@ -1,12 +1,13 @@
 $(document).ready(function() {
 // ---------------- Datapicker -------------------------- //
-    function tooltip() {
+
+/*    function tooltip() {
         // get dates and write to tooltip
         $(".ui-state-default").each(function(){
             //$(".tooltip").remove();
             var date = $(this).text();
             var month = $(".ui-datepicker-month").text();
-            var city = "Киев";
+            var city = "Киев"; // const city
             $(this).append('<div class="tooltip">'+date+' ' + month + ' ' + 'в г. '+ city +'</div>');
         });
 
@@ -20,6 +21,7 @@ $(document).ready(function() {
             }
         );
     };
+*/
     $(".js-date").click( function(){
          $(".tooltip").remove();
         // init datepicker
@@ -49,7 +51,7 @@ $(document).ready(function() {
               }
         });
 
-        tooltip();
+        //tooltip();
     });
     
         
