@@ -14,12 +14,12 @@
 
 .slide-1 .slide__img { left: 40px; }
 
-.slide__text { float: left; padding-top: 108px; width: 280px; }
+.slide__text { float: left; padding-top: 108px; width: 280px; position: relative; z-index: 10; }
 .slide__text p { margin-bottom: 13px; }
 
 .slide__title { margin-bottom: 11px; color: #34272f; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; font-size: 36px; }
 
-.slide__info { float: right; padding: 50px 8px 0 0; }
+.slide__info { float: right; padding: 50px 8px 0 0; position: relative; z-index: 10; }
 .slide__info .next-training { padding-left: 125px; }
 .slide__info .coach-scroll { margin: 66px 0 0 142px; }
 
