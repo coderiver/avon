@@ -239,7 +239,7 @@ $(document).ready(function() {
     });
 
 // ---------------- search  -------------------------- //
-    $(".search__submit").click(function(){
+    $(".filter-wrapper .search__submit").click(function(){
         if ($(this).hasClass("js-act")) {
             $(this).removeClass("js-act");
             $(this).parent().animate({
@@ -254,6 +254,32 @@ $(document).ready(function() {
         }
 });
 
+// ---------------- search city  -------------------------- //
+    $(".search_big .input").focusin(function(){
+        $(this).parent().next().fadeIn("fast");
+        $(this).parent().addClass("search_big-active");
+    });
+    $(".search_big .input").focusout(function(){
+        $(this).parent().next().fadeOut("fast");
+        $(this).parent().removeClass("search_big-active");
+    });
+    $(".latters a").click(function(){
+        var latter = $(this).text();
+        $(".latters a").removeClass("active");
+        $(this).addClass("active");
+        $(".search_big .input").addClass("focus");
+        $(".search_big").addClass("search_big-active");
+        $(".search_big .input").val(latter);
+        $(".js-city-list").fadeIn();
+        return false;
+    });
+    $(".js-city-list li").click(function(){
+        var city = $(this).text();
+        $(this).parent().parent().fadeOut();
+        $(".search_big .input").val(city);
+        $(".search_big").removeClass("search_big-active");
+        $(".search_big .input").addClass("focus");
+    });
 // ---------------- Tab -------------------------- //
     $(".tab-cont").hide();
     $(".tab-1").show();
@@ -392,7 +418,7 @@ $(document).ready(function() {
         Scroll_Resize ();
     });
     
-});
+    });
 
 // ---------------- Press ESC -------------------------- //
 document.onkeydown = function(evt) {

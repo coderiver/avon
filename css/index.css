@@ -1,3 +1,4 @@
+@charset "IBM866";
 @font-face { font-family: 'Conv_MyriadPro-Regular'; src: url("../fonts/MyriadPro-Regular.eot"); src: local("☺"), url("../fonts/MyriadPro-Regular.woff") format("woff"), url("../fonts/MyriadPro-Regular.ttf") format("truetype"), url("../fonts/MyriadPro-Regular.svg") format("svg"); font-weight: normal; font-style: normal; }
 
 @font-face { font-family: 'Conv_MyriadPro-It'; src: url("../fonts/MyriadPro-It.eot"); src: local("☺"), url("../fonts/MyriadPro-It.woff") format("woff"), url("../fonts/MyriadPro-It.ttf") format("truetype"), url("../fonts/MyriadPro-It.svg") format("svg"); font-weight: normal; font-style: normal; }
@@ -17,7 +18,7 @@
 .slide__text { float: left; padding-top: 108px; width: 280px; position: relative; z-index: 10; }
 .slide__text p { margin-bottom: 13px; }
 
-.slide__title { margin-bottom: 11px; color: #34272f; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; font-size: 36px; }
+.slide__title { margin-bottom: 11px; color: #34272f; font-weight: normal; font-style: normal; font-family: "Conv_MyriadPro-Bold", Arial, sans-serif; font-size: 36px; }
 
 .slide__info { float: right; padding: 50px 8px 0 0; position: relative; z-index: 10; }
 .slide__info .next-training { padding-left: 125px; }
@@ -27,9 +28,9 @@
 .slide__big-title h2 { position: relative; margin-bottom: 17px; color: #ae0776; font-size: 43px; line-height: 1; font-weight: normal; }
 .slide__big-title h2:before { content: "“"; position: absolute; left: -41px; top: -11px; font-size: 63px; color: #d380b8; }
 .slide__big-title span { display: block; margin-bottom: -3px; }
-.slide__big-title b { font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; text-transform: uppercase; font-size: 48px; }
-.slide__big-title .coach { padding-left: 5px; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-It', Arial, sans-serif; color: #6b6468; font-size: 16px; }
-.slide__big-title .coach a { color: #34272f; font-size: 19px; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; text-decoration: none; }
+.slide__big-title b { font-weight: normal; font-style: normal; font-family: "Conv_MyriadPro-Bold", Arial, sans-serif; text-transform: uppercase; font-size: 48px; }
+.slide__big-title .coach { padding-left: 5px; font-weight: normal; font-style: normal; font-family: "Conv_MyriadPro-It", Arial, sans-serif; color: #6b6468; font-size: 16px; }
+.slide__big-title .coach a { color: #34272f; font-size: 19px; font-weight: normal; font-style: normal; font-family: "Conv_MyriadPro-Bold", Arial, sans-serif; text-decoration: none; }
 .slide__big-title .coach a:hover { color: #b5007d; }
 .slide__big-title .coach span { display: block; }
 
@@ -40,13 +41,13 @@
 
 .slide-3 .slide__info { padding-top: 74px; }
 .slide-3 .gallery-link { margin-bottom: 35px; }
-.slide-3 .slide__info-title { margin-bottom: 24px; color: #483b50; font-size: 18px; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; }
+.slide-3 .slide__info-title { margin-bottom: 24px; color: #483b50; font-size: 18px; font-weight: normal; font-style: normal; font-family: "Conv_MyriadPro-Bold", Arial, sans-serif; }
 .slide-3 .slide__text { padding-top: 57px; }
 
 .slider-nav { position: absolute; bottom: 39px; left: 0; z-index: 1000; padding-left: 18px; width: 100%; text-align: center; }
 .slider-nav button { position: relative; display: inline-block; margin-right: 35px; width: 104px; height: 78px; line-height: 110px; background: none; text-align: center; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; }
 .slider-nav button:hover span, .slider-nav button:hover i { opacity: 1; }
-.slider-nav span { color: #b5007d; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; font-size: 18px; opacity: .6; }
+.slider-nav span { color: #b5007d; font-weight: normal; font-style: normal; font-family: "Conv_MyriadPro-Bold", Arial, sans-serif; font-size: 18px; opacity: .6; }
 .slider-nav span:hover { opacity: 1; }
 .slider-nav i { position: absolute; left: 50%; top: 21px; margin-left: -11px; opacity: 0.6; }
 .slider-nav i:hover { opacity: 1; }
@@ -59,7 +60,7 @@
 
 .img-scroll { float: left; width: 450px; }
 
-.img-scroll__title { margin-bottom: 10px; font-size: 22px; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; text-align: center; }
+.img-scroll__title { margin-bottom: 10px; font-size: 22px; font-weight: normal; font-style: normal; font-family: "Conv_MyriadPro-Bold", Arial, sans-serif; text-align: center; }
 .img-scroll__title a { color: #34272f; text-decoration: none; }
 .img-scroll__title a:hover { color: #b5007d; }
 
@@ -73,6 +74,18 @@
 
 .overlay_choose-city { display: block; }
 
-.popup_choose-city { display: block; padding: 10px; width: 350px; margin-left: -175px; top: 100px; }
+.popup_choose-city { display: block; padding: 10px; width: 970px; margin-left: -495px; top: 100px; }
+.popup_choose-city p { padding-left: 215px; }
+.popup_choose-city .popup__title span { display: block; }
 .popup_choose-city .select { margin: 24px auto 26px; }
-.popup_choose-city .popup__info { color: #a29ba5; font-size: 14px; }
+.popup_choose-city .popup__info { display: block; color: #a29ba5; font-size: 14px; text-align: center; }
+
+.latters { margin: 36px 0 28px; }
+.latters a { display: inline-block; margin-right: 18px; color: #ab859f; font-size: 18px; font-weight: normal; font-style: normal; font-family: "Conv_MyriadPro-Bold", Arial, sans-serif; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid; line-height: 1; }
+.latters a:hover { border-bottom: 0; }
+.latters .active { color: #bd2388; border-bottom: 1px solid #ab859f; }
+
+.city-list { overflow: hidden; margin: 37px 0 55px; padding-left: 45px; }
+.city-list ul { display: inline-block; margin-bottom: 10px; width: 145px; padding-left: 5px; vertical-align: top; color: #787275; font-size: 16px; }
+.city-list li { margin-bottom: 4px; }
+.city-list .active { font-weight: normal; font-style: normal; font-family: "Conv_MyriadPro-Bold", Arial, sans-serif; }

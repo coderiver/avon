@@ -253,14 +253,67 @@
 .popup_choose-city {
     display: block;
     padding: 10px;
-    width: 350px;
-    margin-left: -175px; 
+    width: 970px;
+    margin-left: -495px; 
     top: 100px;
+    p {
+        padding-left: 215px;
+    }
+    .popup__title { 
+        span {
+            display: block;
+        }  
+    }
     .select {
         margin: 24px auto 26px;
     }
     .popup__info {
+        display: block;
         color: #a29ba5;
         font-size: 14px;
+        text-align: center;
     }
+    
+}
+.latters {
+    margin: 36px 0 28px;
+    a {
+        display: inline-block;
+        margin-right: 18px;
+        color: #ab859f;
+        font-size: 18px;
+        @include mb;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-bottom: 1px solid;
+        line-height: 1;
+        &:hover {
+            border-bottom: 0;
+        }
+    }
+    .active {
+        color: #bd2388;
+        border-bottom: 1px solid #ab859f;
+    }
+}
+.city-list {
+    overflow: hidden;
+    margin: 37px 0 55px;
+    padding-left: 45px;
+    ul {
+        display: inline-block;
+        margin-bottom: 10px;
+        width: 145px;
+        padding-left: 5px;
+        vertical-align: top;
+        color: #787275;
+        font-size: 16px;
+    }
+    li {
+        margin-bottom: 4px;
+    }
+    .active {
+        @include mb;
+    }
+
 }
