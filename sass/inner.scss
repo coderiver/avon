@@ -346,7 +346,7 @@
 }
 .search-wrap {
     position: relative;
-    width: 566px;
+    width: 568px;
     margin: 0 auto;
     .drop-down {
         width: 562px;
@@ -451,6 +451,9 @@
         span {
             border-bottom: 0;
         }
+    }
+    .drop-down {
+        left: 0;
     }
     span {
         border-bottom: 1px dotted;
@@ -687,8 +690,6 @@
     }
 }
 .training-item__head {
-    position: relative;
-    top: -3px;
     .title-l-2 {
         margin: 0 0 3px;
         a {

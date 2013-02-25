@@ -39,9 +39,10 @@ $(document).ready(function() {
     });
 
     $(".js-date").click( function(){
-         $(".tooltip").remove();
+        $(".tooltip").remove();
         // init datepicker
         $(this).children(".ui-datepicker-inline").fadeIn();
+        $(this).css("z-index", "1000");
         $(".overlay-calendar").show();
         $(this).datepicker({
             inline: true,
@@ -279,9 +280,9 @@ $(document).ready(function() {
         $(this).parent().next().fadeOut("fast");
         $(this).parent().removeClass("search_big-active");
     });
-    $(".latters a").click(function(){
+    $(".letters a").click(function(){
         var latter = $(this).text();
-        $(".latters a").removeClass("active");
+        $(".letters a").removeClass("active");
         $(this).addClass("active");
         $(".search_big .input").addClass("focus");
         $(".search_big").addClass("search_big-active");

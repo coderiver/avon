@@ -446,7 +446,7 @@ button.btn-gray { line-height: 31px; }
 .img-scroll__title a { color: #34272f; text-decoration: none; }
 .img-scroll__title a:hover { color: #b5007d; }
 
-.img-scroll__wrap { position: relative; }
+.img-scroll__wrap { position: relative; height: 360px; }
 .img-scroll__wrap img { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3); box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3); }
 
 .img-scroll__nav { position: absolute; top: 20px; left: 18px; z-index: 1000; }
@@ -462,10 +462,10 @@ button.btn-gray { line-height: 31px; }
 .popup_choose-city .select { margin: 24px auto 26px; }
 .popup_choose-city .popup__info { display: block; color: #a29ba5; font-size: 14px; text-align: center; }
 
-.latters { margin: 36px 0 28px; }
-.latters a { display: inline-block; margin-right: 18px; color: #ab859f; font-size: 18px; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid; line-height: 1; }
-.latters a:hover { border-bottom: 0; }
-.latters .active { color: #bd2388; border-bottom: 1px solid #ab859f; }
+.letters { margin: 36px 0 28px; }
+.letters a { display: inline-block; margin-right: 18px; color: #ab859f; font-size: 18px; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid; line-height: 1; }
+.letters a:hover { border-bottom: 0; }
+.letters .active { color: #bd2388; border-bottom: 0; }
 
 .city-list { overflow: hidden; margin: 37px 0 55px; padding-left: 45px; }
 .city-list ul { display: inline-block; margin-bottom: 10px; width: 145px; padding-left: 5px; vertical-align: top; color: #787275; font-size: 16px; }
@@ -583,7 +583,7 @@ button.btn-gray { line-height: 31px; }
 .search__submit { display: inline-block; vertical-align: middle; background: url('../img/icons-s8f89219ce8.png') 0 -1842px no-repeat; width: 16px; height: 17px; }
 .search__submit:hover { background: url('../img/icons-s8f89219ce8.png') 0 -1087px no-repeat; width: 16px; height: 17px; }
 
-.search-wrap { position: relative; width: 566px; margin: 0 auto; }
+.search-wrap { position: relative; width: 568px; margin: 0 auto; }
 .search-wrap .drop-down { width: 562px; left: 0; top: 30px; -webkit-border-radius: 0 0 10px 10px; -moz-border-radius: 0 0 10px 10px; -ms-border-radius: 0 0 10px 10px; -o-border-radius: 0 0 10px 10px; border-radius: 0 0 10px 10px; }
 .search-wrap .drop-down ul { -webkit-border-radius: 0 0 8px 8px; -moz-border-radius: 0 0 8px 8px; -ms-border-radius: 0 0 8px 8px; -o-border-radius: 0 0 8px 8px; border-radius: 0 0 8px 8px; }
 .search-wrap .drop-down:before { display: none; }
@@ -618,6 +618,7 @@ button.btn-gray { line-height: 31px; }
 .date-more { position: relative; padding-bottom: 9px; color: #6b6468; font-size: 16px; -moz-user-select: none; -webkit-user-select: none; user-select: none; cursor: pointer; }
 .date-more:hover { color: #be1f8c; }
 .date-more:hover span { border-bottom: 0; }
+.date-more .drop-down { left: 0; }
 .date-more span { border-bottom: 1px dotted; }
 .date-more strong { font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; }
 .date-more i { position: absolute; left: -26px; top: 4px; background: url('../img/icons-s8f89219ce8.png') 0 -1414px no-repeat; width: 16px; height: 17px; }
@@ -682,7 +683,6 @@ button.btn-gray { line-height: 31px; }
 .training-date span { font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Bold', Arial, sans-serif; }
 .training-date .ui-datepicker-inline { left: 8px; }
 
-.training-item__head { position: relative; top: -3px; }
 .training-item__head .title-l-2 { margin: 0 0 3px; }
 .training-item__head .title-l-2 a { color: #34272f; text-decoration: none; }
 .training-item__head .title-l-2 a:hover { color: #b5007d; }
@@ -1557,7 +1557,7 @@ body .ui-tooltip { border-width: 2px; }
 .lteie8 .checkbox i, .lteie8 .radio i { display: none; }
 .lteie8 .checkbox input, .lteie8 .radio input { position: static; vertical-align: middle; }
 .lteie8 .coach-list { background: none !important; }
-.lteie8 .overlay, .lteie8 .overlay-album { background: #fff; }
+.lteie8 .overlay, .lteie8 .overlay-album, .lteie8 .overlay-photo { background: #fff; }
 .lteie8 .header { position: relative; z-index: 1000; }
 .lteie8 .nav a { background: #e2dbdf; }
 .lteie8 .nav .active { background: #ca56a4; }
@@ -1567,10 +1567,23 @@ body .ui-tooltip { border-width: 2px; }
 .lteie8 .input { line-height: 28px; font-style: italic; }
 .lteie8 .focus { font-style: normal; }
 .lteie8 .coach-item { background: none !important; }
+.lteie8 .letters a { margin-right: 16px; }
+.lteie8 .slide { background: none !important; }
+.lteie8 .map-block-wrap { left: 0; }
 
 * + html .btn-gray { line-height: 27px; }
-* + html .js-date, * + html .filter { position: relative; z-index: 1000; }
+* + html .filter { position: relative; z-index: 1000; }
 * + html .filter__wrap .filter-tab, * + html .filter__wrap .choose { vertical-align: middle; line-height: 51px; }
 * + html .switch { vertical-align: middle; line-height: 51px; }
+* + html .search-wrap { width: 588px; }
+* + html .header .choose { display: block; }
+* + html .enter button { width: 186px; }
+* + html .extend-search .input { width: 214px; }
+* + html .extend-search .field { z-index: 600; }
+* + html .extend-search .field:first-child { position: relative; z-index: 1000; }
+* + html .extend-search .field_checkbox { z-index: 500; }
+* + html .extend-search .checkbox { padding-left: 0; }
+* + html .checkbox { padding-left: 0; }
+* + html .popup_photo .soc-big { display: inline; vertical-align: top; float: none; }
 
-* + html .enter__user i, * + html .btn, * + html .btn-gray, * + html .prev i, * + html .next i, * + html .badge, * + html .gallery-link__wrap, * + html .gallery-link__wrap strong, * + html .close i, * + html .switch__name, * + html .soc, * + html .copy, * + html .slider-nav button, * + html .img-scroll__nav button, * + html .breadcrumbs a, * + html .breadcrumbs span, * + html .page-head .title-l-1, * + html .comments-wrap .btn-gray, * + html .training__head .coach-item, * + html .choose, * + html .filter-tab, * + html .choose__wrap, * + html .comments-head .title-l-2, * + html .filter__wrap .choose, * + html .training-item, * + html .switch, * + html .switch div, * + html .search, * + html .city-list ul, * html .enter__user i, * html .btn, * html .btn-gray, * html .prev i, * html .next i, * html .badge, * html .gallery-link__wrap, * html .gallery-link__wrap strong, * html .close i, * html .switch__name, * html .soc, * html .copy, * html .slider-nav button, * html .img-scroll__nav button, * html .breadcrumbs a, * html .breadcrumbs span, * html .page-head .title-l-1, * html .comments-wrap .btn-gray, * html .training__head .coach-item, * html .choose, * html .filter-tab, * html .choose__wrap, * html .comments-head .title-l-2, * html .filter__wrap .choose, * html .training-item, * html .switch, * html .switch div, * html .search, * html .city-list ul { display: inline; }
+* + html .enter__user i, * + html .btn, * + html .btn-gray, * + html .prev i, * + html .next i, * + html .badge, * + html .gallery-link__wrap, * + html .gallery-link__wrap strong, * + html .close i, * + html .switch__name, * + html .soc, * + html .copy, * + html .slider-nav button, * + html .img-scroll__nav button, * + html .breadcrumbs a, * + html .breadcrumbs span, * + html .page-head .title-l-1, * + html .comments-wrap .btn-gray, * + html .training__head .coach-item, * + html .choose, * + html .filter-tab, * + html .choose__wrap, * + html .comments-head .title-l-2, * + html .filter__wrap .choose, * + html .training-item, * + html .switch, * + html .switch div, * + html .search, * + html .city-list ul, * + html .search .input, * + html .search__submit, * html .enter__user i, * html .btn, * html .btn-gray, * html .prev i, * html .next i, * html .badge, * html .gallery-link__wrap, * html .gallery-link__wrap strong, * html .close i, * html .switch__name, * html .soc, * html .copy, * html .slider-nav button, * html .img-scroll__nav button, * html .breadcrumbs a, * html .breadcrumbs span, * html .page-head .title-l-1, * html .comments-wrap .btn-gray, * html .training__head .coach-item, * html .choose, * html .filter-tab, * html .choose__wrap, * html .comments-head .title-l-2, * html .filter__wrap .choose, * html .training-item, * html .switch, * html .switch div, * html .search, * html .city-list ul, * html .search .input, * html .search__submit { display: inline; }

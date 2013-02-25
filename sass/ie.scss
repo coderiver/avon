@@ -15,7 +15,8 @@
         background: none !important;
     }
     .overlay,
-    .overlay-album {
+    .overlay-album,
+    .overlay-photo {
         background: #fff;
     }
     .header {
@@ -53,6 +54,15 @@
     .coach-item {
         background: none !important;
     }
+    .letters a {
+        margin-right: 16px;
+    }
+    .slide {
+        background: none !important;
+    }
+    .map-block-wrap {
+        left: 0;
+    }
 }
 
 // ie7
@@ -60,8 +70,6 @@
     .btn-gray {
         line-height: 27px;
     }
-    
-    .js-date,
     .filter {
         position: relative;
         z-index: 1000;
@@ -77,8 +85,44 @@
         vertical-align: middle;
         line-height: 51px;
     }
-    
-}
+    .search-wrap {
+        width: 588px;
+    }
+    .header .choose {
+        display: block;
+    }
+    .enter {
+        button {
+            width: 186px;
+        }
+    }
+    .extend-search {
+        .input {
+            width: 214px;
+        }
+        .field {
+            z-index: 600;
+            &:first-child {
+                position: relative;
+                z-index: 1000;
+            }
+        }
+        .field_checkbox {
+            z-index: 500;
+        }
+        .checkbox {
+            padding-left: 0;
+        }
+    }
+    .checkbox {
+        padding-left: 0;
+    }
+    .popup_photo .soc-big {
+        display: inline;
+        vertical-align: top;
+        float: none;
+    }
+} 
 
 // ie6
 * html {
@@ -113,7 +157,9 @@
     .switch,
     .switch div,
     .search,
-    .city-list ul
+    .city-list ul,
+    .search .input,
+    .search__submit,
     {
         display: inline;
     }

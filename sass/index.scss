@@ -220,6 +220,7 @@
 }
 .img-scroll__wrap {
     position: relative;
+    height: 360px;
     img {
         @include border-radius(5px);
         @include box-shadow(0 3px 7px rgba(0,0,0, .3));
@@ -275,7 +276,7 @@
     }
     
 }
-.latters {
+.letters {
     margin: 36px 0 28px;
     a {
         display: inline-block;
@@ -293,7 +294,7 @@
     }
     .active {
         color: #bd2388;
-        border-bottom: 1px solid #ab859f;
+        border-bottom: 0;
     }
 }
 .city-list {
