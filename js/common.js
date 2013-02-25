@@ -1,27 +1,43 @@
 $(document).ready(function() {
 // ---------------- Datapicker -------------------------- //
 
-/*    function tooltip() {
+    $(".cal li").click(function(){
+        $(".cal li").removeClass("active");
+        $(this).addClass("active");
+    });
+    $(".cal .event").each(function(){
+        $(this).append('<i>.</i>');
+    });
+    $(".cal .inactive").click(function(){
+        return false;
+    });
+    function tooltip() {
         // get dates and write to tooltip
-        $(".ui-state-default").each(function(){
-            //$(".tooltip").remove();
+        $(".cal li").each(function(){
             var date = $(this).text();
-            var month = $(".ui-datepicker-month").text();
-            var city = "Киев"; // const city
+            var month = $(".cal__month").text();
+            var city = "Киев";
             $(this).append('<div class="tooltip">'+date+' ' + month + ' ' + 'в г. '+ city +'</div>');
         });
+            // show tooltip
+            $(".cal li").hover(
+                function () {
+                    $(this).children(".tooltip").show();
+                }, 
+                function () {
+                    $(this).children(".tooltip").hide();
+                }
+            );
+    }
+    tooltip();
 
-        // show tooltip
-        $(".ui-state-default").hover(
-            function () {
-                $(this).children(".tooltip").show();
-            }, 
-            function () {
-                $(this).children(".tooltip").hide();
-            }
-        );
-    };
-*/
+    $(".cal__month").cycle({ 
+        next:    ".cal__prev", 
+        prev:    ".cal__next", 
+        timeout:  0,
+        speed: 700
+    });
+
     $(".js-date").click( function(){
          $(".tooltip").remove();
         // init datepicker
