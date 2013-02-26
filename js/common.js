@@ -19,15 +19,17 @@ $(document).ready(function() {
             var city = "Киев";
             $(this).append('<div class="tooltip">'+date+' ' + month + ' ' + 'в г. '+ city +'</div>');
         });
-            // show tooltip
-            $(".cal li").hover(
-                function () {
-                    $(this).children(".tooltip").show();
-                }, 
-                function () {
-                    $(this).children(".tooltip").hide();
-                }
-            );
+        // show tooltip
+        $(".cal li").hover(
+            function () {
+                $(this).children(".tooltip").show();
+                $(this).css("z-index", "2");
+            }, 
+            function () {
+                $(this).children(".tooltip").hide();
+                $(this).css("z-index", "1");
+            }
+        );
     }
     tooltip();
 

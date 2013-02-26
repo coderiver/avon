@@ -325,22 +325,6 @@ button.btn-gray { line-height: 31px; }
 .to-top i { display: inline-block; margin-top: 13px; background: url('../img/icons-s8f89219ce8.png') 0 -1766px no-repeat; width: 24px; height: 24px; }
 .to-top span { display: block; }
 
-/* ---------------------------------- //END Independent blocks ----------------------------------- */
-/* ----------------------------------------- Footer ---------------------------------------------- */
-.footer { position: relative; height: 120px; background: rgba(237, 201, 218, 0.7); -webkit-box-shadow: inset 1px 7px 20px rgba(0, 0, 0, 0.1); -moz-box-shadow: inset 1px 7px 20px rgba(0, 0, 0, 0.1); box-shadow: inset 1px 7px 20px rgba(0, 0, 0, 0.1); }
-
-.footer__wrap { width: 90%; margin: 0 auto; padding-top: 33px; overflow: hidden; }
-
-.footer__nav { float: left; padding-top: 6px; overflow: hidden; }
-.footer__nav li { float: left; margin-right: 34px; }
-.footer__nav a { font-size: 14px; color: #483b50; }
-.footer__nav .active { color: #b5007d; text-decoration: none; }
-
-.footer__info { float: right; }
-.footer__info .soc { margin-right: 14px; }
-.footer__info .soc, .footer__info .copy { display: inline-block; vertical-align: middle; }
-
-/* -------------------------------------- //END Footer ------------------------------------------- */
 .cal { position: relative; padding: 2px; width: 322px; margin: 50px auto; background: #bf3f9b; color: #222; background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JmM2Y5YiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzdjMGU0NyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='); background-size: 100%; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bf3f9b), color-stop(100%, #7c0e47)); background-image: -webkit-linear-gradient(#bf3f9b, #7c0e47); background-image: -moz-linear-gradient(#bf3f9b, #7c0e47); background-image: -o-linear-gradient(#bf3f9b, #7c0e47); background-image: -ms-linear-gradient(#bf3f9b, #7c0e47); background-image: linear-gradient(#bf3f9b, #7c0e47); -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; }
 .cal:before { content: ""; position: absolute; left: 50%; top: -9px; margin-left: -10px; background: url('../img/icons-s8f89219ce8.png') 0 -1704px no-repeat; width: 20px; height: 9px; }
 
@@ -374,3 +358,20 @@ button.btn-gray { line-height: 31px; }
 .cal__body .event i { position: absolute; bottom: 4px; left: 0; width: 100%; text-align: center; line-height: 1; }
 
 .tooltip { display: none; position: absolute; left: 11px; top: -15px; z-index: 5000; padding: 3px 6px; width: auto; color: #fff; font-size: 12px; line-height: 1; background: #333; font-weight: normal; font-style: normal; font-family: 'Conv_MyriadPro-Regular', Arial, sans-serif; -webkit-border-radius: 7px; -moz-border-radius: 7px; -ms-border-radius: 7px; -o-border-radius: 7px; border-radius: 7px; white-space: nowrap; }
+
+/* ---------------------------------- //END Independent blocks ----------------------------------- */
+/* ----------------------------------------- Footer ---------------------------------------------- */
+.footer { position: relative; height: 120px; background: rgba(237, 201, 218, 0.7); -webkit-box-shadow: inset 1px 7px 20px rgba(0, 0, 0, 0.1); -moz-box-shadow: inset 1px 7px 20px rgba(0, 0, 0, 0.1); box-shadow: inset 1px 7px 20px rgba(0, 0, 0, 0.1); }
+
+.footer__wrap { width: 90%; margin: 0 auto; padding-top: 33px; overflow: hidden; }
+
+.footer__nav { float: left; padding-top: 6px; overflow: hidden; }
+.footer__nav li { float: left; margin-right: 34px; }
+.footer__nav a { font-size: 14px; color: #483b50; }
+.footer__nav .active { color: #b5007d; text-decoration: none; }
+
+.footer__info { float: right; }
+.footer__info .soc { margin-right: 14px; }
+.footer__info .soc, .footer__info .copy { display: inline-block; vertical-align: middle; }
+
+/* -------------------------------------- //END Footer ------------------------------------------- */

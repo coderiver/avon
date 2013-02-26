@@ -1232,49 +1232,6 @@ button.btn-gray {
     }
 }
 
-/* ---------------------------------- //END Independent blocks ----------------------------------- */
-
-/* ----------------------------------------- Footer ---------------------------------------------- */
-.footer {
-    position: relative;
-    height: 120px;
-    background: rgba(237,201,218, .7);
-    @include box-shadow(inset 1px 7px 20px rgba(0,0,0,.1));
-}
-.footer__wrap {
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 33px;
-    overflow: hidden;
-}
-.footer__nav {
-    float: left;
-    padding-top: 6px;
-    overflow: hidden;
-    li {
-        float: left;
-        margin-right: 34px;
-    }
-    a {
-        font-size: 14px;
-        color: #483b50;
-    } 
-    .active {
-        color: #b5007d;
-        text-decoration: none;
-    }
-}
-.footer__info  {
-    float: right;
-    .soc {
-        margin-right: 14px;
-    }
-    .soc, .copy {
-        display: inline-block;
-        vertical-align: middle;
-    }
-}
-/* -------------------------------------- //END Footer ------------------------------------------- */
 
 .cal {
     position: relative;
@@ -1449,3 +1406,47 @@ button.btn-gray {
     @include border-radius(7px);
     white-space: nowrap;
 }
+
+/* ---------------------------------- //END Independent blocks ----------------------------------- */
+
+/* ----------------------------------------- Footer ---------------------------------------------- */
+.footer {
+    position: relative;
+    height: 120px;
+    background: rgba(237,201,218, .7);
+    @include box-shadow(inset 1px 7px 20px rgba(0,0,0,.1));
+}
+.footer__wrap {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 33px;
+    overflow: hidden;
+}
+.footer__nav {
+    float: left;
+    padding-top: 6px;
+    overflow: hidden;
+    li {
+        float: left;
+        margin-right: 34px;
+    }
+    a {
+        font-size: 14px;
+        color: #483b50;
+    } 
+    .active {
+        color: #b5007d;
+        text-decoration: none;
+    }
+}
+.footer__info  {
+    float: right;
+    .soc {
+        margin-right: 14px;
+    }
+    .soc, .copy {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+/* -------------------------------------- //END Footer ------------------------------------------- */
