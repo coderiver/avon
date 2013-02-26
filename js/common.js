@@ -16,7 +16,7 @@ $(document).ready(function() {
         $(".cal li").each(function(){
             var date = $(this).text();
             var month = $(".cal__month").text();
-            var city = "Киев";
+            var city = "Киев"; // you can put any City you want
             $(this).append('<div class="tooltip">'+date+' ' + month + ' ' + 'в г. '+ city +'</div>');
         });
         // show tooltip
