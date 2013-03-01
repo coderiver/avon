@@ -347,7 +347,7 @@ $(document).ready(function() {
 
 // ---------------- Scroll TOP -------------------------- //
      $(window).scroll(function() {   
-        if (($('body').scrollTop() > 30)) {
+        if (($(window).scrollTop() > 30)) {
             $(".to-top").show();
         }
         else {
